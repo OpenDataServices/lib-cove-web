@@ -16,3 +16,5 @@ rfc3987
 rfc6266
 bleach
 xmltodict
+-e git+https://github.com/OpenDataServices/lib-cove.git@master#egg=libcove
+

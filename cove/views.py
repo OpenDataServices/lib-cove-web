@@ -8,7 +8,7 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 
 from cove.input.models import SuppliedData
-from cove.lib.tools import get_file_type as _get_file_type
+from libcove.lib.tools import get_file_type as _get_file_type
 
 logger = logging.getLogger(__name__)
 
