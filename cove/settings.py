@@ -174,8 +174,6 @@ LANGUAGES = (
 )
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'cove', 'locale'),
-    os.path.join(BASE_DIR, 'cove_ocds', 'locale'),
-    os.path.join(BASE_DIR, 'cove_360', 'locale'),
 )
 
 
