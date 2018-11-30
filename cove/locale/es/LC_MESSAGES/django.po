@@ -2,345 +2,382 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Ben Webb <ben.webb@opendataservices.coop>, 2018
+# Eduardo Gomez <eduardo.gomez@hotmail.co.uk>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-23 19:22+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2018-11-30 11:11+0000\n"
+"PO-Revision-Date: 2018-11-30 11:12+0000\n"
+"Last-Translator: Eduardo Gomez <eduardo.gomez@hotmail.co.uk>, 2018\n"
+"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59127/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: cove/input/templates/input/input.html:13 cove/templates/stats.html:10
 msgid "Upload"
-msgstr ""
+msgstr "Subir"
 
 #: cove/input/templates/input/input.html:23
 #: cove/input/templates/input/input.html:46
 #: cove/input/templates/input/input.html:69
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: cove/input/templates/input/input.html:36 cove/templates/stats.html:11
 msgid "Link"
-msgstr ""
+msgstr "Enlazar"
 
 #: cove/input/templates/input/input.html:59 cove/templates/stats.html:12
 msgid "Paste"
-msgstr ""
+msgstr "Pegar"
 
 #: cove/input/views.py:17
 msgid "Upload a file (.json, .csv, .xlsx)"
-msgstr ""
+msgstr "Subir un archivo (.json, .csv, .xlsx)"
 
 #: cove/input/views.py:26
 msgid "Supply a URL"
-msgstr ""
+msgstr "Proporcionar una dirección URL"
 
 #: cove/input/views.py:31
 msgid "Paste (JSON only)"
-msgstr ""
+msgstr "Pegar (sólo JSON)"
 
 #: cove/input/views.py:71
 msgid "Sorry we got a ConnectionError whilst trying to download that file"
 msgstr ""
+"Lo sentimos, al tratar de descargar el archivo hemos encontrado un "
+"ConnectionError"
 
 #: cove/input/views.py:73 cove/input/views.py:81
 msgid "Try Again"
-msgstr ""
+msgstr "Inténtelo de nuevo"
 
 #: cove/input/views.py:74
 msgid ""
 "\n"
 "\n"
-" Common reasons for this error include supplying a local development url "
-"that our servers can't access, or misconfigured SSL certificates."
+" Common reasons for this error include supplying a local development url that our servers can't access, or misconfigured SSL certificates."
 msgstr ""
+"\n"
+"\n"
+"Las causas más comunes de este tipo de error son el uso de una direccción URL para desarrollo local que nuestros servidores no pueden acceder o el uso de certificados SSL mal configurados."
 
 #: cove/input/views.py:79
 msgid "Sorry we got a HTTP Error whilst trying to download that file"
 msgstr ""
+"Lo sentimos, al tratar de descargar el archivo hemos encontrado un HTTP "
+"Error"
 
 #: cove/input/views.py:82
 msgid ""
 "\n"
 "\n"
-" If you can access the file through a browser then the problem may be "
-"related to permissions, or you may be blocking certain user agents."
+" If you can access the file through a browser then the problem may be related to permissions, or you may be blocking certain user agents."
 msgstr ""
+"\n"
+"\n"
+"Si se puede acceder al archivo a través de un navegador entonces el problema puede estar relacionado con los permisos de acceso , o puede ser que usted esté bloqueando ciertas aplicaciones de usuario."
 
 #: cove/templates/500.html:8
 msgid "Internal Server Error"
-msgstr ""
+msgstr "Error de Servidor Interno"
 
 #: cove/templates/500.html:12
 msgid ""
 "Something went wrong with your request. This could be due to a bug in the "
 "application and/or the data you supplied."
 msgstr ""
+"Algo ha ido mal con su petición al servidor. Esto podría ser debido a un "
+"error en la aplicación o en los datos proporcionados."
 
 #: cove/templates/500.html:14
 msgid ""
 "This error has been automatically reported to our development team. If you "
 msgstr ""
+"Nuestro equipo de desarrollo ha sido informado de este error de forma "
+"automática. Si usted"
 
 #: cove/templates/500.html:14
 msgid "please reference this error as "
-msgstr ""
+msgstr "por favor haga referencia a este error como"
 
 #: cove/templates/additional_codelist_values.html:7
 #: cove/templates/additional_fields_table.html:5
 msgid "Field"
-msgstr ""
+msgstr "Campo"
 
 #: cove/templates/additional_codelist_values.html:8
 #: cove/templates/additional_fields_table.html:5
 msgid "Path to Field"
-msgstr ""
+msgstr "Ruta al Campo"
 
 #: cove/templates/additional_codelist_values.html:9
 msgid "Codelist"
-msgstr ""
+msgstr "Lista de códigos"
 
 #: cove/templates/additional_codelist_values.html:10
 msgid "Additional Values Used"
-msgstr ""
+msgstr "Valores Adicionales Usados"
 
 #: cove/templates/additional_fields_table.html:5
 msgid "Usage Count"
-msgstr ""
+msgstr "Número total de usos"
 
 #. Translators: Label of a button that triggers search
 #: cove/templates/base.html:55 cove/templates/page_header.html:27
 msgid "Go"
-msgstr ""
+msgstr "Ir"
 
 #: cove/templates/base.html:115
 msgid "About"
-msgstr ""
+msgstr "Acerca de"
 
 #: cove/templates/base.html:117
 msgid "Built by"
-msgstr ""
+msgstr "Construido por "
 
 #: cove/templates/base.html:117
 msgid "Open Data Services"
-msgstr ""
+msgstr "Open Data Services"
 
 #: cove/templates/base.html:118
 msgid "The code for this site is available on"
-msgstr ""
+msgstr "El código de este sitio está disponible en "
 
 #: cove/templates/base.html:118
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: cove/templates/base.html:118
 msgid "Cove - COnvert Validate & Explore"
-msgstr ""
+msgstr "Cove - COnvert Validate & Explore"
 
 #: cove/templates/base.html:118
 msgid "Licence"
-msgstr ""
+msgstr "Licencia"
 
 #: cove/templates/base.html:118
 msgid "AGPLv3"
-msgstr ""
+msgstr "AGPLv3"
 
 #: cove/templates/base.html:118
 msgid "Report/View issues"
-msgstr ""
+msgstr "Reportar / Ver issues"
 
 #: cove/templates/base.html:118
 msgid "Cove Issues"
-msgstr ""
+msgstr "Issues del Cove"
 
 #: cove/templates/base.html:122
 msgid "Terms &amp; Conditions"
-msgstr ""
+msgstr "Términos y condiciones"
 
-#. Translators: Provides information about the version of the code base that is being used
+#. Translators: Provides information about the version of the code base that
+#. is being used
 #: cove/templates/base.html:125
 msgid "Running version "
-msgstr ""
+msgstr "Versión en ejecución"
 
 #: cove/templates/base.html:130
 msgid "Links"
-msgstr ""
+msgstr "Enlaces"
 
 #: cove/templates/error_extra.html:2
 msgid ""
-"If you think this is a bug, you can <a href=\"https://github.com/"
-"OpenDataServices/cove/issues\">file an issue publicly on GitHub</a> or "
+"If you think this is a bug, you can <a "
+"href=\"https://github.com/OpenDataServices/cove/issues\">file an issue "
+"publicly on GitHub</a> or "
 msgstr ""
+"Si cree que esto es un error, puede <a "
+"href=\"https://github.com/OpenDataServices/cove/issues\">presentar un issue "
+"públicamente en GitHub</a> o"
 
 #: cove/templates/error_extra.html:2
 msgid "get in touch via email"
-msgstr ""
+msgstr "póngase en contacto a través de correo electrónico "
 
 #: cove/templates/error_extra.html:2
 msgid "referencing this error as "
-msgstr ""
+msgstr "haciendo referencia a este error como "
 
 #: cove/templates/explore.html:6
 msgid "Load New File"
-msgstr ""
+msgstr "Cargar archivo nuevo"
 
 #: cove/templates/explore.html:11
 msgid "Converted from Original"
-msgstr ""
+msgstr "Convertido del original"
 
 #: cove/templates/explore.html:12
 msgid "Original"
-msgstr ""
+msgstr "Original"
 
 #: cove/templates/explore.html:13
 msgid "Excel Spreadsheet (.xlsx)"
-msgstr ""
+msgstr "Hoja de cálculo de Excel (.xlsx)"
 
 #: cove/templates/explore.html:14
 msgid "CSV Spreadsheet (.csv)"
-msgstr ""
+msgstr "Hoja de cálculo CSV (.csv)"
 
 #: cove/templates/explore.html:15
 msgid "Excel Spreadsheet (.xlsx) with titles"
-msgstr ""
+msgstr "Hoja de cálculo de Excel (.xlsx) con títulos"
 
-#. Translators: JSON probably does not need a transalation: http://www.json.org/
+#. Translators: JSON probably does not need a transalation:
+#. http://www.json.org/
 #: cove/templates/explore.html:17
 msgid "JSON"
-msgstr ""
+msgstr "JSON"
 
 #: cove/templates/explore.html:18
 msgid "XML"
-msgstr ""
+msgstr "XML"
 
 #: cove/templates/modal_errors.html:14
 msgid "Value"
-msgstr ""
+msgstr "Valor"
 
 #: cove/templates/modal_errors.html:15 cove/templates/modal_errors.html:21
 msgid "Location"
-msgstr ""
+msgstr "Ubicación"
 
 #: cove/templates/modal_errors.html:17 cove/templates/modal_errors.html:23
 msgid "Spreadsheet Location"
-msgstr ""
+msgstr "Localización de la hoja de cálculo"
 
 #: cove/templates/multi_index.html:12
 msgid "360Giving Logo"
-msgstr ""
+msgstr "360Giving Logo"
 
 #: cove/templates/multi_index.html:14
 msgid "360Giving Data Standard"
-msgstr ""
+msgstr "Estándar de Datos 360Giving"
 
 #: cove/templates/multi_index.html:15
 msgid ""
 "360Giving provides support for grantmakers to publish their grants data "
-"openly, to understand their data, and to use the data to create online tools "
-"that make grant-making more effective."
+"openly, to understand their data, and to use the data to create online tools"
+" that make grant-making more effective."
 msgstr ""
+"360Giving proporciona soporte para que los subvencionadores publiquen sus "
+"datos de subvenciones abiertamente, y también para que entiendan mejor sus "
+"datos y los utilicen para crear herramientas en línea que hagan las "
+"decisiones sobre donaciones más eficaces."
 
 #: cove/templates/multi_index.html:16
 msgid "360Giving Data Quality Tool"
-msgstr ""
+msgstr "Herramienta de calidad de datos 360Giving"
 
 #: cove/templates/multi_index.html:24
 msgid "Open Contracting Logo"
-msgstr ""
+msgstr "Open Contracting Logo"
 
 #: cove/templates/multi_index.html:26
 msgid "Open Contracting Data Standard"
-msgstr ""
+msgstr "Estándar de Datos de Contrataciones Abiertas"
 
 #: cove/templates/multi_index.html:27
 msgid ""
-"The Open Contracting Data Standard promotes the effective use of contracting "
-"data, helping users to “follow the money”, and it provides a clear template "
-"for governments wishing to disclose their data."
+"The Open Contracting Data Standard promotes the effective use of contracting"
+" data, helping users to “follow the money”, and it provides a clear template"
+" for governments wishing to disclose their data."
 msgstr ""
+"El Estándar de Datos de Contrataciones Abiertas promueve el uso efectivo de "
+"datos de contratación, ayudando a los usuarios a “seguir el dinero”, y "
+"provee un modelo claro para aquellos gobiernos que deseen divulgar sus "
+"datos. "
 
 #: cove/templates/multi_index.html:28
 msgid "Open Contracting Data Tool"
-msgstr ""
+msgstr "Herramienta de Datos de Contrataciones Abiertas"
 
 #: cove/templates/multi_index.html:35
 msgid ""
 "Creating and using Open Data is made easier when there are good tools to "
 "help."
 msgstr ""
+"La creación y uso de Datos Abiertos se hace más fácil cuando hay buenas "
+"herramientas de ayuda."
 
 #: cove/templates/multi_index.html:36
 msgid "CoVE exisits to help people:"
-msgstr ""
+msgstr "CoVe existe para ayudar a la gente a:"
 
 #: cove/templates/multi_index.html:38
 msgid "Convert data between common formats (e.g. csv to json)"
-msgstr ""
+msgstr "Convertir datos entre formatos comunes (por ejemplo, csv a json)"
 
 #: cove/templates/multi_index.html:39
 msgid "Validate data against rules"
-msgstr ""
+msgstr "Validar datos contrastándolos con las reglas"
 
 #: cove/templates/multi_index.html:40
 msgid "Explore data, that machines find easy, but humans find harder to read"
 msgstr ""
+"Explorar datos que son faciles de leer para una máquina pero dificiles para "
+"los humanos"
 
 #: cove/templates/stats.html:4
 msgid "Usage stats"
-msgstr ""
+msgstr "Estadísticas de uso"
 
 #: cove/templates/stats.html:19
 msgid "Last"
-msgstr ""
+msgstr "Últimos"
 
 #: cove/templates/stats.html:19
 msgid "days"
-msgstr ""
+msgstr "días "
 
 #: cove/templates/validation_table.html:7
 msgid "Error Description"
-msgstr ""
+msgstr "Error de descripción"
 
 #: cove/templates/validation_table.html:8
 msgid "Error Count"
-msgstr ""
+msgstr "Total de errores"
 
 #: cove/templates/validation_table.html:9
 msgid "First 3 Examples"
-msgstr ""
+msgstr "3 primeros ejemplos"
 
 #: cove/templates/validation_table.html:10
 msgid "Location of first 3 errors"
-msgstr ""
+msgstr "Ubicación de los 3 primeros errores"
 
 #: cove/templates/validation_table.html:12
 msgid "Spreadsheet Location of first 3 errors"
-msgstr ""
+msgstr " Ubicación de los 3 primeros errores en la hoja de cálculo"
 
 #: cove/views.py:24 cove/views.py:36
 msgid "Sorry, the page you are looking for is not available"
-msgstr ""
+msgstr "Lo sentimos, la página que está buscando no está disponible"
 
 #: cove/views.py:26 cove/views.py:38
 msgid "Go to Home page"
-msgstr ""
+msgstr "Ir a la Página de Inicio"
 
 #: cove/views.py:27
 msgid "We don't seem to be able to find the data you requested."
-msgstr ""
+msgstr "Parece que no podemos encontrar los datos que usted solicitó."
 
 #: cove/views.py:39
 msgid ""
 "The data you were hoping to explore no longer exists.\n"
 "\n"
-"This is because all data suplied to this website is automatically deleted "
-"after 7 days, and therefore the analysis of that data is no longer available."
+"This is because all data suplied to this website is automatically deleted after 7 days, and therefore the analysis of that data is no longer available."
 msgstr ""
+"Los datos que usted quería explorar ya no existen.\n"
+"\n"
+"Esto se debe a que todos los datos suministrados a este sitio web se borran automáticamente después de 7 días, y por lo tanto el análisis de esos datos ya no está disponible."
