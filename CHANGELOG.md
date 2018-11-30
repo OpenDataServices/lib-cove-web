@@ -7,7 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
 
+- Update Transifex config and locale directory settings
+- Add English message files and Spanish translations
 
 ## [0.1.0] - 2018-11-28
 
