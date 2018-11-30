@@ -3,14 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Ben Webb <ben.webb@opendataservices.coop>, 2018
+# Eduardo Gomez <eduardo.gomez@hotmail.co.uk>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 09:48+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Eduardo Gomez <eduardo.gomez@hotmail.co.uk>, 2017\n"
+"POT-Creation-Date: 2018-11-30 11:11+0000\n"
+"PO-Revision-Date: 2018-11-30 11:12+0000\n"
+"Last-Translator: Eduardo Gomez <eduardo.gomez@hotmail.co.uk>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59127/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,9 +58,7 @@ msgstr ""
 "Lo sentimos, al tratar de descargar el archivo hemos encontrado un "
 "ConnectionError"
 
-#: cove/input/views.py:73 cove/input/views.py:81 cove/lib/converters.py:174
-#: cove/lib/exceptions.py:25 cove/lib/exceptions.py:34
-#: cove/lib/exceptions.py:61
+#: cove/input/views.py:73 cove/input/views.py:81
 msgid "Try Again"
 msgstr "Inténtelo de nuevo"
 
@@ -85,51 +87,6 @@ msgstr ""
 "\n"
 "\n"
 "Si se puede acceder al archivo a través de un navegador entonces el problema puede estar relacionado con los permisos de acceso , o puede ser que usted esté bloqueando ciertas aplicaciones de usuario."
-
-#: cove/lib/converters.py:172 cove/lib/exceptions.py:23
-#: cove/lib/exceptions.py:32 cove/lib/exceptions.py:59
-msgid "Sorry, we can't process that data"
-msgstr "Lo sentimos, no podemos procesar esos datos"
-
-#: cove/lib/converters.py:175
-msgid ""
-"We think you tried to upload a JSON file, but it is not well formed JSON.\n"
-"\n"
-"Error message: {}"
-msgstr ""
-"Creemos que ha intentado subir un archivo JSON, pero el archivo no es JSON bien formado.\n"
-"\n"
-"Mensaje del error: {}"
-
-#: cove/lib/exceptions.py:26
-msgid ""
-"We did not recognise the file type.\n"
-"\n"
-"We can only process json, csv and xlsx files."
-msgstr ""
-"No hemos podido reconocer ese tipo de archivo.\n"
-"\n"
-"Sólo podemos procesar archivos json, csv y xlsx."
-
-#: cove/lib/exceptions.py:35
-msgid ""
-"We did not recognise the file type.\n"
-"\n"
-"We can only process xml, csv and xlsx files."
-msgstr ""
-"No se reconoce el tipo de archivo. \n"
-"\n"
-"Sólo podemos procesar archivos xml, csv y xlsx."
-
-#: cove/lib/exceptions.py:62
-msgid ""
-"We think you tried to supply a spreadsheet, but we failed to convert it.\n"
-"\n"
-"Error message: {}"
-msgstr ""
-"Creemos que ha tratado de suministrar una hoja de cálculo, pero no hemos podido convertirla.\n"
-"\n"
-"Mensaje del error: {}"
 
 #: cove/templates/500.html:8
 msgid "Internal Server Error"
@@ -384,27 +341,22 @@ msgid "days"
 msgstr "días "
 
 #: cove/templates/validation_table.html:7
-#: cove/templates/validation_table_modal.html:7
 msgid "Error Description"
 msgstr "Error de descripción"
 
 #: cove/templates/validation_table.html:8
-#: cove/templates/validation_table_modal.html:9
 msgid "Error Count"
 msgstr "Total de errores"
 
 #: cove/templates/validation_table.html:9
-#: cove/templates/validation_table_modal.html:10
 msgid "First 3 Examples"
 msgstr "3 primeros ejemplos"
 
 #: cove/templates/validation_table.html:10
-#: cove/templates/validation_table_modal.html:11
 msgid "Location of first 3 errors"
 msgstr "Ubicación de los 3 primeros errores"
 
 #: cove/templates/validation_table.html:12
-#: cove/templates/validation_table_modal.html:13
 msgid "Spreadsheet Location of first 3 errors"
 msgstr " Ubicación de los 3 primeros errores en la hoja de cálculo"
 
