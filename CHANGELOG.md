@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix typo in the following text: "all data **suplied** to this website is automatically deleted"
+
 ### Changed
 
 - Update Transifex config: changed resource name to `cove-common`
