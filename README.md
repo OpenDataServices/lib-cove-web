@@ -11,7 +11,10 @@ Currently it does *not* stand alone as a CoVE django app.
 
 ## CoVEs which use this library
 
-* [Beneficial Ownership Data Standard]()
+* [Beneficial Ownership Data Standard](https://github.com/openownership/cove-bods)
+* [Open Contracting Data Standard](https://github.com/opendataservices/cove)
+* [IATI](https://github.com/opendataservices/cove)
+* [360Giving](https://github.com/opendataservices/cove)
 
 ## Translations
 
@@ -25,6 +28,16 @@ Translators can provide translations for this application by becomming a collabo
 ### Translations for Developers
 
 For more information about Django's translation framework, see https://docs.djangoproject.com/en/1.8/topics/i18n/translation/
+
+#### Adding new text
+
+In short:
+
+* Add strings in a way that makes them translatable.
+* Extract the messages and push them to transifex.
+* When translations are ready, pull them from transifex.
+* Bump the minor version number.
+* Update dependent CoVEs (see list above) to use the new version, so they get the new strings. 
 
 If you add new text to the interface, ensure to wrap it in the relevant gettext blocks/functions.
 
