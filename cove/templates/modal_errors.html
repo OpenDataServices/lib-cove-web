@@ -30,7 +30,14 @@
               <tr>
               {% if full_table %}
                 <td> {{item.value}} </td>
-                <td> {{item.path}} </td>
+                <td>
+                  {% if item.line %}
+                    <b>Path:</b> {{item.path}}
+                    {% if item.line %}<b>Line:</b> {{item.line}}{% endif %}
+                  {% else %}
+                    {{ item.path }}
+                  {% endif %}
+                </td>
                 {% if file_type == 'xlsx' or file_type == 'csv' %}
                   <td> <strong>Sheet:</strong> {{item.sheet}} <strong>Row:</strong> {{item.row_number}} {% if item.header %} <strong>Header:</strong> {{item.header}} {% endif %} </td>
                 {% endif %}

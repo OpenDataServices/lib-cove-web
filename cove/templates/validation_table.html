@@ -56,7 +56,14 @@
   <td>
     <ul class="list-unstyled">
       {% for value in values|slice:":3" %}
-         <li> {{value.path}} </li>
+        <li>
+          {% if value.line %}
+            <b>Path:</b> {{value.path}}
+            {% if value.line %}<b>Line:</b> {{value.line}}{% endif %}
+          {% else %}
+            {{ value.path }}
+          {% endif %}
+        </li>
       {% endfor %}
     </ul>
   </td>

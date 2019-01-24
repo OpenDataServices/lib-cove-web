@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Display an error's line number if available (currently only IATI)
+
 ## [0.2.0] - 2018-12-05
 
 ### Changed
