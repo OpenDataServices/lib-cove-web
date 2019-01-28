@@ -32,8 +32,8 @@
                 <td> {{item.value}} </td>
                 <td>
                   {% if item.line %}
-                    <b>Path:</b> {{item.path}}
-                    {% if item.line %}<b>Line:</b> {{item.line}}{% endif %}
+                    <b>{% trans 'Path:' %}</b> {{item.path}}
+                    {% if item.line %}<b>{% trans 'Line:' %}</b> {{item.line}}{% endif %}
                   {% else %}
                     {{ item.path }}
                   {% endif %}
