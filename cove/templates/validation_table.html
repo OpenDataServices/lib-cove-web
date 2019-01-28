@@ -59,7 +59,7 @@
         <li>
           {% if value.line %}
             <b>{% trans 'Path:' %}</b> {{value.path}}
-            {% if value.line %}<b>{% trans 'Line:' %}</b> {{value.line}}{% endif %}
+            <b>{% trans 'Line:' %}</b> {{value.line}}
           {% else %}
             {{ value.path }}
           {% endif %}
