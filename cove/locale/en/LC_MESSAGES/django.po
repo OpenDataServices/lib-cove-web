@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-30 11:11+0000\n"
+"POT-Creation-Date: 2019-02-06 11:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -231,6 +231,14 @@ msgstr ""
 
 #: cove/templates/modal_errors.html:17 cove/templates/modal_errors.html:23
 msgid "Spreadsheet Location"
+msgstr ""
+
+#: cove/templates/modal_errors.html:35 cove/templates/validation_table.html:61
+msgid "Path:"
+msgstr ""
+
+#: cove/templates/modal_errors.html:36 cove/templates/validation_table.html:62
+msgid "Line:"
 msgstr ""
 
 #: cove/templates/multi_index.html:12
