@@ -39,7 +39,11 @@
   {% endif %}
   <td class="text-center">
     {% if values|length > 3 %}
+      {% if error_prefix %}
+      <a data-toggle="modal" data-target=".{{"validation-errors-"|concat:error_prefix|concat:forloop.counter}}">
+      {% else %}
       <a data-toggle="modal" data-target=".{{"validation-errors-"|concat:forloop.counter}}">
+      {% endif %}
         {{values|length}}
       </a>
     {% else %}
