@@ -45,7 +45,8 @@ def explore_data_context(request, pk, get_file_type=None):
     context = {
         'original_file': {
             'url': data.original_file.url,
-            'size': data.original_file.size
+            'size': data.original_file.size,
+            'path': data.original_file.path,
         },
         'file_type': file_type,
         'data_uuid': pk,

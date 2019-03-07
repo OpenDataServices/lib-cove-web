@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Pass the original file path into the context
+
 ### Changed
 
 - Use error_prefix in validaiton error modal IDs, if available (for 360Giving error grouping) https://github.com/OpenDataServices/cove/issues/1117
