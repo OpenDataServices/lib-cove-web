@@ -11,17 +11,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Pass the original file path into the context
 
+### Fixed
+
+- Fix typo in the following text: "all data **suplied** to this website is automatically deleted"
+
+
 ## [0.3.0] - 2019-01-07
 
 ### Added
 
-### Added
-
 - Display an error's line number if available (currently only IATI)
-
-### Fixed
-
-- Fix typo in the following text: "all data **suplied** to this website is automatically deleted"
 
 ## [0.2.0] - 2018-12-05
 
