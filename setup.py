@@ -14,12 +14,12 @@ with open('./requirements.in') as requirements_txt:
 
 setup(
     name='libcoveweb',
-    version='0.4.0',
+    version='0.5.0',
     author='Open Data Services',
     author_email='code@opendataservices.coop',
     packages=['cove', 'cove.input', 'cove.dataload', 'cove.lib'],
     scripts=['manage.py'],
-    url='https://github.com/OpenDataServices/xxxxxxxxxxxxxxxxxxxx',
+    url='https://github.com/OpenDataServices/lib-cove-web',
     description='',
     classifiers=[
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
