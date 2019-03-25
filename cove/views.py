@@ -13,6 +13,12 @@ from libcove.lib.tools import get_file_type as _get_file_type
 logger = logging.getLogger(__name__)
 
 
+def get_file_name(file_name):
+    if file_name is not None and '/' in file_name:
+        file_name = file_name.split('/')[-1]
+    return file_name
+
+
 def explore_data_context(request, pk, get_file_type=None):
     if get_file_type is None:
         get_file_type = _get_file_type
@@ -49,12 +55,14 @@ def explore_data_context(request, pk, get_file_type=None):
             'path': data.original_file.path,
         },
         'file_type': file_type,
+        'file_name': get_file_name(file_name),
         'data_uuid': pk,
         'current_url': request.build_absolute_uri(),
         'source_url': data.source_url,
         'form_name': data.form_name,
         'created_datetime': data.created.strftime('%A, %d %B %Y %I:%M%p %Z'),
         'created_date': data.created.strftime('%A, %d %B %Y'),
+        'created_time': data.created.strftime('%I:%M%p %Z'),
     }
 
     return (context, data, None)

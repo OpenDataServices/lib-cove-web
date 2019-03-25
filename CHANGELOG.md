@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Fields `file_name` and `created_time` in explore_data_context.
+
 ## [0.5.0] - 2019-03-22
 
 ### Added
