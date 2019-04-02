@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.7.0] - 2019-04-02
+
+### Added
+
+- Add a block for about links, so that BODS CoVE can overwrite https://github.com/openownership/cove-bods/issues/25
+
 ## [0.6.0] - 2019-03-28
 
 ### Added
