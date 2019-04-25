@@ -1,6 +1,7 @@
-from django import template
-import random
 import json
+import random
+
+from django import template
 
 register = template.Library()
 
@@ -33,3 +34,9 @@ def subtract(value, arg):
 @register.filter(name='sample')
 def sample(population, k):
     return random.sample(population, k)
+
+
+@register.filter(name='list_from_attribute')
+def list_from_attribute(list_of_dicts, key_name):
+    return [value[key_name] for value in list_of_dicts]
+
