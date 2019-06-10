@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.9.0] - 2019-06-10
+
+### Added
+
+- Add template displaying all additional fields.
+
 ## [0.8.0] - 2019-04-25
 
 ### Added
