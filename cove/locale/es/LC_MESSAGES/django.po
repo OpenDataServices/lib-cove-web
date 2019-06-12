@@ -6,15 +6,18 @@
 # Translators:
 # Ben Webb <ben.webb@opendataservices.coop>, 2018
 # Eduardo Gomez <eduardo.gomez@hotmail.co.uk>, 2018
+# Bibiana Cristòfol <bcristofol@gmail.com>, 2019
+# David Raznick <david.raznick@opendataservices.coop>, 2019
+# Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-30 11:11+0000\n"
+"POT-Creation-Date: 2019-06-06 23:23+0000\n"
 "PO-Revision-Date: 2018-11-30 11:12+0000\n"
-"Last-Translator: Eduardo Gomez <eduardo.gomez@hotmail.co.uk>, 2018\n"
+"Last-Translator: Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59127/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -113,11 +116,15 @@ msgstr "por favor haga referencia a este error como"
 
 #: cove/templates/additional_codelist_values.html:7
 #: cove/templates/additional_fields_table.html:5
+#: cove/templates/additional_fields_table_all.html:7
+#: cove/templates/additional_fields_table_all.html:53
 msgid "Field"
 msgstr "Campo"
 
 #: cove/templates/additional_codelist_values.html:8
 #: cove/templates/additional_fields_table.html:5
+#: cove/templates/additional_fields_table_all.html:8
+#: cove/templates/additional_fields_table_all.html:54
 msgid "Path to Field"
 msgstr "Ruta al Campo"
 
@@ -130,8 +137,24 @@ msgid "Additional Values Used"
 msgstr "Valores Adicionales Usados"
 
 #: cove/templates/additional_fields_table.html:5
+#: cove/templates/additional_fields_table_all.html:9
+#: cove/templates/additional_fields_table_all.html:55
 msgid "Usage Count"
 msgstr "Número total de usos"
+
+#: cove/templates/additional_fields_table_all.html:10
+#: cove/templates/additional_fields_table_all.html:56
+msgid "Examples (first 3)"
+msgstr "Ejemplos (las primeras 3 ocurrencias)"
+
+#: cove/templates/additional_fields_table_all.html:11
+msgid "Child Fields"
+msgstr "Campos hijos"
+
+#: cove/templates/additional_fields_table_all.html:46
+#, python-format
+msgid "Child fields of %(parent_full_path)s"
+msgstr "Campos hijos de %(parent_full_path)s"
 
 #. Translators: Label of a button that triggers search
 #: cove/templates/base.html:55 cove/templates/page_header.html:27
@@ -142,53 +165,51 @@ msgstr "Ir"
 msgid "About"
 msgstr "Acerca de"
 
-#: cove/templates/base.html:117
+#: cove/templates/base.html:118
 msgid "Built by"
 msgstr "Construido por "
 
-#: cove/templates/base.html:117
+#: cove/templates/base.html:118
 msgid "Open Data Services"
 msgstr "Open Data Services"
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "The code for this site is available on"
 msgstr "El código de este sitio está disponible en "
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "GitHub"
 msgstr "GitHub"
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "Cove - COnvert Validate & Explore"
 msgstr "Cove - COnvert Validate & Explore"
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "Licence"
 msgstr "Licencia"
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "AGPLv3"
 msgstr "AGPLv3"
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "Report/View issues"
 msgstr "Reportar / Ver issues"
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "Cove Issues"
 msgstr "Issues del Cove"
 
-#: cove/templates/base.html:122
+#: cove/templates/base.html:124
 msgid "Terms &amp; Conditions"
 msgstr "Términos y condiciones"
 
-#. Translators: Provides information about the version of the code base that
-#. is being used
-#: cove/templates/base.html:125
+#: cove/templates/base.html:128
 msgid "Running version "
 msgstr "Versión en ejecución"
 
-#: cove/templates/base.html:130
+#: cove/templates/base.html:134
 msgid "Links"
 msgstr "Enlaces"
 
@@ -255,6 +276,14 @@ msgstr "Ubicación"
 #: cove/templates/modal_errors.html:17 cove/templates/modal_errors.html:23
 msgid "Spreadsheet Location"
 msgstr "Localización de la hoja de cálculo"
+
+#: cove/templates/modal_errors.html:35 cove/templates/validation_table.html:61
+msgid "Path:"
+msgstr "Ruta:"
+
+#: cove/templates/modal_errors.html:36 cove/templates/validation_table.html:62
+msgid "Line:"
+msgstr "Línea:"
 
 #: cove/templates/multi_index.html:12
 msgid "360Giving Logo"
@@ -360,19 +389,19 @@ msgstr "Ubicación de los 3 primeros errores"
 msgid "Spreadsheet Location of first 3 errors"
 msgstr " Ubicación de los 3 primeros errores en la hoja de cálculo"
 
-#: cove/views.py:24 cove/views.py:36
+#: cove/views.py:30 cove/views.py:42
 msgid "Sorry, the page you are looking for is not available"
 msgstr "Lo sentimos, la página que está buscando no está disponible"
 
-#: cove/views.py:26 cove/views.py:38
+#: cove/views.py:32 cove/views.py:44
 msgid "Go to Home page"
 msgstr "Ir a la Página de Inicio"
 
-#: cove/views.py:27
+#: cove/views.py:33
 msgid "We don't seem to be able to find the data you requested."
 msgstr "Parece que no podemos encontrar los datos que usted solicitó."
 
-#: cove/views.py:39
+#: cove/views.py:45
 msgid ""
 "The data you were hoping to explore no longer exists.\n"
 "\n"

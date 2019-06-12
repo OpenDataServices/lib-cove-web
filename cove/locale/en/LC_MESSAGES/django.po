@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 11:13+0000\n"
+"POT-Creation-Date: 2019-06-06 23:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -96,11 +96,15 @@ msgstr ""
 
 #: cove/templates/additional_codelist_values.html:7
 #: cove/templates/additional_fields_table.html:5
+#: cove/templates/additional_fields_table_all.html:7
+#: cove/templates/additional_fields_table_all.html:53
 msgid "Field"
 msgstr ""
 
 #: cove/templates/additional_codelist_values.html:8
 #: cove/templates/additional_fields_table.html:5
+#: cove/templates/additional_fields_table_all.html:8
+#: cove/templates/additional_fields_table_all.html:54
 msgid "Path to Field"
 msgstr ""
 
@@ -113,7 +117,23 @@ msgid "Additional Values Used"
 msgstr ""
 
 #: cove/templates/additional_fields_table.html:5
+#: cove/templates/additional_fields_table_all.html:9
+#: cove/templates/additional_fields_table_all.html:55
 msgid "Usage Count"
+msgstr ""
+
+#: cove/templates/additional_fields_table_all.html:10
+#: cove/templates/additional_fields_table_all.html:56
+msgid "Examples (first 3)"
+msgstr ""
+
+#: cove/templates/additional_fields_table_all.html:11
+msgid "Child Fields"
+msgstr ""
+
+#: cove/templates/additional_fields_table_all.html:46
+#, python-format
+msgid "Child fields of %(parent_full_path)s"
 msgstr ""
 
 #. Translators: Label of a button that triggers search
@@ -125,52 +145,51 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: cove/templates/base.html:117
+#: cove/templates/base.html:118
 msgid "Built by"
 msgstr ""
 
-#: cove/templates/base.html:117
+#: cove/templates/base.html:118
 msgid "Open Data Services"
 msgstr ""
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "The code for this site is available on"
 msgstr ""
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "GitHub"
 msgstr ""
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "Cove - COnvert Validate & Explore"
 msgstr ""
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "Licence"
 msgstr ""
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "AGPLv3"
 msgstr ""
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "Report/View issues"
 msgstr ""
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "Cove Issues"
 msgstr ""
 
-#: cove/templates/base.html:122
+#: cove/templates/base.html:124
 msgid "Terms &amp; Conditions"
 msgstr ""
 
-#. Translators: Provides information about the version of the code base that is being used
-#: cove/templates/base.html:125
+#: cove/templates/base.html:128
 msgid "Running version "
 msgstr ""
 
-#: cove/templates/base.html:130
+#: cove/templates/base.html:134
 msgid "Links"
 msgstr ""
 
@@ -333,19 +352,19 @@ msgstr ""
 msgid "Spreadsheet Location of first 3 errors"
 msgstr ""
 
-#: cove/views.py:24 cove/views.py:36
+#: cove/views.py:30 cove/views.py:42
 msgid "Sorry, the page you are looking for is not available"
 msgstr ""
 
-#: cove/views.py:26 cove/views.py:38
+#: cove/views.py:32 cove/views.py:44
 msgid "Go to Home page"
 msgstr ""
 
-#: cove/views.py:27
+#: cove/views.py:33
 msgid "We don't seem to be able to find the data you requested."
 msgstr ""
 
-#: cove/views.py:39
+#: cove/views.py:45
 msgid ""
 "The data you were hoping to explore no longer exists.\n"
 "\n"
