@@ -1,8 +1,8 @@
-pip==19.1
-Django==1.11.20
+pip==19.1.1
+Django==1.11.21
 django-bootstrap3==11.0.0
 django-debug-toolbar==1.11
-requests==2.21.0
+requests==2.22.0
 cached-property==1.5.1
 dealer==2.1.0
 django-environ==0.4.5
@@ -16,19 +16,19 @@ rfc3987==1.3.8
 rfc6266==0.0.4
 bleach==3.1.0
 xmltodict==0.12.0
--e git+https://github.com/OpenDataServices/lib-cove.git@52acb2f0dcd296b9d952ff2adbae61dc4f8dd296#egg=libcove
+-e git+https://github.com/OpenDataServices/lib-cove.git@213e5fe3145ab186e34db325d4f40fe051755b84#egg=libcove
 
 ## The following requirements were added by pip freeze:
 attrs==19.1.0
-certifi==2019.3.9
+certifi==2019.6.16
 chardet==3.0.4
-commonmark==0.8.1
+commonmark==0.9.0
 future==0.17.1
 idna==2.8
 LEPL==5.1.3
-pyrsistent==0.14.11
+pyrsistent==0.15.2
 pytz==2019.1
 six==1.12.0
 sqlparse==0.3.0
-urllib3==1.24.2
+urllib3==1.25.3
 webencodings==0.5.1
