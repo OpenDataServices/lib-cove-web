@@ -16,6 +16,10 @@ Currently it does *not* stand alone as a CoVE django app.
 * [IATI](https://github.com/opendataservices/cove)
 * [360Giving](https://github.com/opendataservices/cove)
 
+## Changelog
+
+Changes are tracked in CHANGELOG.md. Make sure you update that file when changing anything here!
+
 ## Translations
 
 We use Django's translation framework to provide this application in different languages.

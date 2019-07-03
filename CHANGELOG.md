@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.10.0] 2019-07-03
+
+### Added
+
+- Add styling for 360Giving metadata work
+
 ## [0.9.1] - 2019-06-18
 
 ### Changed
