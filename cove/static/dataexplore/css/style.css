@@ -24,6 +24,17 @@ h1.application-name {
   margin-bottom: -36px;
 }
 
+.publisher-logo {
+  margin-left: 35px;
+  margin-top: 5px;
+  max-height: 150px;
+  max-width: 250px;
+}
+
+.small-font {
+  font-size: 80%
+}
+
 .language-select {
   margin: 1px 0;
 }
