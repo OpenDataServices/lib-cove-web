@@ -14,7 +14,7 @@ with open('./requirements.in') as requirements_txt:
 
 setup(
     name='libcoveweb',
-    version='0.9.1',
+    version='0.9.2',
     author='Open Data Services',
     author_email='code@opendataservices.coop',
     packages=['cove', 'cove.input', 'cove.dataload', 'cove.lib'],
