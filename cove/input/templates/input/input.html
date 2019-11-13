@@ -5,19 +5,19 @@
 {% block content %}
 <div id="loading" style="display: none"> <h3> Loading: </h3> <img class="spinner" src="//i1.wp.com/cdnjs.cloudflare.com/ajax/libs/galleriffic/2.0.1/css/loader.gif" alt="spinner" width="30" height="30"> </div>
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  {% if 'upload' in input_methods %}
+  {% if 'url' in input_methods %}
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
       <h4 class="panel-title">
         <a class="accordion-toggle">
-          <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>{% trans "Upload" %}
+          <span class="glyphicon glyphicon-link" aria-hidden="true"></span>{% trans "Link" %}
         </a>
       </h4>
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
-        <form method="POST" action="." enctype="multipart/form-data">{% csrf_token %}
-            {% bootstrap_form forms.upload_form %}
+        <form method="POST" action="." id="fetchURL">{% csrf_token %}
+            {% bootstrap_form forms.url_form %}
             {% buttons %}
                 <button type="submit" class="btn btn-primary">
                     {% trans 'Submit' %}
@@ -28,19 +28,19 @@
     </div>
   </div>
   {% endif %}
-  {% if 'url' in input_methods %}
+  {% if 'upload' in input_methods %}
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
       <h4 class="panel-title">
         <a class="accordion-toggle">
-          <span class="glyphicon glyphicon-link" aria-hidden="true"></span>{% trans "Link" %}
+          <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>{% trans "Upload" %}
         </a>
       </h4>
     </div>
     <div id="collapseTwo" class="panel-collapse show-open-if-noscript" role="tabpanel" aria-labelledby="headingTwo">
       <div class="panel-body">
-        <form method="POST" action="." id="fetchURL">{% csrf_token %}
-            {% bootstrap_form forms.url_form %}
+        <form method="POST" action="." enctype="multipart/form-data">{% csrf_token %}
+            {% bootstrap_form forms.upload_form %}
             {% buttons %}
                 <button type="submit" class="btn btn-primary">
                     {% trans 'Submit' %}

@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.9.3] - 2019-11-13
+
+### Changed
+
+- Landing page JSON inputs reordered to put 'Link' first and expanded.
+
 ## [0.9.2] - 2019-07-04
 
 - Update 360Giving's address
