@@ -16,6 +16,8 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css">
   
   <title>{{ app_verbose_name }} {% block title %}{% endblock %}</title>
+
+  {% include "hotjar.html" %}
 </head>
 <body>
   {% block banner %}

@@ -39,6 +39,8 @@ env = environ.Env(  # set default values and casting
     PIWIK_SITE_ID=(str, ''),
     PIWIK_DIMENSION_MAP=(dict, {}),
     GOOGLE_ANALYTICS_ID=(str, ''),
+    HOTJAR_ID=(str, ''),
+    HOTJAR_SV=(str, ''),
     ALLOWED_HOSTS=(list, []),
     SECRET_KEY=(str, secret_key),
     DB_NAME=(str, os.path.join(BASE_DIR, 'db.sqlite3')),
@@ -53,6 +55,11 @@ PIWIK = {
 }
 
 GOOGLE_ANALYTICS_ID = env('GOOGLE_ANALYTICS_ID')
+
+HOTJAR = {
+    'id': env('HOTJAR_ID'),
+    'sv': env('HOTJAR_SV'),
+}
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
