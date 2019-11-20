@@ -56,12 +56,22 @@
   <p>In this website we use cookies to:</p>
 
   <ul>
-    <li>Help us analyse how our website is used."</li>
+    <li>Help us analyse how our website is used.</li>
     <li>To ensure other sites can’t “forge” requests.</li>
     <li>Remember your choices within the application, for your convenience.</li>
   </ul>
 
-  <p>We use <a href="http://matomo.org">Matomo</a> to analyse usage of our website (see "Understanding website visitor and traffic patterns" section below). This uses cookies to identify you (anonymously) as the same user, so that we can analyse our web traffic better. E.g. it allows us to count how many users we have, instead of just total page views or analyse what pages people commonly visit together.</p>
+  <p>We use
+  {% if app == 'cove_ocds' %}
+    {% if hotjar.id %}
+      Matomo, Google Analytics and Hotjar
+    {% else %}
+      Matomo, and Google Analytics
+    {% endif %}
+  {% else %}
+    <a href="http://matomo.org">Matomo</a>
+  {% endif %}
+  to analyse usage of our website (see "Understanding website visitor and traffic patterns" section below). {% if app == 'cove_ocds' %}These use{% else %}This uses{% endif %} cookies to identify you (anonymously) as the same user, so that we can analyse our web traffic better. E.g. it allows us to count how many users we have, instead of just total page views or analyse what pages people commonly visit together.</p>
 
   <p>If you do allow cookies to be used, Matomo uses 1st party cookies, set on the domain of this website. Cookies created by Matomo start with: </p>
   <ul>
@@ -72,6 +82,13 @@
   </ul>
 
   <p>See: <a href="http://piwik.org/faq/general/faq_146/">http://piwik.org/faq/general/faq_146/</a> for more information.</p>
+
+  {% if app == 'cove_ocds' %}
+    <p><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">List of cookies that Google Analytics sets</a>.</p>
+    {% if hotjar.id %}
+      <p><a href="https://help.hotjar.com/hc/en-us/articles/115011789248-Hotjar-Cookies">List of cookies that Hotjar sets</a>.</p>
+    {% endif %}
+  {% endif %}
 
   <p>The application is built using <a href="https://www.djangoproject.com/">Django</a> and we use that framework to set the following cookies:</p>
    <ul>{% comment %}Translators: csrftoken and sessionid are names of cookies and do not need translation {% endcomment %}
@@ -123,7 +140,20 @@
 
 
   <h3>Understanding website visitor and traffic patterns</h3>
-  We collect data about your visits to the website, for the purpose of analysing how the website is used, so that we can improve it. A self hosted copy of Matomo is used for this.
+  We collect data about your visits to the website, for the purpose of analysing how the website is used, so that we can improve it.
+  {% if app == 'cove_ocds' %}
+    {% if hotjar.id %}
+      We use Matomo, Google Analytics and Hotjar for this.
+    {% else %}
+      We use Matomo, and Google Analytics for this.
+    {% endif %}
+  {% else %}
+    A self hosted copy of Matomo is used for this.
+  {% endif %}
+
+  {% if app == 'cove_ocds' %}
+  <h4>Matomo</h4>
+  {% endif %}
 
   <p>Personal data we collect:<ul>
     <li>Your IP address - this is pseudonymised by redacting the second half of the address</li>
@@ -145,6 +175,35 @@
     <p>No data is transferred to third countries or international organisations.</p>
   {% endif %}
   <p>The data is kept indefinitely, in pseudonymised form.</p>
+
+{% if app == 'cove_ocds' %}
+  <h4>Google analytics</h4>
+
+  <p>Personal data we collect:</p>
+  <ul class="simple">
+    <li>Your IP address</li>
+    <li>Referrer (what page you arrived at one of our web pages from)</li>
+    <li>Information about your device, OS and browser</li>
+  </ul>
+  <p>We do not use this data to personally identify individuals, but it is possible that it could be used to do so, particularly if combined with other datasets.</p>
+  <p>Data processors: Google Analytics, Open Data Services Co-operative Limited</p>
+  <p>The data controller (Open Contracting Partnership) is based in the USA.</p>
+  <p>Data is transferred to Google Analytics, who may transfer data to third countries (non-EEA).</p>
+  <p>The data is kept indefinitely, in pseudonymised form.</p>
+
+  {% if hotjar.id %}
+  <h4>Hotjar</h4>
+
+  <p>In order to understand the behaviour of website visitors, to help us understand the most popular features and understand potential sources of frustration for website users, we are currently running a time-limited experiment using <a href="https://www.hotjar.com/">Hotjar</a> behaviour tracking.</p>
+
+  <p>Hotjar is a technology service that helps us better understand our users experience (e.g. how much time they spend on which pages, which links they choose to click, what users do and don’t like, etc.) and this enables us to build and maintain our service with user feedback. Hotjar uses cookies and other technologies to collect data on our users’ behavior and their devices (in particular device's IP address (captured and stored only in anonymized form), device screen size, device type (unique device identifiers), browser information, geographic location (country only), preferred language used to display our website). Hotjar stores this information in a pseudonymized user profile. Neither Hotjar nor we will ever use this information to identify individual users or to match it with further data on an individual user. For further details, please see Hotjar’s privacy policy by clicking on <a href="https://www.hotjar.com/legal/policies/privacy">this link</a>.</p>
+ 
+  <p>You can opt-out to the creation of a user profile, Hotjar’s storing of data about your usage of our site and Hotjar’s use of tracking cookies on other websites by following this <a href="https://www.hotjar.com/legal/compliance/opt-out">opt-out link</a>.</p>
+  {% endif %}
+
+
+{% endif %}
+
 
   <h3>Understanding server behaviour</h3>
   We collect data about your visits to the website in server logs. This is for the purpose of debugging network issues, monitoring server usage, and identifying malicious usage.
