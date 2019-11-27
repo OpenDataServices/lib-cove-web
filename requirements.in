@@ -16,5 +16,4 @@ rfc3987
 rfc6266
 bleach
 xmltodict
-libcove
-
+libcove>=0.7.0
