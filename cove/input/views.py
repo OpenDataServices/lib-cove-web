@@ -1,6 +1,7 @@
 import requests
 
 from django import forms
+from django.conf import settings
 from django.core.files.base import ContentFile
 from django.shortcuts import render, redirect
 from django.utils.translation import ugettext_lazy as _
@@ -86,4 +87,4 @@ def data_input(request, form_classes=default_form_classes, text_file_name='test.
                 data.original_file.save(text_file_name, ContentFile(form['paste'].value()))
             return redirect(data.get_absolute_url())
 
-    return render(request, 'input/input.html', {'forms': forms})
+    return render(request, settings.COVE_CONFIG.get('input_template', 'input.html'), {'forms': forms})
