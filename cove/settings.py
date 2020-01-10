@@ -41,6 +41,7 @@ env = environ.Env(  # set default values and casting
     GOOGLE_ANALYTICS_ID=(str, ''),
     HOTJAR_ID=(str, ''),
     HOTJAR_SV=(str, ''),
+    HOTJAR_DATE_INFO=(str, ''),
     ALLOWED_HOSTS=(list, []),
     SECRET_KEY=(str, secret_key),
     DB_NAME=(str, os.path.join(BASE_DIR, 'db.sqlite3')),
@@ -59,6 +60,7 @@ GOOGLE_ANALYTICS_ID = env('GOOGLE_ANALYTICS_ID')
 HOTJAR = {
     'id': env('HOTJAR_ID'),
     'sv': env('HOTJAR_SV'),
+    'date_info': env('HOTJAR_DATE_INFO'),
 }
 
 
