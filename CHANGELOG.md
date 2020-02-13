@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Split terms.html into many templates using includes
+(This make it possible for instances of COVE to add extra trackers)
+
 ## [0.10.0] - 2019-11-27
 
 ### Changed
