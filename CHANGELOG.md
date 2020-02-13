@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Split terms.html into many templates using includes
 (This make it possible for instances of COVE to add extra trackers)
+- Add Terms for Google Analytics, behind a config switch
+(The actual tracking code for Google Analytics is in this library (behind a config switch) so the terms and conditions should be too.)
 
 ## [0.10.0] - 2019-11-27
 
