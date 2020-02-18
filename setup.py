@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 install_requires = []
 
@@ -17,7 +17,20 @@ setup(
     version='0.15.0',
     author='Open Data Services',
     author_email='code@opendataservices.coop',
-    packages=['cove', 'cove.input', 'cove.dataload', 'cove.lib'],
+    packages=find_packages(),
+    package_data={
+        'cove': [
+            'fixtures/*',
+            'locale/*/*/*.po',
+            'sass/*/*',
+            'sass/*/*/*',
+            'sass/*/*/*/*',
+            'static/*/*',
+            'static/*/*/*',
+            'static/*/*/*/*',
+            'templates/*'
+        ]
+    },
     scripts=['manage.py'],
     url='https://github.com/OpenDataServices/lib-cove-web',
     description='',
