@@ -13,7 +13,7 @@
               {% if full_table %}
                 <th>{% trans 'Value' %}</th>
                 <th>{% trans 'Location' %}</th>
-                {% if file_type == 'xlsx' or file_type == 'csv' %}
+                {% if file_type == 'xlsx' or file_type == 'csv' or file_type == 'ods' %}
                   <th>{% trans 'Spreadsheet Location' %}</th> 
                 {% endif %}
               {% else %}
@@ -38,7 +38,7 @@
                     {{ item.path }}
                   {% endif %}
                 </td>
-                {% if file_type == 'xlsx' or file_type == 'csv' %}
+                {% if file_type == 'xlsx' or file_type == 'csv' or file_type == 'ods' %}
                   <td> <strong>Sheet:</strong> {{item.sheet}} <strong>Row:</strong> {{item.row_number}} {% if item.header %} <strong>Header:</strong> {{item.header}} {% endif %} </td>
                 {% endif %}
               {% else %}
