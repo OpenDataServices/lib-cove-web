@@ -10,7 +10,8 @@ import rfc6266  # (content-disposition header parser)
 CONTENT_TYPE_MAP = {
     'application/json': 'json',
     'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 'xlsx',
-    'text/csv': 'csv'
+    'text/csv': 'csv',
+    'application/vnd.oasis.opendocument.spreadsheet': 'ods',
 }
 
 

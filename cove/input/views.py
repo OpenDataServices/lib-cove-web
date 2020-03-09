@@ -15,7 +15,7 @@ class UploadForm(forms.ModelForm):
         model = SuppliedData
         fields = ['original_file']
         labels = {
-            'original_file': _('Upload a file (.json, .csv, .xlsx)')
+            'original_file': _('Upload a file (.json, .csv, .xlsx, .ods)')
         }
 
 
