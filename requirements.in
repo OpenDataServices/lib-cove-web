@@ -1,4 +1,3 @@
-pip
 Django>=1.11.23,<1.12
 django-bootstrap3
 django-debug-toolbar
@@ -6,6 +5,7 @@ requests
 cached-property
 dealer
 django-environ
+zipp==1.2.0
 jsonschema
 jsonref
 json-merge-patch
@@ -14,6 +14,8 @@ raven
 strict-rfc3339
 rfc3987
 rfc6266
-bleach
 xmltodict
+# libcove deps on flatten-tool which pulls in openpyxl
+# which is only compatible with certain versions of python
+openpyxl==2.6.4
 libcove>=0.7.0
