@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.12.0] - 2020-03-11
+
+### Add
+
+- Text added to show awareness of Open Document Support that is now available in flatten-tool 0.11.0 and current CoVE.
+
 ## [0.11.0] - 2020-02-17
 
 ### Changed
