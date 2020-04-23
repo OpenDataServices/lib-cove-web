@@ -15,8 +15,6 @@ import environ
 import os
 import warnings
 
-import raven
-
 from django.utils.crypto import get_random_string
 
 COVE_CONFIG = {
@@ -72,10 +70,14 @@ DEBUG = env('DEBUG')
 ALLOWED_HOSTS = env('ALLOWED_HOSTS')
 
 if env('SENTRY_DSN'):
-    RAVEN_CONFIG = {
-        'dsn': env('SENTRY_DSN'),
-        'release': raven.fetch_git_sha(os.path.join(os.path.dirname(__file__), '..')),
-    }
+    import sentry_sdk
+    from sentry_sdk.integrations.django import DjangoIntegration
+
+    sentry_sdk.init(
+        dsn=env('SENTRY_DSN'),
+        integrations=[DjangoIntegration()]
+    )
+
 
 
 # Application definition
@@ -92,9 +94,6 @@ INSTALLED_APPS = (
     'cove',
     'cove.input',
 )
-
-if env('SENTRY_DSN'):
-    INSTALLED_APPS += ('raven.contrib.django.raven_compat',)
 
 if env('DEBUG_TOOLBAR'):
     INSTALLED_APPS += ('debug_toolbar',)
@@ -188,10 +187,6 @@ LOGGING = {
         },
     },
     'handlers': {
-        'sentry': {
-            'level': 'WARNING',
-            'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
-        },
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
@@ -204,19 +199,9 @@ LOGGING = {
             'handlers': ['console'],
             'propagate': False,
         },
-        'raven': {
-            'level': 'DEBUG',
-            'handlers': ['console'],
-            'propagate': False,
-        },
-        'sentry.errors': {
-            'level': 'DEBUG',
-            'handlers': ['console'],
-            'propagate': False,
-        },
         '': {
             'level': 'WARNING',
-            'handlers': ['console', 'sentry'],
+            'handlers': ['console'],
         },
     },
 }
