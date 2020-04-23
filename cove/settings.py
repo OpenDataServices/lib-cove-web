@@ -74,7 +74,7 @@ if env('SENTRY_DSN'):
     from sentry_sdk.integrations.django import DjangoIntegration
 
     sentry_sdk.init(
-        dsn=config('SENTRY_DSN'),
+        dsn=env('SENTRY_DSN'),
         integrations=[DjangoIntegration()]
     )
 
