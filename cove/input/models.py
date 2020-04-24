@@ -1,6 +1,6 @@
 from django.db import models
 import uuid
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 import os
 from django.conf import settings
 import requests
