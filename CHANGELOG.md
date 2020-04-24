@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Changes needed to update 360/IATI cove to Django 2.2 LTS
+
 ## [0.13.0] - 2020-04-23
 
 ### Changed
