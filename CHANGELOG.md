@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.14.0] - 2020-04-28
+
 ### Changed
 
 - Changes needed to update 360/IATI cove to Django 2.2 LTS
+- Switch to sentry-sdk from raven
 
 ## [0.13.0] - 2020-04-23
 
