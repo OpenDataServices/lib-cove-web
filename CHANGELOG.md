@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Delete 360 logo. It is saved in cove and cove-opendataservices-coop repositories.
+- Delete lib-cove-web/cove/templates/multi_index.html. Not being used (it was replaced by the static site at 
+cove-opendataservices-coop).
+
 ## [0.14.0] - 2020-04-28
 
 ### Changed
