@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
-- Delete 360 logo. It is saved in cove and cove-opendataservices-coop repositories.
+- Break up some terms templates to allow OCDS specific overrides
+- Delete OCDS and 360 logos. They are saved in cove/cove-ocds and cove-opendataservices-coop repositories.
 - Delete lib-cove-web/cove/templates/multi_index.html. Not being used (it was replaced by the static site at 
 cove-opendataservices-coop).
 
