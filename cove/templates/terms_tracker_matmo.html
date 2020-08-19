@@ -15,9 +15,9 @@ If you have set your web browser to "I do not want to be tracked" (DoNotTrack is
 <iframe style="border: 1; height: 150px; width: 600px;" src="https://mon.opendataservices.coop/piwik/index.php?module=CoreAdminHome&amp;action=optOut&amp;language=en"></iframe>
 
 <p>Data processors: {% if app != 'cove_iati' %}Open Data Services Co-operative Limited, {% endif %}Bytemark.</p>
-{% if app == 'cove_ocds' %}
-<p>The data controller (Open Contracting Partnership) is based in the USA.</p>
-{% else %}
-<p>No data is transferred to third countries or international organisations.</p>
-{% endif %}
+
+{% include "terms_tracker_data_controller_international.html" %}
+
+{% include "terms_tracker_no_international.html" %}
+
 <p>The data is kept indefinitely, in pseudonymised form.</p>

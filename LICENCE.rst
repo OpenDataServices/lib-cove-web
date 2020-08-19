@@ -1,8 +1,6 @@
 Cove - COnvert Validate & Explore
 =================================
 
-Note: This license doesn't apply to the OCDS or 360Giving theme and related assets (such as the logo).
-
 Cove - COnvert Validate & Explore is free software designed to help people check data 
 published to various different data standards.
   
