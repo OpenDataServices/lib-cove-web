@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## Add
+
+- Add xml content types to auto detection https://github.com/OpenDataServices/cove/issues/1283
+
 ### Changed
 
 - Break up some terms templates to allow OCDS specific overrides

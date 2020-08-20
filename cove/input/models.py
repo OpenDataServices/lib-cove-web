@@ -12,6 +12,8 @@ CONTENT_TYPE_MAP = {
     'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 'xlsx',
     'text/csv': 'csv',
     'application/vnd.oasis.opendocument.spreadsheet': 'ods',
+    'application/xml': 'xml',
+    'text/xml': 'xml',
 }
 
 
