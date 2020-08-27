@@ -4,9 +4,11 @@ language: python
 
 python:
   - "3.5"
+  - "3.6"
 
 install: 
-  - "pip install -r requirements_dev.txt"
+  - "pip install --upgrade pip"
+  - "pip install --use-feature=2020-resolver --upgrade -e .[test]"
 
 script:
   - "DJANGO_SETTINGS_MODULE=cove.settings py.test -n 2 cove --cov --cov-report="

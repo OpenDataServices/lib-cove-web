@@ -2,16 +2,6 @@ from setuptools import setup, find_packages
 
 install_requires = []
 
-with open('./requirements.in') as requirements_txt:
-    requirements = requirements_txt.read().strip().splitlines()
-    for requirement in requirements:
-        if requirement.startswith('#'):
-            continue
-        elif requirement.startswith('-e '):
-            install_requires.append(requirement.split('=')[1])
-        else:
-            install_requires.append(requirement)
-
 setup(
     name='libcoveweb',
     version='0.15.0',
@@ -37,5 +27,42 @@ setup(
     classifiers=[
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
     ],
-    install_requires=install_requires,
+    install_requires=[
+        "Django<2.3",
+        "django-bootstrap3",
+        "django-debug-toolbar",
+        "requests",
+        "cached-property",
+        "dealer",
+        "django-environ",
+        "zipp==1.2.0",
+        "jsonschema",
+        "jsonref",
+        "json-merge-patch",
+        "python-dateutil",
+        "sentry-sdk",
+        "strict-rfc3339",
+        "rfc3987",
+        "rfc6266",
+        "xmltodict",
+        # libcove deps on flatten-tool which pulls in openpyxl
+        # which is only compatible with certain versions of python
+        "openpyxl==2.6.4",
+        "libcove>=0.17.0",
+    ],
+    extras_require={
+        'test': [
+            "flake8",
+            "pytest",
+            "pytest-django",
+            "pytest-cov",
+            "pytest-localserver",
+            "pytest-xdist",
+            "coveralls",
+            "selenium",
+            "transifex-client",
+            "libsass",
+            "hypothesis",
+        ],
+    }
 )
