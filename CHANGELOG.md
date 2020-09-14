@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## Add
+
+- Make it possible to set a limit on the number of locations shown for an error, and optionally randomise them if there are too many.
+
 ## [0.16.0] - 2020-08-27
 
 ### Fixed
