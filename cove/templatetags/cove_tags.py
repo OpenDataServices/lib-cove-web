@@ -2,6 +2,7 @@ import json
 import random
 
 from django import template
+from django.conf import settings
 
 register = template.Library()
 
@@ -12,8 +13,12 @@ def cove_modal_list(**kw):
 
 
 @register.inclusion_tag('modal_errors.html')
-def cove_modal_errors(**kw):
-    return kw
+def cove_modal_errors(**context):
+    if hasattr(settings, 'VALIDATION_ERROR_LOCATIONS_LENGTH'):
+        context['validation_error_locations_length'] = settings.VALIDATION_ERROR_LOCATIONS_LENGTH
+    if hasattr(settings, 'VALIDATION_ERROR_LOCATIONS_SAMPLE'):
+        context['validation_error_locations_sample'] = settings.VALIDATION_ERROR_LOCATIONS_SAMPLE
+    return context
 
 
 @register.filter(name='json_decode')
@@ -34,6 +39,17 @@ def subtract(value, arg):
 @register.filter(name='sample')
 def sample(population, k):
     return random.sample(population, k)
+
+
+@register.filter(name='take_or_sample')
+def take_or_sample(population, k):
+    if hasattr(settings, 'VALIDATION_ERROR_LOCATIONS_SAMPLE') and settings.VALIDATION_ERROR_LOCATIONS_SAMPLE:
+        if len(population) > k:
+            return random.sample(population, k)
+        else:
+            return population
+    else:
+        return population[:k]
 
 
 @register.filter(name='list_from_attribute')

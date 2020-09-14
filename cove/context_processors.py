@@ -1,13 +1,12 @@
 from django.conf import settings
 
 
-def analytics(request):
-    return {
+def from_settings(request):
+    context = {
+        'input_methods': settings.COVE_CONFIG.get('input_methods', []),
+        'app_verbose_name': settings.COVE_CONFIG.get('app_verbose_name', []),
+
         'piwik': settings.PIWIK,
-        'google_analytics_id': settings.GOOGLE_ANALYTICS_ID
+        'google_analytics_id': settings.GOOGLE_ANALYTICS_ID,
     }
-
-
-def input_methods(request):
-    return {'input_methods': settings.COVE_CONFIG.get('input_methods', []),
-            'app_verbose_name': settings.COVE_CONFIG.get('app_verbose_name', [])}
+    return context
