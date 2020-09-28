@@ -6,18 +6,18 @@
 # Translators:
 # Ben Webb <ben.webb@opendataservices.coop>, 2018
 # Eduardo Gomez <eduardo.gomez@hotmail.co.uk>, 2018
-# Bibiana Cristòfol <bcristofol@gmail.com>, 2019
 # David Raznick <david.raznick@opendataservices.coop>, 2019
 # Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2019
+# Bibiana Cristòfol <bcristofol@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-06 23:23+0000\n"
+"POT-Creation-Date: 2020-09-16 11:01+0000\n"
 "PO-Revision-Date: 2018-11-30 11:12+0000\n"
-"Last-Translator: Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2019\n"
+"Last-Translator: Bibiana Cristòfol <bcristofol@gmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59127/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,47 +25,29 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: cove/input/templates/input/input.html:13 cove/templates/stats.html:10
-msgid "Upload"
-msgstr "Subir"
+#: cove/input/views.py:18
+msgid "Upload a file (.json, .csv, .xlsx, .ods)"
+msgstr "Subir un archivo (.json, .csv, .xlsx, .ods)"
 
-#: cove/input/templates/input/input.html:23
-#: cove/input/templates/input/input.html:46
-#: cove/input/templates/input/input.html:69
-msgid "Submit"
-msgstr "Enviar"
-
-#: cove/input/templates/input/input.html:36 cove/templates/stats.html:11
-msgid "Link"
-msgstr "Enlazar"
-
-#: cove/input/templates/input/input.html:59 cove/templates/stats.html:12
-msgid "Paste"
-msgstr "Pegar"
-
-#: cove/input/views.py:17
-msgid "Upload a file (.json, .csv, .xlsx)"
-msgstr "Subir un archivo (.json, .csv, .xlsx)"
-
-#: cove/input/views.py:26
+#: cove/input/views.py:27
 msgid "Supply a URL"
 msgstr "Proporcionar una dirección URL"
 
-#: cove/input/views.py:31
+#: cove/input/views.py:32
 msgid "Paste (JSON only)"
 msgstr "Pegar (sólo JSON)"
 
-#: cove/input/views.py:71
+#: cove/input/views.py:72
 msgid "Sorry we got a ConnectionError whilst trying to download that file"
 msgstr ""
 "Lo sentimos, al tratar de descargar el archivo hemos encontrado un "
 "ConnectionError"
 
-#: cove/input/views.py:73 cove/input/views.py:81
+#: cove/input/views.py:74 cove/input/views.py:82
 msgid "Try Again"
 msgstr "Inténtelo de nuevo"
 
-#: cove/input/views.py:74
+#: cove/input/views.py:75
 msgid ""
 "\n"
 "\n"
@@ -75,13 +57,13 @@ msgstr ""
 "\n"
 "Las causas más comunes de este tipo de error son el uso de una direccción URL para desarrollo local que nuestros servidores no pueden acceder o el uso de certificados SSL mal configurados."
 
-#: cove/input/views.py:79
+#: cove/input/views.py:80
 msgid "Sorry we got a HTTP Error whilst trying to download that file"
 msgstr ""
 "Lo sentimos, al tratar de descargar el archivo hemos encontrado un HTTP "
 "Error"
 
-#: cove/input/views.py:82
+#: cove/input/views.py:83
 msgid ""
 "\n"
 "\n"
@@ -170,8 +152,8 @@ msgid "Built by"
 msgstr "Construido por "
 
 #: cove/templates/base.html:118
-msgid "Open Data Services"
-msgstr "Open Data Services"
+msgid "Open Data Services Co-operative"
+msgstr "Open Data Services Co-operative"
 
 #: cove/templates/base.html:119
 msgid "The code for this site is available on"
@@ -248,114 +230,85 @@ msgid "Excel Spreadsheet (.xlsx)"
 msgstr "Hoja de cálculo de Excel (.xlsx)"
 
 #: cove/templates/explore.html:14
+msgid "OpenDocument Spreadsheet (.ods)"
+msgstr "Hoja de cálculo de OpenDocument (.ods)"
+
+#: cove/templates/explore.html:15
 msgid "CSV Spreadsheet (.csv)"
 msgstr "Hoja de cálculo CSV (.csv)"
 
-#: cove/templates/explore.html:15
+#: cove/templates/explore.html:16
 msgid "Excel Spreadsheet (.xlsx) with titles"
 msgstr "Hoja de cálculo de Excel (.xlsx) con títulos"
 
+#: cove/templates/explore.html:17
+msgid "OpenDocument Spreadsheet (.ods) with titles"
+msgstr "Hoja de cálculo de OpenDocument (.ods) con títulos"
+
 #. Translators: JSON probably does not need a transalation:
 #. http://www.json.org/
-#: cove/templates/explore.html:17
+#: cove/templates/explore.html:19
 msgid "JSON"
 msgstr "JSON"
 
-#: cove/templates/explore.html:18
+#: cove/templates/explore.html:20
 msgid "XML"
 msgstr "XML"
 
+#: cove/templates/input.html:13 cove/templates/stats.html:10
+msgid "Upload"
+msgstr "Subir"
+
+#: cove/templates/input.html:23 cove/templates/input.html:46
+#: cove/templates/input.html:69
+msgid "Submit"
+msgstr "Enviar"
+
+#: cove/templates/input.html:36 cove/templates/stats.html:11
+msgid "Link"
+msgstr "Enlazar"
+
+#: cove/templates/input.html:59 cove/templates/stats.html:12
+msgid "Paste"
+msgstr "Pegar"
+
 #: cove/templates/modal_errors.html:14
+#, python-format
+msgid ""
+"Showing a random %(validation_error_locations_length)s locations for this "
+"error."
+msgstr ""
+"Mostrando ubicaciones aleatorias %(validation_error_locations_length)spara "
+"este error."
+
+#: cove/templates/modal_errors.html:16
+#, python-format
+msgid ""
+"Showing the first %(validation_error_locations_length)s locations for this "
+"error."
+msgstr ""
+"Mostrando la primera %(validation_error_locations_length)s ubicación para "
+"este error."
+
+#: cove/templates/modal_errors.html:24
 msgid "Value"
 msgstr "Valor"
 
-#: cove/templates/modal_errors.html:15 cove/templates/modal_errors.html:21
+#: cove/templates/modal_errors.html:25 cove/templates/modal_errors.html:31
 msgid "Location"
 msgstr "Ubicación"
 
-#: cove/templates/modal_errors.html:17 cove/templates/modal_errors.html:23
+#: cove/templates/modal_errors.html:27 cove/templates/modal_errors.html:33
 msgid "Spreadsheet Location"
 msgstr "Localización de la hoja de cálculo"
 
-#: cove/templates/modal_errors.html:35 cove/templates/validation_table.html:61
+#: cove/templates/modal_errors.html:45 cove/templates/validation_table.html:61
 msgid "Path:"
 msgstr "Ruta:"
 
-#: cove/templates/modal_errors.html:36 cove/templates/validation_table.html:62
+#: cove/templates/modal_errors.html:46 cove/templates/validation_table.html:62
 msgid "Line:"
 msgstr "Línea:"
-
-#: cove/templates/multi_index.html:12
-msgid "360Giving Logo"
-msgstr "360Giving Logo"
-
-#: cove/templates/multi_index.html:14
-msgid "360Giving Data Standard"
-msgstr "Estándar de Datos 360Giving"
-
-#: cove/templates/multi_index.html:15
-msgid ""
-"360Giving provides support for grantmakers to publish their grants data "
-"openly, to understand their data, and to use the data to create online tools"
-" that make grant-making more effective."
-msgstr ""
-"360Giving proporciona soporte para que los subvencionadores publiquen sus "
-"datos de subvenciones abiertamente, y también para que entiendan mejor sus "
-"datos y los utilicen para crear herramientas en línea que hagan las "
-"decisiones sobre donaciones más eficaces."
-
-#: cove/templates/multi_index.html:16
-msgid "360Giving Data Quality Tool"
-msgstr "Herramienta de calidad de datos 360Giving"
-
-#: cove/templates/multi_index.html:24
-msgid "Open Contracting Logo"
-msgstr "Open Contracting Logo"
-
-#: cove/templates/multi_index.html:26
-msgid "Open Contracting Data Standard"
-msgstr "Estándar de Datos de Contrataciones Abiertas"
-
-#: cove/templates/multi_index.html:27
-msgid ""
-"The Open Contracting Data Standard promotes the effective use of contracting"
-" data, helping users to “follow the money”, and it provides a clear template"
-" for governments wishing to disclose their data."
-msgstr ""
-"El Estándar de Datos de Contrataciones Abiertas promueve el uso efectivo de "
-"datos de contratación, ayudando a los usuarios a “seguir el dinero”, y "
-"provee un modelo claro para aquellos gobiernos que deseen divulgar sus "
-"datos. "
-
-#: cove/templates/multi_index.html:28
-msgid "Open Contracting Data Tool"
-msgstr "Herramienta de Datos de Contrataciones Abiertas"
-
-#: cove/templates/multi_index.html:35
-msgid ""
-"Creating and using Open Data is made easier when there are good tools to "
-"help."
-msgstr ""
-"La creación y uso de Datos Abiertos se hace más fácil cuando hay buenas "
-"herramientas de ayuda."
-
-#: cove/templates/multi_index.html:36
-msgid "CoVE exisits to help people:"
-msgstr "CoVe existe para ayudar a la gente a:"
-
-#: cove/templates/multi_index.html:38
-msgid "Convert data between common formats (e.g. csv to json)"
-msgstr "Convertir datos entre formatos comunes (por ejemplo, csv a json)"
-
-#: cove/templates/multi_index.html:39
-msgid "Validate data against rules"
-msgstr "Validar datos contrastándolos con las reglas"
-
-#: cove/templates/multi_index.html:40
-msgid "Explore data, that machines find easy, but humans find harder to read"
-msgstr ""
-"Explorar datos que son faciles de leer para una máquina pero dificiles para "
-"los humanos"
 
 #: cove/templates/stats.html:4
 msgid "Usage stats"

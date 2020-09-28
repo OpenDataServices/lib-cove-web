@@ -41,6 +41,8 @@ env = environ.Env(  # set default values and casting
     SECRET_KEY=(str, secret_key),
     DB_NAME=(str, os.path.join(BASE_DIR, 'db.sqlite3')),
     DEBUG_TOOLBAR=(bool, False),
+    VALIDATION_ERROR_LOCATIONS_LENGTH=(int, 1000),
+    VALIDATION_ERROR_LOCATIONS_SAMPLE=(bool, False),
     # SCHEMA_URL_360=(str, 'https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/'),
 )
 
@@ -49,9 +51,10 @@ PIWIK = {
     'site_id': env('PIWIK_SITE_ID'),
     'dimension_map': env('PIWIK_DIMENSION_MAP'),
 }
-
 GOOGLE_ANALYTICS_ID = env('GOOGLE_ANALYTICS_ID')
 
+VALIDATION_ERROR_LOCATIONS_LENGTH = env("VALIDATION_ERROR_LOCATIONS_LENGTH")
+VALIDATION_ERROR_LOCATIONS_SAMPLE = env("VALIDATION_ERROR_LOCATIONS_SAMPLE")
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -126,8 +129,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'cove.context_processors.analytics',
-                'cove.context_processors.input_methods'
+                'cove.context_processors.from_settings',
             ],
         },
     },
