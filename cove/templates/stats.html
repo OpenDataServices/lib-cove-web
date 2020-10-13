@@ -10,7 +10,7 @@
             <th>{% trans "Upload" %}</th>
             <th>{% trans "Link" %}</th>
             <th>{% trans "Paste" %}</th>
-            <th>Total</th>
+            <th>{% trans "Total" %}</th>
         </tr>
     </thead>
     <tbody>
@@ -24,7 +24,7 @@
         </tr>
     {% endfor %}
     <tr>
-        <th>Ever</th>
+        <th>{% trans "Ever" %}</th>
         <td>{{total_by_form.upload_form|default:"0"}}</td>
         <td>{{total_by_form.url_form|default:"0"}}</td>
         <td>{{total_by_form.text_form|default:"0"}}</td>
