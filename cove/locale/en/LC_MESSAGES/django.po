@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-18 15:19+0000\n"
+"POT-Creation-Date: 2020-10-15 15:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -73,6 +73,10 @@ msgid ""
 msgstr ""
 
 #: cove/templates/500.html:14
+msgid "get in touch"
+msgstr ""
+
+#: cove/templates/500.html:14
 msgid "please reference this error as "
 msgstr ""
 
@@ -111,6 +115,10 @@ msgstr ""
 
 #: cove/templates/additional_fields_table_all.html:11
 msgid "Child Fields"
+msgstr ""
+
+#: cove/templates/additional_fields_table_all.html:29
+msgid "(See child fields)"
 msgstr ""
 
 #: cove/templates/additional_fields_table_all.html:46
@@ -230,6 +238,10 @@ msgstr ""
 msgid "XML"
 msgstr ""
 
+#: cove/templates/input.html:6
+msgid "Loading:"
+msgstr ""
+
 #: cove/templates/input.html:13 cove/templates/stats.html:10
 msgid "Upload"
 msgstr ""
@@ -281,8 +293,26 @@ msgstr ""
 msgid "Line:"
 msgstr ""
 
+#: cove/templates/modal_errors.html:52 cove/templates/modal_errors.html:58
+#: cove/templates/validation_table.html:74
+msgid "Sheet:"
+msgstr ""
+
+#: cove/templates/modal_errors.html:52 cove/templates/modal_errors.html:58
+#: cove/templates/validation_table.html:74
+msgid "Row:"
+msgstr ""
+
+#: cove/templates/modal_errors.html:52 cove/templates/modal_errors.html:58
+msgid "Header:"
+msgstr ""
+
 #: cove/templates/stats.html:4
 msgid "Usage stats"
+msgstr ""
+
+#: cove/templates/stats.html:13
+msgid "Total"
 msgstr ""
 
 #: cove/templates/stats.html:19
@@ -291,6 +321,10 @@ msgstr ""
 
 #: cove/templates/stats.html:19
 msgid "days"
+msgstr ""
+
+#: cove/templates/stats.html:27
+msgid "Ever"
 msgstr ""
 
 #: cove/templates/validation_table.html:7
@@ -311,6 +345,94 @@ msgstr ""
 
 #: cove/templates/validation_table.html:12
 msgid "Spreadsheet Location of first 3 errors"
+msgstr ""
+
+#: cove/templates/validation_table.html:30
+msgid "(more info)"
+msgstr ""
+
+#: cove/templates/validation_table.html:74
+msgid "Column:"
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:71
+msgid "Date is not in the correct format"
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:72
+msgid "Invalid 'uri' found"
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:73
+msgid ""
+"{}<code>{}</code> is not a string. Check that the value {} has quotes at the "
+"start and end. Escape any quotes in the value with <code>\\</code>"
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:74
+msgid ""
+"{}<code>{}</code> is not a integer. Check that the value {} doesn’t contain "
+"decimal points or any characters other than 0-9. Integer values should not "
+"be in quotes. "
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:75
+msgid ""
+"{}<code>{}</code> is not a number. Check that the value {} doesn’t contain "
+"any characters other than 0-9 and dot (<code>.</code>). Number values should "
+"not be in quotes. "
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:76
+msgid "{}<code>{}</code> is not a JSON object"
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:77
+msgid "{}<code>{}</code> is not a JSON array"
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:91
+msgid "Array Element "
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:117
+msgid "<code>{}</code> is missing but required within <code>{}</code>"
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:123
+msgid "<code>{}</code> is missing but required"
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:127
+msgid "Invalid code found in <code>{}</code>"
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:131
+msgid "<code>{}</code> does not match the regex <code>{}</code>"
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:138
+msgid ""
+"<code>{}</code> is too short. You must supply at least one value, or remove "
+"the item entirely (unless it’s required)."
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:144
+msgid ""
+"<code>\"{}\"</code> is too short. Strings must be at least one character. "
+"This error typically indicates a missing value."
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:149
+msgid "{} does not have enough properties"
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:154
+msgid "Array has non-unique elements"
+msgstr ""
+
+#: cove/templatetags/cove_tags.py:157
+msgid "Non-unique {} values"
 msgstr ""
 
 #: cove/views.py:30 cove/views.py:42
