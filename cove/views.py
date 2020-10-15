@@ -1,3 +1,4 @@
+import functools
 import logging
 from datetime import timedelta
 
@@ -8,9 +9,52 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 
 from cove.input.models import SuppliedData
+from flattentool.json_input import BadlyFormedJSONError
+from libcove.lib.exceptions import CoveInputDataError, UnrecognisedFileType
 from libcove.lib.tools import get_file_type as _get_file_type
 
 logger = logging.getLogger(__name__)
+
+
+def cove_web_input_error(func):
+    @functools.wraps(func)
+    def wrapper(request, *args, **kwargs):
+        try:
+            return func(request, *args, **kwargs)
+        except BadlyFormedJSONError as err:
+            context={
+                "sub_title": _("Sorry, we can't process that data"),
+                "link": "index",
+                "link_text": _("Try Again"),
+                "msg": _(
+                    "We think you tried to upload a JSON file, but it is not well formed JSON.\n\nError message: {}".format(
+                        err
+                    )
+                ),
+            }
+        except UnrecognisedFileType:
+            context = {
+                "sub_title": _("Sorry, we can't process that data"),
+                "link": "index",
+                "link_text": _("Try Again"),
+                "msg": _(
+                    "We did not recognise the file type.\n\nWe can only process json, csv, ods and xlsx files."
+                ),
+            }
+        except CoveInputDataError as err:
+            context = {
+                    "sub_title": _("Sorry, we can't process that data"),
+                    "link": "index",
+                    "link_text": _("Try Again"),
+                    "msg": _(
+                        "We think you tried to supply a spreadsheet, but we failed to convert it."
+                        "\n\nError message: {}"
+                    ).format(repr(err.wrapped_err)),
+                }
+        except CoveInputDataError as err:
+            context = err.context
+        return render(request, 'error.html', context=context)
+    return wrapper
 
 
 def get_file_name(file_name):

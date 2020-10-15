@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-15 15:36+0000\n"
+"POT-Creation-Date: 2020-10-15 16:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,8 @@ msgstr ""
 msgid "Sorry we got a ConnectionError whilst trying to download that file"
 msgstr ""
 
-#: cove/input/views.py:74 cove/input/views.py:82
+#: cove/input/views.py:74 cove/input/views.py:82 cove/views.py:28
+#: cove/views.py:39 cove/views.py:48
 msgid "Try Again"
 msgstr ""
 
@@ -435,19 +436,44 @@ msgstr ""
 msgid "Non-unique {} values"
 msgstr ""
 
-#: cove/views.py:30 cove/views.py:42
+#: cove/views.py:26 cove/views.py:37 cove/views.py:46
+msgid "Sorry, we can't process that data"
+msgstr ""
+
+#: cove/views.py:30
+msgid ""
+"We think you tried to upload a JSON file, but it is not well formed JSON.\n"
+"\n"
+"Error message: {}"
+msgstr ""
+
+#: cove/views.py:41
+msgid ""
+"We did not recognise the file type.\n"
+"\n"
+"We can only process json, csv, ods and xlsx files."
+msgstr ""
+
+#: cove/views.py:50
+msgid ""
+"We think you tried to supply a spreadsheet, but we failed to convert it.\n"
+"\n"
+"Error message: {}"
+msgstr ""
+
+#: cove/views.py:74 cove/views.py:86
 msgid "Sorry, the page you are looking for is not available"
 msgstr ""
 
-#: cove/views.py:32 cove/views.py:44
+#: cove/views.py:76 cove/views.py:88
 msgid "Go to Home page"
 msgstr ""
 
-#: cove/views.py:33
+#: cove/views.py:77
 msgid "We don't seem to be able to find the data you requested."
 msgstr ""
 
-#: cove/views.py:45
+#: cove/views.py:89
 msgid ""
 "The data you were hoping to explore no longer exists.\n"
 "\n"

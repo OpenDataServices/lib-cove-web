@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-15 15:36+0000\n"
+"POT-Creation-Date: 2020-10-15 16:42+0000\n"
 "PO-Revision-Date: 2018-11-30 11:12+0000\n"
 "Last-Translator: Maria Esther Cervantes <mcervantes@cds.com.py>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59127/es/)\n"
@@ -44,7 +44,8 @@ msgstr ""
 "Lo sentimos, al tratar de descargar el archivo hemos encontrado un "
 "ConnectionError"
 
-#: cove/input/views.py:74 cove/input/views.py:82
+#: cove/input/views.py:74 cove/input/views.py:82 cove/views.py:28
+#: cove/views.py:39 cove/views.py:48
 msgid "Try Again"
 msgstr "Inténtelo de nuevo"
 
@@ -478,19 +479,53 @@ msgstr "La matriz tiene elementos no únicos"
 msgid "Non-unique {} values"
 msgstr "Valores {} no únicos"
 
-#: cove/views.py:30 cove/views.py:42
+#: cove/views.py:26 cove/views.py:37 cove/views.py:46
+msgid "Sorry, we can't process that data"
+msgstr "Lo sentimos, no podemos procesar esos datos"
+
+#: cove/views.py:30
+msgid ""
+"We think you tried to upload a JSON file, but it is not well formed JSON.\n"
+"\n"
+"Error message: {}"
+msgstr ""
+"Creemos que ha intentado subir un archivo JSON, pero el archivo no es JSON bien formado.\n"
+"\n"
+"Mensaje del error: {}"
+
+#: cove/views.py:41
+msgid ""
+"We did not recognise the file type.\n"
+"\n"
+"We can only process json, csv, ods and xlsx files."
+msgstr ""
+"No podemos reconocer este tipo de archivo. \n"
+"\n"
+"Solo podemos procesar archivos son, csv, ods y xlsx."
+
+#: cove/views.py:50
+msgid ""
+"We think you tried to supply a spreadsheet, but we failed to convert it.\n"
+"\n"
+"Error message: {}"
+msgstr ""
+"Creemos que ha tratado de suministrar una hoja de cálculo, pero no hemos podido convertirla.\n"
+"\n"
+"Mensaje del error: {}"
+
+#: cove/views.py:74 cove/views.py:86
 msgid "Sorry, the page you are looking for is not available"
 msgstr "Lo sentimos, la página que está buscando no está disponible"
 
-#: cove/views.py:32 cove/views.py:44
+#: cove/views.py:76 cove/views.py:88
 msgid "Go to Home page"
 msgstr "Ir a la Página de Inicio"
 
-#: cove/views.py:33
+#: cove/views.py:77
 msgid "We don't seem to be able to find the data you requested."
 msgstr "Parece que no podemos encontrar los datos que usted solicitó."
 
-#: cove/views.py:45
+#: cove/views.py:89
 msgid ""
 "The data you were hoping to explore no longer exists.\n"
 "\n"
