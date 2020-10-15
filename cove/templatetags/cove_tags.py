@@ -145,4 +145,16 @@ def html_error_msg(error):
             error.get("instance"),
         )
 
+    if e_validator == "minProperties":
+        return _("{} does not have enough properties").format(e_instance)
+
+
+    if error.get("error_id"):
+        if error["error_id"] == "uniqueItems_no_ids":
+            return _("Array has non-unique elements")
+        if error["error_id"].startswith("uniqueItems_with_"):
+            id_name = error["error_id"][len("uniqueItems_with_"):]
+            return _("Non-unique {} values").format(id_name)
+
+
     return error["message"]
