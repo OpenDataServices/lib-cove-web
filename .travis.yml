@@ -8,6 +8,10 @@ python:
 
 install: 
   - "pip install --upgrade pip"
+  # Uninstall preinstalled pip packages, so that subsequent pip install works
+  # correctly (resolver breaks otherwise, as versions are different)
+  # https://docs.travis-ci.com/user/reference/trusty/#pre-installed-pip-packages
+  - "pip freeze | xargs pip uninstall -y"
   - "pip install --use-feature=2020-resolver --upgrade -e .[test]"
   # Install translate toolkit to get pocount binary
   - sudo apt-get install translate-toolkit
