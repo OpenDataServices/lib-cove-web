@@ -17,26 +17,26 @@
 {% for error_json, values in validation_errors %}
 {% with error=error_json|json_decode %}
 <tr>
-  {% if error.message_safe %}
-    <td>
-      <p>
+  <td>
+    <p>
+      {% if error.message_safe %}
+        {# Still used by BODS cove #}
         <strong>{{ error.message_safe | safe }}</strong>
-        {% if error.message_type in common_error_types %}
-          <a href="{% url 'common_errors' %}#{{error.message_type}}" target="_blank">(more info)</a>
-        {% endif %}
-      </p>
-      {% if 'schema_title' in error %}
-      <div class="well well-sm">
-        <h4>{{ error.schema_title }}</h4>
-        <p>{{ error.schema_description_safe | safe }}</p>
-      </div>
+      {% else %}
+        {# Used by other coves and is the preferred way to do this going forward #}
+        <strong>{{ error | html_error_msg }}</strong>
       {% endif %}
-    </td>
-  {% elif error.message_type in common_error_types %}
-  <td><a href="{% url 'common_errors' %}#{{error.message_type}}"> {{error.message}} </a></td>
-  {% else %}
-    <td>{{error.message}}</td> 
-  {% endif %}
+      {% if error.message_type in common_error_types %}
+        <a href="{% url 'common_errors' %}#{{error.message_type}}" target="_blank">{% trans "(more info)" %}</a>
+      {% endif %}
+    </p>
+    {% if 'schema_title' in error %}
+    <div class="well well-sm">
+      <h4>{{ error.schema_title }}</h4>
+      <p>{{ error.schema_description_safe | safe }}</p>
+    </div>
+    {% endif %}
+  </td>
   <td class="text-center">
     {% if values|length > 3 %}
       <a data-toggle="modal" data-target=".{{"validation-errors-"|concat:forloop.counter}}">
@@ -71,7 +71,7 @@
   <td style="white-space: nowrap">
     <ul class="list-unstyled">
       {% for value in values|slice:":3" %}
-      <li> <b>Sheet:</b> {{value.sheet}} <b>Row:</b> {{value.row_number}} {% if value.header %} <b>Column:</b> {{value.header}} {% endif %} </li>
+      <li> <b>{% trans "Sheet:" %}</b> {{value.sheet}} <b>{% trans "Row:" %}</b>{{value.row_number}} {% if value.header %}<b>{% trans "Column:" %}</b>{{value.header}} {% endif %}</li>
       {% endfor %}
     </ul>
   </td>

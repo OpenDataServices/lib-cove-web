@@ -49,13 +49,13 @@
                   {% endif %}
                 </td>
                 {% if file_type == 'xlsx' or file_type == 'csv' or file_type == 'ods' %}
-                  <td> <strong>Sheet:</strong> {{item.sheet}} <strong>Row:</strong> {{item.row_number}} {% if item.header %} <strong>Header:</strong> {{item.header}} {% endif %} </td>
+                  <td> <strong>{% trans "Sheet:" %}</strong> {{item.sheet}} <strong>{% trans "Row:" %}</strong> {{item.row_number}} {% if item.header %} <strong>{% trans "Header:" %}</strong> {{item.header}} {% endif %} </td>
                 {% endif %}
               {% else %}
                 {% if file_type == 'json' %}
                   <td>{{item}}</td>
                 {% else %}
-                  <td> <strong>Sheet:</strong> {{item.sheet}} <strong>Row:</strong> {{item.row_number}} {% if item.header %} <strong>Header:</strong> {{item.header}} {% endif %} </td>
+                  <td> <strong>{% trans "Sheet:" %}</strong> {{item.sheet}} <strong>{% trans "Row:" %}</strong> {{item.row_number}} {% if item.header %} <strong>{% trans "Header:" %}</strong> {{item.header}} {% endif %} </td>
                 {% endif %}
               {% endif %}
               </tr>
