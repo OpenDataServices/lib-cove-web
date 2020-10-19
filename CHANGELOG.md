@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+See https://github.com/OpenDataServices/lib-cove-web/pull/58 for the below:
+
+- Move strings from lib-cove to here, so they're easier to translate
+- Copy a strings for minProperties here from jsonschema, so it can be translated
+- Add Spanish translation for all strings
+
 ## [0.17.0] - 2020-09-16
 
 ### Add
