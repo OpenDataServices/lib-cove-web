@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Fixed
 
 - Don't require `VALIDATION_ERROR_LOCATIONS_LENGTH` and `VALIDATION_ERROR_LOCATIONS_SAMPLE` to be in the settings file
+- Fixes for translation work in 0.18.0 to work with [360Giving and IATI CoVEs](https://github.com/OpenDataServices/cove/)
 
 ## [0.18.0] - 2020-10-19
 

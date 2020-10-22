@@ -82,6 +82,10 @@ validation_error_template_lookup_safe = {
 
 @register.filter(name='html_error_msg')
 def html_error_msg(error):
+    # This should not happen for json schema validation, but may happen for
+    # other forms of validation, e.g. XML for IATI
+    if "validator" not in error:
+        return error["message"]
 
     e_validator = error['validator']
     e_validator_value = error.get('validator_value')
