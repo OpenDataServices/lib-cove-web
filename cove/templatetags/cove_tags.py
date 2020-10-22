@@ -22,6 +22,8 @@ def cove_modal_list(**kw):
 def cove_modal_errors(**context):
     if hasattr(settings, 'VALIDATION_ERROR_LOCATIONS_LENGTH'):
         context['validation_error_locations_length'] = settings.VALIDATION_ERROR_LOCATIONS_LENGTH
+    else:
+        context['validation_error_locations_length'] = 1000
     if hasattr(settings, 'VALIDATION_ERROR_LOCATIONS_SAMPLE'):
         context['validation_error_locations_sample'] = settings.VALIDATION_ERROR_LOCATIONS_SAMPLE
     return context
