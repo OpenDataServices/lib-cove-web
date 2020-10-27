@@ -87,6 +87,10 @@ def html_error_msg(error):
     if "validator" not in error:
         return error["message"]
 
+    # Support cove-ocds, which hasn't fully moved over to the template tag based approach
+    if "message_safe" in error and error["message_safe"] != escape(error["message"]):
+        return format_html(error["message_safe"])
+
     e_validator = error['validator']
     e_validator_value = error.get('validator_value')
     validator_type = error['message_type']
