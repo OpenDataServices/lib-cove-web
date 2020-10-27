@@ -22,6 +22,8 @@ def cove_modal_list(**kw):
 def cove_modal_errors(**context):
     if hasattr(settings, 'VALIDATION_ERROR_LOCATIONS_LENGTH'):
         context['validation_error_locations_length'] = settings.VALIDATION_ERROR_LOCATIONS_LENGTH
+    else:
+        context['validation_error_locations_length'] = 1000
     if hasattr(settings, 'VALIDATION_ERROR_LOCATIONS_SAMPLE'):
         context['validation_error_locations_sample'] = settings.VALIDATION_ERROR_LOCATIONS_SAMPLE
     return context
@@ -80,6 +82,14 @@ validation_error_template_lookup_safe = {
 
 @register.filter(name='html_error_msg')
 def html_error_msg(error):
+    # This should not happen for json schema validation, but may happen for
+    # other forms of validation, e.g. XML for IATI
+    if "validator" not in error:
+        return error["message"]
+
+    # Support cove-ocds, which hasn't fully moved over to the template tag based approach
+    if "message_safe" in error and error["message_safe"] != escape(error["message"]):
+        return format_html(error["message_safe"])
 
     e_validator = error['validator']
     e_validator_value = error.get('validator_value')

@@ -42,17 +42,18 @@ def cove_web_input_error(func):
                 ),
             }
         except CoveInputDataError as err:
-            context = {
-                    "sub_title": _("Sorry, we can't process that data"),
-                    "link": "index",
-                    "link_text": _("Try Again"),
-                    "msg": _(
-                        "We think you tried to supply a spreadsheet, but we failed to convert it."
-                        "\n\nError message: {}"
-                    ).format(repr(err.wrapped_err)),
+            if hasattr(err, "wrapped_err"):
+                context = {
+                        "sub_title": _("Sorry, we can't process that data"),
+                        "link": "index",
+                        "link_text": _("Try Again"),
+                        "msg": _(
+                            "We think you tried to supply a spreadsheet, but we failed to convert it."
+                            "\n\nError message: {}"
+                        ).format(repr(err.wrapped_err)),
                 }
-        except CoveInputDataError as err:
-            context = err.context
+            else:
+                context = err.context
         return render(request, 'error.html', context=context)
     return wrapper
 
