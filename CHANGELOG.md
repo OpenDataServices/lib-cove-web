@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.18.2] - 2020-11-05
+
+## Fixed
+
+- Add a missing string to the translation https://github.com/OpenDataServices/lib-cove-web/pull/60
+
 ## [0.18.1] - 2020-10-22
 
 ## Fixed

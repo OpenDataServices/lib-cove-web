@@ -106,9 +106,9 @@ def html_error_msg(error):
     if e_validator in ("format", "type"):
         if isinstance(e_validator_value, list):
             if "null" not in e_validator_value:
-                null_clause = "is not null, and"
+                null_clause = _("is not null, and")
         else:
-            null_clause = "is not null, and"
+            null_clause = _("is not null, and")
 
         message_safe_template = validation_error_template_lookup_safe.get(
             validator_type
