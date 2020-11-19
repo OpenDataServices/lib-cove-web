@@ -51,7 +51,7 @@ h1.application-name {
   padding-top: 9px;
   margin: 20px 0 40px;
   border-top: 1px solid #eee;
-} 
+}
 
 show-open-if-noscript {
   display:block;
@@ -145,4 +145,12 @@ a.anchor::before {
 
 .no-bottom-margin {
   margin-bottom: 0px;
+}
+
+table {
+  table-layout: fixed;
+}
+
+table td {
+  overflow-wrap: break-word;
 }
