@@ -167,7 +167,7 @@ def html_error_msg(error):
         )
 
     if e_validator == "minProperties":
-        return _("{} does not have enough properties").format(e_instance)
+        return _("{} does not have enough properties").format(error.get("instance"))
 
     if error.get("error_id"):
         if error["error_id"] == "uniqueItems_no_ids":
