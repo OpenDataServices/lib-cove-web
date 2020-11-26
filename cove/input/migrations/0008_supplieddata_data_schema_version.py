@@ -8,13 +8,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('input', '0007_supplied_data_schema_version'),
+        ("input", "0007_supplied_data_schema_version"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='supplieddata',
-            name='data_schema_version',
-            field=models.CharField(default='', max_length=10),
+            model_name="supplieddata",
+            name="data_schema_version",
+            field=models.CharField(default="", max_length=10),
         ),
     ]

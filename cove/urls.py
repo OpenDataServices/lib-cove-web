@@ -1,10 +1,9 @@
+from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.conf import settings
-from django.views.generic import TemplateView
-
-from django.template import loader
 from django.http import HttpResponseServerError
+from django.template import loader
+from django.views.generic import TemplateView
 
 import cove.input.views
 import cove.views
@@ -15,11 +14,11 @@ def handler500(request):
     """
 
     context = {
-        'request': request,
+        "request": request,
     }
     context.update(settings.COVE_CONFIG)
 
-    t = loader.get_template('500.html')
+    t = loader.get_template("500.html")
     return HttpResponseServerError(t.render(context))
 
 
@@ -28,10 +27,10 @@ def cause500(request):
 
 
 urlpatterns = [
-    url(r'^$', cove.input.views.data_input, name='index'),
-    url(r'^terms/$', TemplateView.as_view(template_name='terms.html'), name='terms'),
-    url(r'^stats/$', cove.views.stats, name='stats'),
-    url(r'^test/500$', cause500),
-    url(r'^admin/', admin.site.urls),
-    url(r'^i18n/', include('django.conf.urls.i18n'))
+    url(r"^$", cove.input.views.data_input, name="index"),
+    url(r"^terms/$", TemplateView.as_view(template_name="terms.html"), name="terms"),
+    url(r"^stats/$", cove.views.stats, name="stats"),
+    url(r"^test/500$", cause500),
+    url(r"^admin/", admin.site.urls),
+    url(r"^i18n/", include("django.conf.urls.i18n")),
 ]

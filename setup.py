@@ -1,31 +1,29 @@
-from setuptools import setup, find_packages
-
-install_requires = []
+from setuptools import find_packages, setup
 
 setup(
-    name='libcoveweb',
-    version='0.18.2',
-    author='Open Data Services',
-    author_email='code@opendataservices.coop',
+    name="libcoveweb",
+    version="0.18.2",
+    author="Open Data Services",
+    author_email="code@opendataservices.coop",
     packages=find_packages(),
     package_data={
-        'cove': [
-            'fixtures/*',
-            'locale/*/*/*.po',
-            'sass/*/*',
-            'sass/*/*/*',
-            'sass/*/*/*/*',
-            'static/*/*',
-            'static/*/*/*',
-            'static/*/*/*/*',
-            'templates/*'
+        "cove": [
+            "fixtures/*",
+            "locale/*/*/*.po",
+            "sass/*/*",
+            "sass/*/*/*",
+            "sass/*/*/*/*",
+            "static/*/*",
+            "static/*/*/*",
+            "static/*/*/*/*",
+            "templates/*",
         ]
     },
-    scripts=['manage.py'],
-    url='https://github.com/OpenDataServices/lib-cove-web',
-    description='',
+    scripts=["manage.py"],
+    url="https://github.com/OpenDataServices/lib-cove-web",
+    description="",
     classifiers=[
-        'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
+        "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
     ],
     install_requires=[
         "Django<2.3",
@@ -51,7 +49,7 @@ setup(
         "libcove>=0.17.0",
     ],
     extras_require={
-        'test': [
+        "test": [
             "flake8",
             "pytest",
             "pytest-django",
@@ -64,5 +62,5 @@ setup(
             "libsass",
             "hypothesis",
         ],
-    }
+    },
 )
