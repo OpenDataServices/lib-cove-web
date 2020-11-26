@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+ - Generating HTML for an error message was broken, html_error_msg in cove/templatetags/cove_tags.py
  - Make tables fixed layout to avoid layout breaking on long unbroken text
 
 ## [0.18.2] - 2020-11-05
