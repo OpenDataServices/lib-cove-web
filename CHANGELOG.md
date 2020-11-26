@@ -7,15 +7,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+ - Make tables fixed layout to avoid layout breaking on long unbroken text
+
 ## [0.18.2] - 2020-11-05
 
-## Fixed
+### Fixed
 
 - Add a missing string to the translation https://github.com/OpenDataServices/lib-cove-web/pull/60
 
 ## [0.18.1] - 2020-10-22
 
-## Fixed
+### Fixed
 
 - Don't require `VALIDATION_ERROR_LOCATIONS_LENGTH` and `VALIDATION_ERROR_LOCATIONS_SAMPLE` to be in the settings file
 - Fixes for translation work in 0.18.0 to work with [360Giving and IATI CoVEs](https://github.com/OpenDataServices/cove/)
@@ -36,7 +40,7 @@ See https://github.com/OpenDataServices/lib-cove-web/pull/58 for the below:
 
 - Make it possible to set a limit on the number of locations shown for an error, and optionally randomise them if there are too many.
 
-## Changed
+### Changed
 
 - Add 'Co-operative' to 'built by'.
 
@@ -46,13 +50,13 @@ See https://github.com/OpenDataServices/lib-cove-web/pull/58 for the below:
 
 - The package available in PyPi was not including all files correctly.
 
-## Changed
+### Changed
 
 - Move requirements into setup.py and delete requirements.\* files
 
 ## [0.15.0] - 2020-08-20
 
-## Add
+### Add
 
 - Add xml content types to auto detection https://github.com/OpenDataServices/cove/issues/1283
 
