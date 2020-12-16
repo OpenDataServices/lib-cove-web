@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.18.3] - 2020-12-16
+
 ### Fixed
 
- - Make tables fixed layout to avoid layout breaking on long unbroken text
+- Make tables fixed layout to avoid layout breaking on long unbroken text
+- Fix `NameError` due to `e_instance` not being defined
 
 ## [0.18.2] - 2020-11-05
 
