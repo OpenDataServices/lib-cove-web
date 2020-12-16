@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.18.3] - 2020-12-16
+
 ### Fixed
 
 - Make tables fixed layout to avoid layout breaking on long unbroken text
