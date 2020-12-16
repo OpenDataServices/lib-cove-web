@@ -24,6 +24,7 @@ jobs:
       - run: "pip install --use-feature=2020-resolver --upgrade -e .[test]"
       - run: "DJANGO_SETTINGS_MODULE=cove.settings py.test -n 2 cove --cov --cov-report="
       # Install translate toolkit to get pocount binary
+      - run: "sudo apt-get update"
       - run: "sudo apt-get install translate-toolkit"
       # Check that strings have Spanish translation (for cove-ocds)
       - run: "python manage.py makemessages -l es"
