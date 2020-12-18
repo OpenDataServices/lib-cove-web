@@ -110,13 +110,12 @@ def html_error_msg(error):
         else:
             null_clause = _("is not null, and")
 
-        message_safe_template = validation_error_template_lookup_safe.get(
-            validator_type
-        )
+        if validator_type in validation_error_template_lookup_safe:
+            message_safe_template = validation_error_template_lookup_safe[validator_type]
 
-        return format_html(
-            message_safe_template, pre_header, error['header'], null_clause
-        )
+            return format_html(
+                message_safe_template, pre_header, error['header'], null_clause
+            )
 
 
     if e_validator == "required":
