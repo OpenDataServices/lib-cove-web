@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix 'NoneType' object has no attribute 'format', due to validation error messages we don't override
+
 ## [0.18.3] - 2020-12-16
 
 ### Fixed
