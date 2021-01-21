@@ -40,7 +40,7 @@ def html_error_msg(error):
     null_clause = error['null_clause']
     header = error['header_extra']
 
-    if '[number]' in header:
+    if isinstance(header, str) and  '[number]' in header:
         pre_header = _("Array Element ")
     else:
         pre_header = ""
