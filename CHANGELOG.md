@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.19.0] - 2021-01-26
+
 ### Changed
 
 - Make `html_error_msg` importable from its own file, and without Django settings needing to be configured (e.g. in lib-cove-bods).
