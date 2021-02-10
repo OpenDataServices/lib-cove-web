@@ -43,6 +43,7 @@ env = environ.Env(  # set default values and casting
     DEBUG_TOOLBAR=(bool, False),
     VALIDATION_ERROR_LOCATIONS_LENGTH=(int, 1000),
     VALIDATION_ERROR_LOCATIONS_SAMPLE=(bool, False),
+    DELETE_FILES_AFTER_DAYS=(int, 7),
     # SCHEMA_URL_360=(str, 'https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/'),
 )
 
@@ -55,6 +56,8 @@ GOOGLE_ANALYTICS_ID = env('GOOGLE_ANALYTICS_ID')
 
 VALIDATION_ERROR_LOCATIONS_LENGTH = env("VALIDATION_ERROR_LOCATIONS_LENGTH")
 VALIDATION_ERROR_LOCATIONS_SAMPLE = env("VALIDATION_ERROR_LOCATIONS_SAMPLE")
+
+DELETE_FILES_AFTER_DAYS = env("DELETE_FILES_AFTER_DAYS")
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

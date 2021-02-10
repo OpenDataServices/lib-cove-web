@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.20.0] - 2021-02-10
+
+### Added
+
+- Number of days before files expire is now configurable in settings.py https://github.com/open-contracting/cove-ocds/issues/142
+
 # [0.19.0] - 2021-01-26
 
 ### Changed
