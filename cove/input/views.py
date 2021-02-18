@@ -72,7 +72,7 @@ def data_input(request, form_classes=default_form_classes, text_file_name='test.
                         'sub_title': _("Sorry we got a ConnectionError whilst trying to download that file"),
                         'link': 'index',
                         'link_text': _('Try Again'),
-                        'msg': _(str(err) + '\n\n Common reasons for this error include supplying a local '
+                        'msg': str(err) + '\n\n' + _('Common reasons for this error include supplying a local '
                                  'development url that our servers can\'t access, or misconfigured SSL certificates.')
                     })
                 except requests.HTTPError as err:
@@ -80,7 +80,7 @@ def data_input(request, form_classes=default_form_classes, text_file_name='test.
                         'sub_title': _("Sorry we got a HTTP Error whilst trying to download that file"),
                         'link': 'index',
                         'link_text': _('Try Again'),
-                        'msg': _(str(err) + '\n\n If you can access the file through a browser then the problem '
+                        'msg': str(err) + '\n\n' +  _('If you can access the file through a browser then the problem '
                                  'may be related to permissions, or you may be blocking certain user agents.')
                     })
             elif form_name == 'text_form':
