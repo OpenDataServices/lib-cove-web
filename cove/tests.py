@@ -214,7 +214,7 @@ def test_get_file_name_with_none():
             "null_clause": "",
             "path_no_number": "records/releases",
             "assumption": "linked_releases",
-            "instance": "[]",
+            "instance": [],
         },
     ],
 )
