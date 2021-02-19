@@ -2,7 +2,7 @@ import json
 
 from django.utils.html import conditional_escape, escape, format_html
 from django.core.exceptions import ImproperlyConfigured
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext_lazy as _, ngettext
 
 from libcove.lib.tools import decimal_default
 
@@ -187,10 +187,11 @@ def html_error_msg(error):
 
     if e_validator == "additionalItems":
         extras = error.get("extras") or []
-        if len(extras) == 1:
-            return _("Additional items are not allowed (%s was unexpected)") % (extras,)
-        else:
-            return _("Additional items are not allowed (%s were unexpected)") % (extras,)
+        return ngettext(
+            "Additional items are not allowed (%s was unexpected)",
+            "Additional items are not allowed (%s were unexpected)",
+            len(extras),
+        ) % (extras,)
 
     if e_validator == "dependencies":
             return _("%(each)s is a dependency of %(property)s") % {
@@ -208,22 +209,21 @@ def html_error_msg(error):
 
         if error["error_id"] == "additionalProperties_not_allowed":
             extras = error.get("extras") or []
-            if len(extras) == 1:
-                return _("Additional properties are not allowed (%s was unexpected)") % (extras,)
-            else:
-                return _("Additional properties are not allowed (%s were unexpected)") % (extras,)
+            return ngettext(
+                "Additional properties are not allowed (%s was unexpected)",
+                "Additional properties are not allowed (%s were unexpected)",
+                len(extras),
+            ) % (extras,)
 
         if error["error_id"] == "additionalProperties_does_not_match_regexes":
             extras = error.get("extras") or []
-            if len(extras) == 1:
-                return _("%(extras)s does not match any of the regexes: %(patterns)s") % {
-                    "extras": error["reprs"][0],
-                    "patterns": error["reprs"][1],
-                }
-            else:
-                return _("%(extras)s do not match any of the regexes: %(patterns)s") % {
-                    "extras": error["reprs"][0],
-                    "patterns": error["reprs"][1],
-                }
+            return ngettext(
+                "%(extras)s does not match any of the regexes: %(patterns)s",
+                "%(extras)s do not match any of the regexes: %(patterns)s",
+                len(extras),
+            ) % {
+                "extras": error["reprs"][0],
+                "patterns": error["reprs"][1],
+            }
 
     return error["message"]
