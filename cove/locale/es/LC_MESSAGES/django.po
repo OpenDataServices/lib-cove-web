@@ -6,25 +6,216 @@
 # Translators:
 # Eduardo Gomez <eduardo.gomez@hotmail.co.uk>, 2018
 # David Raznick <david.raznick@opendataservices.coop>, 2019
-# Yohanna Lisnichuk <ylisnichuk@idatosabiertos.org>, 2019
+# Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2019
 # Ben Webb <ben.webb@opendataservices.coop>, 2020
-# Maria Esther Cervantes <mcervantes@cds.com.py>, 2020
 # Bibiana Cristòfol <bcristofol@gmail.com>, 2020
+# Cecilia Casco <ceciliacasco@cds.com.py>, 2021
+# Maria Esther Cervantes <mcervantes@cds.com.py>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-05 13:13+0000\n"
+"POT-Creation-Date: 2021-03-24 17:43+0000\n"
 "PO-Revision-Date: 2018-11-30 11:12+0000\n"
-"Last-Translator: Bibiana Cristòfol <bcristofol@gmail.com>, 2020\n"
+"Last-Translator: Maria Esther Cervantes <mcervantes@cds.com.py>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59127/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cove/html_error_msg.py:22
+msgid "Date is not in the correct format"
+msgstr "El formato de la fecha es incorrecto"
+
+#: cove/html_error_msg.py:23
+msgid "Invalid 'uri' found"
+msgstr "Se ha encontrado una 'uri' inválida"
+
+#: cove/html_error_msg.py:24
+msgid ""
+"{}<code>{}</code> is not a string. Check that the value {} has quotes at the"
+" start and end. Escape any quotes in the value with <code>\\</code>"
+msgstr ""
+"{}<code>{}</code> no es un hilo. Revise que el valor {} tenga comillas al "
+"principio y al final. Escapar de cualquier comillas con el valor "
+"<code>/</code>"
+
+#: cove/html_error_msg.py:25
+msgid ""
+"{}<code>{}</code> is not a integer. Check that the value {} doesn’t contain "
+"decimal points or any characters other than 0-9. Integer values should not "
+"be in quotes. "
+msgstr ""
+"{}<code>{}</code> no es un entero. Compruebe que el valor {} no contenga "
+"puntos decimales ni ningún otro carácter que no sea 0-9. Los valores enteros"
+" no deben estar entre comillas."
+
+#: cove/html_error_msg.py:26
+msgid ""
+"{}<code>{}</code> is not a number. Check that the value {} doesn’t contain "
+"any characters other than 0-9 and dot (<code>.</code>). Number values should"
+" not be in quotes. "
+msgstr ""
+"{}<code>{}</code>no es un número. Compruebe que el valor {} no contenga "
+"ningún carácter más que 0-9 y el punto (.). Los valores numéricos no deben "
+"estar entre comillas"
+
+#: cove/html_error_msg.py:27
+msgid "{}<code>{}</code> is not a JSON object"
+msgstr "{}<code>{}</code> no es un objeto JSON."
+
+#: cove/html_error_msg.py:28
+msgid "{}<code>{}</code> is not a JSON array"
+msgstr "{}<code>{}</code> no es una matriz JSON"
+
+#: cove/html_error_msg.py:29
+msgid "{}<code>{}</code> is not a JSON boolean"
+msgstr "{}<code>{}</code> no es un JSON booleano "
+
+#: cove/html_error_msg.py:30
+msgid "{}<code>{}</code> is not null"
+msgstr "{}<code>{}</code> no es nulo"
+
+#: cove/html_error_msg.py:59
+msgid "Array Element "
+msgstr "Elemento de matriz"
+
+#: cove/html_error_msg.py:67 cove/html_error_msg.py:69
+msgid "is not null, and"
+msgstr "no es 'null', y"
+
+#: cove/html_error_msg.py:78
+#, python-format
+msgid "%(instance)s is not a %(validator_value)s"
+msgstr "%(instance)s no es un %(validator_value)s"
+
+#: cove/html_error_msg.py:88
+msgid "<code>{}</code> is missing but required within <code>{}</code>"
+msgstr "<code>{}</code> falta pero se requiere dentro de <code>{}</code>"
+
+#: cove/html_error_msg.py:94
+msgid "<code>{}</code> is missing but required"
+msgstr "<code>{}</code>falta pero se requiere"
+
+#: cove/html_error_msg.py:98
+msgid "Invalid code found in <code>{}</code>"
+msgstr "Código inválido encontrado en <code>{}</code>"
+
+#: cove/html_error_msg.py:102
+msgid "<code>{}</code> does not match the regex <code>{}</code>"
+msgstr "<code>{}</code>no coincide con la expresión regular <code>{}</code>"
+
+#: cove/html_error_msg.py:110
+msgid ""
+"<code>{}</code> is too short. You must supply at least one value, or remove "
+"the item entirely (unless it’s required)."
+msgstr ""
+"<code>{}</code>es muy corto. Debe proporcionar al menos un valor o eliminar "
+"el artículo por completo (a menos que sea necesario)."
+
+#: cove/html_error_msg.py:115 cove/html_error_msg.py:127
+msgid "<code>{}</code> is too short"
+msgstr "<code>{}</code>es muy corto"
+
+#: cove/html_error_msg.py:122
+msgid ""
+"<code>{}</code> is too short. Strings must be at least one character. This "
+"error typically indicates a missing value."
+msgstr ""
+"<code>{}</code>es muy corto. Las cadenas deben ser de al menos un caracter. "
+"Este error generalmente indica que hay un valor faltante. "
+
+#: cove/html_error_msg.py:133 cove/html_error_msg.py:139
+msgid "<code>{}</code> is too long"
+msgstr "<code>{}</code>es muy largo"
+
+#: cove/html_error_msg.py:144
+msgid "{} does not have enough properties"
+msgstr "{} no tiene suficientes propiedades"
+
+#: cove/html_error_msg.py:147
+msgid "{} has too many properties"
+msgstr "{} tiene demasiadas propiedades"
+
+#: cove/html_error_msg.py:151
+#, python-format
+msgid ""
+"%(instance)s is less than or equal to the minimum of %(validator_value)s"
+msgstr "%(instance)s es menor o igual que el mínimo de %(validator_value)s"
+
+#: cove/html_error_msg.py:156
+#, python-format
+msgid "%(instance)s is less than the minimum of %(validator_value)s"
+msgstr "%(instance)s es menor que el mínimo de %(validator_value)s"
+
+#: cove/html_error_msg.py:163
+#, python-format
+msgid ""
+"%(instance)s is more than or equal to the maximum of %(validator_value)s"
+msgstr "%(instance)ses mayor o igual que el máximo de %(validator_value)s"
+
+#: cove/html_error_msg.py:168
+#, python-format
+msgid "%(instance)s is more than the maximum of %(validator_value)s"
+msgstr "%(instance)s es mayor que el máximo de %(validator_value)s"
+
+#: cove/html_error_msg.py:174
+#, python-format
+msgid "%s is not valid under any of the given schemas"
+msgstr "%sno es válido bajo ninguno de los esquemas dados"
+
+#: cove/html_error_msg.py:177
+#, python-format
+msgid "%(instance)s is not a multiple of %(validator_value)s"
+msgstr "%(instance)s no es un múltiplo de %(validator_value)s"
+
+#: cove/html_error_msg.py:183
+#, python-format
+msgid "%(validator_value)s is not allowed for %(instance)s"
+msgstr "%(validator_value)s no está permitido para %(instance)s"
+
+#: cove/html_error_msg.py:191
+#, python-format
+msgid "Additional items are not allowed (%s was unexpected)"
+msgid_plural "Additional items are not allowed (%s were unexpected)"
+msgstr[0] "Items adicionales no están permitidos (%s fue inesperado)"
+msgstr[1] "Items adicionales no están permitidos (%s fueron inesperados)"
+
+#: cove/html_error_msg.py:197
+#, python-format
+msgid "%(each)s is a dependency of %(property)s"
+msgstr "%(each)ses una dependencia de %(property)s"
+
+#: cove/html_error_msg.py:204
+msgid "Array has non-unique elements"
+msgstr "La matriz tiene elementos no únicos"
+
+#: cove/html_error_msg.py:208
+msgid "Non-unique {} values"
+msgstr "Valores {} no únicos"
+
+#: cove/html_error_msg.py:213
+#, python-format
+msgid "Additional properties are not allowed (%s was unexpected)"
+msgid_plural "Additional properties are not allowed (%s were unexpected)"
+msgstr[0] "Propiedades adicionales no están permitidas (%s fue inesperado )"
+msgstr[1] ""
+"Propiedades adicionales no están permitidas (%s fueron inesperados )"
+
+#: cove/html_error_msg.py:221
+#, python-format
+msgid "%(extras)s does not match any of the regexes: %(patterns)s"
+msgid_plural "%(extras)s do not match any of the regexes: %(patterns)s"
+msgstr[0] ""
+"%(extras)s no coincide con ninguna de las expresiones regulares: "
+"%(patterns)s"
+msgstr[1] ""
+"%(extras)s no coinciden con ninguna de las expresiones regulares: "
+"%(patterns)s"
 
 #: cove/input/views.py:18
 msgid "Upload a file (.json, .csv, .xlsx, .ods)"
@@ -51,13 +242,12 @@ msgstr "Inténtelo de nuevo"
 
 #: cove/input/views.py:75
 msgid ""
-"\n"
-"\n"
-" Common reasons for this error include supplying a local development url that our servers can't access, or misconfigured SSL certificates."
+"Common reasons for this error include supplying a local development url that"
+" our servers can't access, or misconfigured SSL certificates."
 msgstr ""
-"\n"
-"\n"
-"Las causas más comunes de este tipo de error son el uso de una direccción URL para desarrollo local que nuestros servidores no pueden acceder o el uso de certificados SSL mal configurados."
+"Las razones comunes de este error incluyen el suministro de una URL de "
+"desarrollo local a la que nuestros servidores no pueden acceder o "
+"certificados SSL mal configurados."
 
 #: cove/input/views.py:80
 msgid "Sorry we got a HTTP Error whilst trying to download that file"
@@ -67,13 +257,12 @@ msgstr ""
 
 #: cove/input/views.py:83
 msgid ""
-"\n"
-"\n"
-" If you can access the file through a browser then the problem may be related to permissions, or you may be blocking certain user agents."
+"If you can access the file through a browser then the problem may be related"
+" to permissions, or you may be blocking certain user agents."
 msgstr ""
-"\n"
-"\n"
-"Si se puede acceder al archivo a través de un navegador entonces el problema puede estar relacionado con los permisos de acceso , o puede ser que usted esté bloqueando ciertas aplicaciones de usuario."
+"Si no puede acceder al archivo a través del navegador entonces el problema "
+"puede esta relacionado con los permisos, o puede que este bloqueando a "
+"ciertos usuarios"
 
 #: cove/templates/500.html:8
 msgid "Internal Server Error"
@@ -385,103 +574,6 @@ msgstr "(más información)"
 #: cove/templates/validation_table.html:74
 msgid "Column:"
 msgstr "Columna:"
-
-#: cove/templatetags/cove_tags.py:73
-msgid "Date is not in the correct format"
-msgstr "El formato de la fecha es incorrecto"
-
-#: cove/templatetags/cove_tags.py:74
-msgid "Invalid 'uri' found"
-msgstr "Se ha encontrado una 'uri' inválida"
-
-#: cove/templatetags/cove_tags.py:75
-msgid ""
-"{}<code>{}</code> is not a string. Check that the value {} has quotes at the"
-" start and end. Escape any quotes in the value with <code>\\</code>"
-msgstr ""
-"{}<code>{}</code> no es un hilo. Revise que el valor {} tenga comillas al "
-"principio y al final. Escapar de cualquier comillas con el valor "
-"<code>/</code>"
-
-#: cove/templatetags/cove_tags.py:76
-msgid ""
-"{}<code>{}</code> is not a integer. Check that the value {} doesn’t contain "
-"decimal points or any characters other than 0-9. Integer values should not "
-"be in quotes. "
-msgstr ""
-"{}<code>{}</code> no es un entero. Compruebe que el valor {} no contenga "
-"puntos decimales ni ningún otro carácter que no sea 0-9. Los valores enteros"
-" no deben estar entre comillas."
-
-#: cove/templatetags/cove_tags.py:77
-msgid ""
-"{}<code>{}</code> is not a number. Check that the value {} doesn’t contain "
-"any characters other than 0-9 and dot (<code>.</code>). Number values should"
-" not be in quotes. "
-msgstr ""
-"{}<code>{}</code>no es un número. Compruebe que el valor {} no contenga "
-"ningún carácter más que 0-9 y el punto (.). Los valores numéricos no deben "
-"estar entre comillas"
-
-#: cove/templatetags/cove_tags.py:78
-msgid "{}<code>{}</code> is not a JSON object"
-msgstr "{}<code>{}</code> no es un objeto JSON."
-
-#: cove/templatetags/cove_tags.py:79
-msgid "{}<code>{}</code> is not a JSON array"
-msgstr "{}<code>{}</code> no es una matriz JSON"
-
-#: cove/templatetags/cove_tags.py:101
-msgid "Array Element "
-msgstr "Elemento de matriz"
-
-#: cove/templatetags/cove_tags.py:109 cove/templatetags/cove_tags.py:111
-msgid "is not null, and"
-msgstr "no es 'null', y"
-
-#: cove/templatetags/cove_tags.py:127
-msgid "<code>{}</code> is missing but required within <code>{}</code>"
-msgstr "<code>{}</code> falta pero se requiere dentro de <code>{}</code>"
-
-#: cove/templatetags/cove_tags.py:133
-msgid "<code>{}</code> is missing but required"
-msgstr "<code>{}</code>falta pero se requiere"
-
-#: cove/templatetags/cove_tags.py:137
-msgid "Invalid code found in <code>{}</code>"
-msgstr "Código inválido encontrado en <code>{}</code>"
-
-#: cove/templatetags/cove_tags.py:141
-msgid "<code>{}</code> does not match the regex <code>{}</code>"
-msgstr "<code>{}</code>no coincide con la expresión regular <code>{}</code>"
-
-#: cove/templatetags/cove_tags.py:148
-msgid ""
-"<code>{}</code> is too short. You must supply at least one value, or remove "
-"the item entirely (unless it’s required)."
-msgstr ""
-"<code>{}</code>es muy corto. Debe proporcionar al menos un valor o eliminar "
-"el artículo por completo (a menos que sea necesario)."
-
-#: cove/templatetags/cove_tags.py:154
-msgid ""
-"<code>\"{}\"</code> is too short. Strings must be at least one character. "
-"This error typically indicates a missing value."
-msgstr ""
-"<code>\"{}\"</code>es muy corto. Las cadenas deben tener al menos un "
-"carácter. Este error normalmente indica un valor faltante."
-
-#: cove/templatetags/cove_tags.py:159
-msgid "{} does not have enough properties"
-msgstr "{} no tiene suficientes propiedades"
-
-#: cove/templatetags/cove_tags.py:164
-msgid "Array has non-unique elements"
-msgstr "La matriz tiene elementos no únicos"
-
-#: cove/templatetags/cove_tags.py:167
-msgid "Non-unique {} values"
-msgstr "Valores {} no únicos"
 
 #: cove/views.py:26 cove/views.py:37 cove/views.py:47
 msgid "Sorry, we can't process that data"
