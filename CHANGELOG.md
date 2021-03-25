@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - All text that might appear in cove-ocds is translated into Spanish https://github.com/open-contracting/cove-ocds/issues/144
 
+### Fixed
+
+- Codelist csv link now points to working service. https://github.com/OpenDataServices/lib-cove-web/issues/74
+
 # [0.20.0] - 2021-02-10
 
 ### Added

@@ -15,11 +15,11 @@
       <tr>
         <td>{{detail.field}}</td> <td>{{detail.path}}</td> 
         <td>
-          <a href="http://datapipes.okfnlabs.org/csv/html/?url={{detail.codelist_url}}" >{{detail.codelist}}</a>
+          <a href="http://datapipes.herokuapp.com/csv/html/?url={{detail.codelist_url}}" >{{detail.codelist}}</a>
           {% if detail.codelist_amend_urls %}
             ( 
             {% for symbol, url in detail.codelist_amend_urls %}
-              <a href="http://datapipes.okfnlabs.org/csv/html/?url={{url|urlencode}}">{{symbol}}</a> 
+              <a href="http://datapipes.herokuapp.com/csv/html/?url={{url|urlencode}}">{{symbol}}</a>
             {% endfor %}
             )
           {% endif %}
