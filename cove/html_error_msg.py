@@ -1,6 +1,10 @@
+import json
+
 from django.utils.html import conditional_escape, escape, format_html
 from django.core.exceptions import ImproperlyConfigured
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext_lazy as _, ngettext
+
+from libcove.lib.tools import decimal_default
 
 # If this is imported from an application without settings configured
 # (e.g. lib-cove-bods), then don't do translation.
@@ -9,6 +13,7 @@ try:
     settings.USE_I18N
 except ImproperlyConfigured:
     _ = lambda x: x
+
 
 # These are "safe" html that we trust
 # Don't insert any values into these strings without ensuring escaping
@@ -21,7 +26,17 @@ validation_error_template_lookup_safe = {
     "number": _("{}<code>{}</code> is not a number. Check that the value {} doesn’t contain any characters other than 0-9 and dot (<code>.</code>). Number values should not be in quotes. "),
     "object": _("{}<code>{}</code> is not a JSON object"),
     "array": _("{}<code>{}</code> is not a JSON array"),
+    "boolean": _("{}<code>{}</code> is not a JSON boolean"),
+    "boolean": _("{}<code>{}</code> is not null"),
 }
+
+
+def json_repr(s):
+    """
+    jsonschema uses %r to repr some values, but we'd rather see the json
+    representation, so call this instaead.
+    """
+    return json.dumps(s, sort_keys=True, default=decimal_default)
 
 
 def html_error_msg(error):
@@ -59,7 +74,11 @@ def html_error_msg(error):
             return format_html(
                 message_safe_template, pre_header, error['header'], null_clause
             )
-
+        elif e_validator == "format":
+            return _("%(instance)s is not a %(validator_value)s") % {
+                "instance": json_repr(error.get("instance")),
+                "validator_value": json_repr(e_validator_value),
+            }
 
     if e_validator == "required":
         path_no_number = error["path_no_number"].split("/")
@@ -85,28 +104,126 @@ def html_error_msg(error):
             e_validator_value,
         )
 
-    if e_validator == "minItems" and e_validator_value == 1:
-        return format_html(
-            _("<code>{}</code> is too short. You must supply at least one value, or remove the item entirely (unless it’s required)."),
-            error.get("instance"),
-        )
+    if e_validator == "minItems":
+        if e_validator_value == 1:
+            return format_html(
+                _("<code>{}</code> is too short. You must supply at least one value, or remove the item entirely (unless it’s required)."),
+                json_repr(error.get("instance")),
+            )
+        else:
+            return format_html(
+                _('<code>{}</code> is too short'),
+                json_repr(error.get("instance")),
+            )
 
-    if e_validator == "minLength" and e_validator_value == 1:
-        return format_html(
-            _('<code>"{}"</code> is too short. Strings must be at least one character. This error typically indicates a missing value.'),
-            error.get("instance"),
-        )
+    if e_validator == "minLength":
+        if e_validator_value == 1:
+            return format_html(
+                _('<code>{}</code> is too short. Strings must be at least one character. This error typically indicates a missing value.'),
+                json_repr(error.get("instance")),
+            )
+        else:
+            return format_html(
+                _('<code>{}</code> is too short'),
+                json_repr(error.get("instance")),
+            )
+
+    if e_validator == "maxItems":
+            return format_html(
+                _('<code>{}</code> is too long'),
+                json_repr(error.get("instance")),
+            )
+
+    if e_validator == "maxLength":
+            return format_html(
+                _('<code>{}</code> is too long'),
+                json_repr(error.get("instance")),
+            )
 
     if e_validator == "minProperties":
-        return _("{} does not have enough properties").format(error.get("instance"))
+        return _("{} does not have enough properties").format(json_repr(error.get("instance")))
 
+    if e_validator == "maxProperties":
+        return _("{} has too many properties").format(json_repr(error.get("instance")))
+
+    if e_validator == "minimum":
+        if error.get("exclusiveMinimum", False):
+            return _("%(instance)s is less than or equal to the minimum of %(validator_value)s") % {
+                "instance": json_repr(error.get("instance")),
+                "validator_value": json_repr(e_validator_value),
+            }
+        else:
+            return _("%(instance)s is less than the minimum of %(validator_value)s") % {
+                "instance": json_repr(error.get("instance")),
+                "validator_value": json_repr(e_validator_value),
+            }
+
+    if e_validator == "maximum":
+        if error.get("exclusiveMaximum", False):
+            return _("%(instance)s is more than or equal to the maximum of %(validator_value)s") % {
+                "instance": json_repr(error.get("instance")),
+                "validator_value": json_repr(e_validator_value),
+            }
+        else:
+            return _("%(instance)s is more than the maximum of %(validator_value)s") % {
+                "instance": json_repr(error.get("instance")),
+                "validator_value": json_repr(e_validator_value),
+            }
+
+    if e_validator == "anyOf":
+        return _("%s is not valid under any of the given schemas") % (json_repr(error["instance"]),)
+
+    if e_validator == "multipleOf":
+        return _("%(instance)s is not a multiple of %(validator_value)s") % {
+            "instance": json_repr(error.get("instance")),
+            "validator_value": json_repr(e_validator_value),
+        }
+
+    if e_validator == "not":
+        return _("%(validator_value)s is not allowed for %(instance)s") % {
+            "instance": json_repr(error.get("instance")),
+            "validator_value": json_repr(e_validator_value),
+        }
+
+    if e_validator == "additionalItems":
+        extras = error.get("extras") or []
+        return ngettext(
+            "Additional items are not allowed (%s was unexpected)",
+            "Additional items are not allowed (%s were unexpected)",
+            len(extras),
+        ) % (extras,)
+
+    if e_validator == "dependencies":
+            return _("%(each)s is a dependency of %(property)s") % {
+                "each": json_repr(error.get("each")),
+                "property": json_repr(error.get("property")),
+            }
 
     if error.get("error_id"):
         if error["error_id"] == "uniqueItems_no_ids":
             return _("Array has non-unique elements")
+
         if error["error_id"].startswith("uniqueItems_with_"):
             id_name = error["error_id"][len("uniqueItems_with_"):]
             return _("Non-unique {} values").format(id_name)
 
+        if error["error_id"] == "additionalProperties_not_allowed":
+            extras = error.get("extras") or []
+            return ngettext(
+                "Additional properties are not allowed (%s was unexpected)",
+                "Additional properties are not allowed (%s were unexpected)",
+                len(extras),
+            ) % (extras,)
+
+        if error["error_id"] == "additionalProperties_does_not_match_regexes":
+            extras = error.get("extras") or []
+            return ngettext(
+                "%(extras)s does not match any of the regexes: %(patterns)s",
+                "%(extras)s do not match any of the regexes: %(patterns)s",
+                len(extras),
+            ) % {
+                "extras": error["reprs"][0],
+                "patterns": error["reprs"][1],
+            }
 
     return error["message"]
