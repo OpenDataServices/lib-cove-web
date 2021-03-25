@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.21.0] - 2021-03-25
+
 ### Changed
 
 - All text that might appear in cove-ocds is translated into Spanish https://github.com/open-contracting/cove-ocds/issues/144
