@@ -4,7 +4,7 @@ install_requires = []
 
 setup(
     name='libcoveweb',
-    version='0.21.0',
+    version='0.21.1',
     author='Open Data Services',
     author_email='code@opendataservices.coop',
     packages=find_packages(),
@@ -43,7 +43,7 @@ setup(
         "sentry-sdk",
         "strict-rfc3339",
         "rfc3987",
-        "rfc6266",
+        "uc-rfc6266-parser",
         "xmltodict",
         # libcove deps on flatten-tool which pulls in openpyxl
         # which is only compatible with certain versions of python

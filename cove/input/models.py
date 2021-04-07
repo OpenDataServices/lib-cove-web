@@ -5,7 +5,7 @@ import os
 from django.conf import settings
 import requests
 from django.core.files.base import ContentFile
-import rfc6266  # (content-disposition header parser)
+import rfc6266_parser  # (content-disposition header parser)
 
 CONTENT_TYPE_MAP = {
     'application/json': 'json',
@@ -66,7 +66,7 @@ class SuppliedData(models.Model):
             file_extension = CONTENT_TYPE_MAP.get(content_type)
 
             if not file_extension:
-                possible_extension = rfc6266.parse_requests_response(r).filename_unsafe.split('.')[-1]
+                possible_extension = rfc6266_parser.parse_requests_response(r).filename_unsafe.split('.')[-1]
                 if possible_extension in CONTENT_TYPE_MAP.values():
                     file_extension = possible_extension
 
