@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.21.1] - 2021-04-08
+
+### Fixed
+
+- Switch to a fork of the rfc6266 package, that supports Python 3.8
+
 # [0.21.0] - 2021-03-25
 
 ### Changed
