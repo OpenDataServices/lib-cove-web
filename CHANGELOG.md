@@ -7,6 +7,34 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.21.1] - 2021-04-08
+
+### Fixed
+
+- Switch to a fork of the rfc6266 package, that supports Python 3.8
+
+# [0.21.0] - 2021-03-25
+
+### Changed
+
+- All text that might appear in cove-ocds is translated into Spanish https://github.com/open-contracting/cove-ocds/issues/144
+
+### Fixed
+
+- Codelist csv link now points to working service. https://github.com/OpenDataServices/lib-cove-web/issues/74
+
+# [0.20.0] - 2021-02-10
+
+### Added
+
+- Number of days before files expire is now configurable in settings.py https://github.com/open-contracting/cove-ocds/issues/142
+
+# [0.19.0] - 2021-01-26
+
+### Changed
+
+- Make `html_error_msg` importable from its own file, and without Django settings needing to be configured (e.g. in lib-cove-bods).
+
 # [0.18.4] - 2020-12-18
 
 ### Fixed

@@ -8,5 +8,7 @@ def from_settings(request):
 
         'piwik': settings.PIWIK,
         'google_analytics_id': settings.GOOGLE_ANALYTICS_ID,
+
+        'delete_files_after_days': getattr(settings, 'DELETE_FILES_AFTER_DAYS', 7),
     }
     return context
