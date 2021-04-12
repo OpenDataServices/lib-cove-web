@@ -34,7 +34,7 @@ jobs:
             ${{ runner.os }}-pip-
       - run: "pip install --upgrade pip"
       - run: "pip install --use-feature=2020-resolver --upgrade -e .[test]"
-      - run: "pip install ${{ matrix.django-version }}"
+      - run: "pip install '${{ matrix.django-version }}'"
       - run: "DJANGO_SETTINGS_MODULE=cove.settings py.test -n 2 cove --cov --cov-report="
       # Install translate toolkit to get pocount binary
       - run: "sudo apt-get update"
