@@ -28,7 +28,7 @@ setup(
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
     ],
     install_requires=[
-        "Django<2.3",
+        "Django>=2.2,<3.3",
         "django-bootstrap3",
         "django-debug-toolbar",
         "requests",
