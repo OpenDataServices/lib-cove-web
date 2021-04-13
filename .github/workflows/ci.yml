@@ -35,7 +35,11 @@ jobs:
       - run: "pip install --upgrade pip"
       - run: "pip install --use-feature=2020-resolver --upgrade -e .[test]"
       - run: "pip install '${{ matrix.django-version }}'"
-      - run: "DJANGO_SETTINGS_MODULE=cove.settings py.test -n 2 cove --cov"
+      - run: "py.test -n 2 cove --cov"
+        env:
+          PYTHONWARNINGS: error
+          DJANGO_SETTINGS_MODULE: cove.settings
+          SECRET_KEY: 7ur)dt+e%1^e6$8_sd-@1h67_5zixe2&39%r2$$8_7v6fr_7ee
       # Install translate toolkit to get pocount binary
       - run: "sudo apt-get update"
       - run: "sudo apt-get install translate-toolkit"
