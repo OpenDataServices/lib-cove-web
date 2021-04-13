@@ -2,7 +2,7 @@ import json
 
 from django.utils.html import conditional_escape, escape, format_html
 from django.core.exceptions import ImproperlyConfigured
-from django.utils.translation import ugettext_lazy as _, ngettext
+from django.utils.translation import gettext_lazy as _, ngettext
 
 from libcove.lib.tools import decimal_default
 
