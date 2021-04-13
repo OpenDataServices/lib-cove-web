@@ -45,9 +45,6 @@ setup(
         "rfc3987",
         "uc-rfc6266-parser",
         "xmltodict",
-        # libcove deps on flatten-tool which pulls in openpyxl
-        # which is only compatible with certain versions of python
-        "openpyxl==2.6.4",
         "libcove>=0.17.0",
     ],
     extras_require={
