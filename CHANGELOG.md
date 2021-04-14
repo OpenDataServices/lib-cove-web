@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.22.0] - 2021-04-14
+
+### Added
+
+- Add Django 3.x support https://github.com/OpenDataServices/lib-cove-web/pull/79
+
 # [0.21.1] - 2021-04-08
 
 ### Fixed
