@@ -40,7 +40,6 @@ setup(
         "jsonref",
         "json-merge-patch",
         "python-dateutil",
-        "sentry-sdk",
         "strict-rfc3339",
         "rfc3987",
         "uc-rfc6266-parser",
