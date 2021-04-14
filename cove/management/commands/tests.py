@@ -13,7 +13,7 @@ def test_expire_files():
     recent.original_file.save('test.json', ContentFile('{}'))
 
     old = SuppliedData.objects.create()
-    old.created = timezone.datetime(2015, 1, 1)
+    old.created = timezone.datetime(2015, 1, 1, tzinfo=timezone.utc)
     old.original_file.save('test.json', ContentFile('{}'))
 
     call_command('expire_files')
@@ -26,7 +26,7 @@ def test_expire_files_default_days(settings):
     del(settings.DELETE_FILES_AFTER_DAYS)
 
     old = SuppliedData.objects.create()
-    old.created = timezone.datetime.now() - datetime.timedelta(days=30)
+    old.created = timezone.now() - datetime.timedelta(days=30)
     old.original_file.save('test.json', ContentFile('{}'))
     call_command('expire_files')
     assert not os.path.exists(old.upload_dir())
@@ -37,7 +37,7 @@ def test_expire_files_90_days(settings):
     settings.DELETE_FILES_AFTER_DAYS = 90
 
     old = SuppliedData.objects.create()
-    old.created = timezone.datetime.now() - datetime.timedelta(days=30)
+    old.created = timezone.now() - datetime.timedelta(days=30)
     old.original_file.save('test.json', ContentFile('{}'))
     call_command('expire_files')
     assert os.path.exists(old.upload_dir())

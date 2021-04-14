@@ -4,7 +4,7 @@ from django import forms
 from django.conf import settings
 from django.core.files.base import ContentFile
 from django.shortcuts import render, redirect
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from cove.input.models import SuppliedData
 from django.views.decorators.csrf import csrf_exempt

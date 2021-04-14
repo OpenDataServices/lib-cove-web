@@ -2,7 +2,7 @@ import json
 
 from django.utils.html import conditional_escape, escape, format_html
 from django.core.exceptions import ImproperlyConfigured
-from django.utils.translation import ugettext_lazy as _, ngettext
+from django.utils.translation import gettext_lazy as _, ngettext
 
 from libcove.lib.tools import decimal_default
 
@@ -21,7 +21,7 @@ except ImproperlyConfigured:
 validation_error_template_lookup_safe = {
     "date-time": _("Date is not in the correct format"),
     "uri": _("Invalid 'uri' found"),
-    "string": _("{}<code>{}</code> is not a string. Check that the value {} has quotes at the start and end. Escape any quotes in the value with <code>\</code>"),
+    "string": _("{}<code>{}</code> is not a string. Check that the value {} has quotes at the start and end. Escape any quotes in the value with <code>\\</code>"),
     "integer": _("{}<code>{}</code> is not a integer. Check that the value {} doesn’t contain decimal points or any characters other than 0-9. Integer values should not be in quotes. "),
     "number": _("{}<code>{}</code> is not a number. Check that the value {} doesn’t contain any characters other than 0-9 and dot (<code>.</code>). Number values should not be in quotes. "),
     "object": _("{}<code>{}</code> is not a JSON object"),

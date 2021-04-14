@@ -28,7 +28,7 @@ setup(
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
     ],
     install_requires=[
-        "Django<2.3",
+        "Django>=2.2,<3.3",
         "django-bootstrap3",
         "django-debug-toolbar",
         "requests",
@@ -45,9 +45,6 @@ setup(
         "rfc3987",
         "uc-rfc6266-parser",
         "xmltodict",
-        # libcove deps on flatten-tool which pulls in openpyxl
-        # which is only compatible with certain versions of python
-        "openpyxl==2.6.4",
         "libcove>=0.17.0",
     ],
     extras_require={
