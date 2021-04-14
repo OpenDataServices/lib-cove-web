@@ -16,6 +16,33 @@ Currently it does *not* stand alone as a CoVE django app.
 * [IATI](https://github.com/opendataservices/cove)
 * [360Giving](https://github.com/opendataservices/cove)
 
+## Theme customization
+
+### Adding a link to the source control management (SCM) revision
+
+We recommend [dealer](https://pypi.org/project/dealer/). To use it:
+
+1. Add `dealer` to your requirements file
+1. In your Django project's `settings.py` file:
+    1. Set `DEALER_TYPE = 'git'`
+    1. Add `'dealer.contrib.django.Middleware',` to the `MIDDLEWARE` list
+1. In your Django app:
+    1. Create a `templates/APP` directory, replacing `APP` with the name of your Django app
+    1. Create a `base.html` file in the new directory, with at minimum:
+
+        ```jinja
+        {% extends 'base.html' %}
+        {% load i18n %}
+        ```
+
+    1. Add to the `base.html` file, for example, replacing `OpenDataServices/cove` with the path to your GitHub repository:
+
+        ```jinja
+        {% block version_link %}
+        <p class="text-muted">{% blocktrans %}Running version {% endblocktrans %}<a href="https://github.com/OpenDataServices/cove/tree/{{ request.tag }}">{{ request.tag }}</a></p>
+        {% endblock %}
+        ```
+
 ## Translations
 
 We use Django's translation framework to provide this application in different languages.

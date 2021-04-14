@@ -33,7 +33,6 @@ setup(
         "django-debug-toolbar",
         "requests",
         "cached-property",
-        "dealer",
         "django-environ",
         "zipp==1.2.0",
         "jsonschema",
