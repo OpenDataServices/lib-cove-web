@@ -62,8 +62,6 @@ DELETE_FILES_AFTER_DAYS = env("DELETE_FILES_AFTER_DAYS")
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-DEALER_TYPE = 'git'
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -115,7 +113,6 @@ MIDDLEWARE = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'dealer.contrib.django.Middleware',
     'cove.middleware.CoveConfigCurrentApp',
 )
 
