@@ -30,7 +30,6 @@ setup(
     install_requires=[
         "Django>=2.2,<3.3",
         "django-bootstrap3",
-        "django-debug-toolbar",
         "requests",
         "dealer",
         "django-environ",

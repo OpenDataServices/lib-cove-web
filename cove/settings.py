@@ -40,7 +40,6 @@ env = environ.Env(  # set default values and casting
     ALLOWED_HOSTS=(list, []),
     SECRET_KEY=(str, secret_key),
     DB_NAME=(str, os.path.join(BASE_DIR, 'db.sqlite3')),
-    DEBUG_TOOLBAR=(bool, False),
     VALIDATION_ERROR_LOCATIONS_LENGTH=(int, 1000),
     VALIDATION_ERROR_LOCATIONS_SAMPLE=(bool, False),
     DELETE_FILES_AFTER_DAYS=(int, 7),
@@ -102,9 +101,6 @@ INSTALLED_APPS = (
     'cove',
     'cove.input',
 )
-
-if env('DEBUG_TOOLBAR'):
-    INSTALLED_APPS += ('debug_toolbar',)
 
 MIDDLEWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',
