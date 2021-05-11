@@ -8,6 +8,7 @@ def from_settings(request):
 
         'piwik': getattr(settings, 'PIWIK', {'dimension_map': {}}),
         'google_analytics_id': getattr(settings, 'GOOGLE_ANALYTICS_ID', ''),
+        'sentry_dsn': getattr(settings, 'SENTRY_DSN', ''),
 
         'delete_files_after_days': getattr(settings, 'DELETE_FILES_AFTER_DAYS', 7),
     }
