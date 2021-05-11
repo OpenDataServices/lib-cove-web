@@ -12,7 +12,8 @@ Currently it does *not* stand alone as a CoVE django app.
 ## CoVEs which use this library
 
 * [Beneficial Ownership Data Standard](https://github.com/openownership/cove-bods)
-* [Open Contracting Data Standard](https://github.com/opendataservices/cove)
+* [Open Contracting Data Standard](https://github.com/open-contracting/cove-ocds)
+* [Open Contracting for Infrastructure Data Standards](https://github.com/open-contracting/cove-oc4ids)
 * [IATI](https://github.com/opendataservices/cove)
 * [360Giving](https://github.com/opendataservices/cove)
 
