@@ -31,7 +31,6 @@ setup(
         "Django>=2.2,<3.3",
         "django-bootstrap3",
         "requests",
-        "dealer",
         "django-environ",
         "flattentool",
         "uc-rfc6266-parser",
