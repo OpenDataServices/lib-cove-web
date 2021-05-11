@@ -34,7 +34,6 @@ setup(
         "dealer",
         "django-environ",
         "flattentool",
-        "sentry-sdk",
         "uc-rfc6266-parser",
         "libcove>=0.17.0",
     ],

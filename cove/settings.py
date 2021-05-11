@@ -31,7 +31,6 @@ if 'SECRET_KEY' not in os.environ:
     warnings.warn('SECRET_KEY should be added to Environment Variables. Random key will be used instead.')
 
 env = environ.Env(  # set default values and casting
-    SENTRY_DSN=(str, ''),
     DEBUG=(bool, True),
     PIWIK_URL=(str, ''),
     PIWIK_SITE_ID=(str, ''),
@@ -73,18 +72,6 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = env('ALLOWED_HOSTS')
-
-if env('SENTRY_DSN'):
-    import sentry_sdk
-    from sentry_sdk.integrations.django import DjangoIntegration
-    from sentry_sdk.integrations.logging import ignore_logger
-
-    ignore_logger('django.security.DisallowedHost')
-    sentry_sdk.init(
-        dsn=env('SENTRY_DSN'),
-        integrations=[DjangoIntegration()]
-    )
-
 
 
 # Application definition
