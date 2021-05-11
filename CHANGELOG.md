@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Don't show section on Sentry in the terms and conditions, if its not in use https://github.com/OpenDataServices/lib-cove-web/pull/95
+
 # [0.22.0] - 2021-04-14
 
 ### Added
