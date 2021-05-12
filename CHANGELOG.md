@@ -7,8 +7,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.23.0] - 2021-05-12
+
+### Removed
+
+- Remove [Dealer](https://github.com/OpenDataServices/lib-cove-web/pull/90) (git commit info), [Django Debug Toolbar](https://github.com/OpenDataServices/lib-cove-web/pull/88/files) and [Sentry](https://github.com/OpenDataServices/lib-cove-web/pull/92) integration, so that projects can choose whether to use them or not. Projects will **need to explicitly add these** themselves to keep the same functionality.
+- Empty dataload app has been removed https://github.com/OpenDataServices/lib-cove-web/pull/87/files
+
 ### Changed
 
+- Make sure requirements are correct https://github.com/OpenDataServices/lib-cove-web/pull/85
+- `PIWIK` and `GOOGLE_ANALYSTICS_ID` are now optional in the settings https://github.com/OpenDataServices/lib-cove-web/pull/94
 - Don't show section on Sentry in the terms and conditions, if its not in use https://github.com/OpenDataServices/lib-cove-web/pull/95
 
 # [0.22.0] - 2021-04-14
