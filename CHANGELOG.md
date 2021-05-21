@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.24.0] - 2021-05-25
+
 ### Changed
 
 - Add support to `html_error_msg` for messages about a non-unique combination of multiple IDs. (E.g. ocid and id, as added in [this lib-cove-ocds PR](https://github.com/open-contracting/lib-cove-ocds/pull/91)).
