@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-24 17:43+0000\n"
+"POT-Creation-Date: 2021-05-21 15:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -171,18 +171,22 @@ msgstr ""
 msgid "Array has non-unique elements"
 msgstr ""
 
-#: cove/html_error_msg.py:208
+#: cove/html_error_msg.py:210
+msgid "Non-unique combination of {} values"
+msgstr ""
+
+#: cove/html_error_msg.py:212
 msgid "Non-unique {} values"
 msgstr ""
 
-#: cove/html_error_msg.py:213
+#: cove/html_error_msg.py:217
 #, python-format
 msgid "Additional properties are not allowed (%s was unexpected)"
 msgid_plural "Additional properties are not allowed (%s were unexpected)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: cove/html_error_msg.py:221
+#: cove/html_error_msg.py:225
 #, python-format
 msgid "%(extras)s does not match any of the regexes: %(patterns)s"
 msgid_plural "%(extras)s do not match any of the regexes: %(patterns)s"
@@ -344,11 +348,7 @@ msgstr ""
 msgid "Terms &amp; Conditions"
 msgstr ""
 
-#: cove/templates/base.html:128
-msgid "Running version "
-msgstr ""
-
-#: cove/templates/base.html:134
+#: cove/templates/base.html:133
 msgid "Links"
 msgstr ""
 

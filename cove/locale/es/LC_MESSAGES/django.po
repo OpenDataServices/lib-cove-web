@@ -7,19 +7,19 @@
 # Eduardo Gomez <eduardo.gomez@hotmail.co.uk>, 2018
 # David Raznick <david.raznick@opendataservices.coop>, 2019
 # Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2019
-# Ben Webb <ben.webb@opendataservices.coop>, 2020
-# Bibiana Cristòfol <bcristofol@gmail.com>, 2020
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
 # Maria Esther Cervantes <mcervantes@cds.com.py>, 2021
+# Ben Webb <ben.webb@opendataservices.coop>, 2021
+# Bibiana Cristòfol <bcristofol@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-24 17:43+0000\n"
+"POT-Creation-Date: 2021-05-21 15:36+0000\n"
 "PO-Revision-Date: 2018-11-30 11:12+0000\n"
-"Last-Translator: Maria Esther Cervantes <mcervantes@cds.com.py>, 2021\n"
+"Last-Translator: Bibiana Cristòfol <bcristofol@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59127/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,8 +41,8 @@ msgid ""
 " start and end. Escape any quotes in the value with <code>\\</code>"
 msgstr ""
 "{}<code>{}</code> no es un hilo. Revise que el valor {} tenga comillas al "
-"principio y al final. Escapar de cualquier comillas con el valor "
-"<code>/</code>"
+"principio y al final. Escapa de cualquier comillas con el valor "
+"<code>\\</code>"
 
 #: cove/html_error_msg.py:25
 msgid ""
@@ -194,11 +194,15 @@ msgstr "%(each)ses una dependencia de %(property)s"
 msgid "Array has non-unique elements"
 msgstr "La matriz tiene elementos no únicos"
 
-#: cove/html_error_msg.py:208
+#: cove/html_error_msg.py:210
+msgid "Non-unique combination of {} values"
+msgstr "Combinación no única de {} valores"
+
+#: cove/html_error_msg.py:212
 msgid "Non-unique {} values"
 msgstr "Valores {} no únicos"
 
-#: cove/html_error_msg.py:213
+#: cove/html_error_msg.py:217
 #, python-format
 msgid "Additional properties are not allowed (%s was unexpected)"
 msgid_plural "Additional properties are not allowed (%s were unexpected)"
@@ -206,7 +210,7 @@ msgstr[0] "Propiedades adicionales no están permitidas (%s fue inesperado )"
 msgstr[1] ""
 "Propiedades adicionales no están permitidas (%s fueron inesperados )"
 
-#: cove/html_error_msg.py:221
+#: cove/html_error_msg.py:225
 #, python-format
 msgid "%(extras)s does not match any of the regexes: %(patterns)s"
 msgid_plural "%(extras)s do not match any of the regexes: %(patterns)s"
@@ -386,11 +390,7 @@ msgstr "Issues del Cove"
 msgid "Terms &amp; Conditions"
 msgstr "Términos y condiciones"
 
-#: cove/templates/base.html:128
-msgid "Running version "
-msgstr "Versión en ejecución"
-
-#: cove/templates/base.html:134
+#: cove/templates/base.html:133
 msgid "Links"
 msgstr "Enlaces"
 

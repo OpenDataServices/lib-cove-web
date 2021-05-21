@@ -185,6 +185,22 @@ def test_get_file_name_with_none():
             "path_no_number": "releases",
             "assumption": None,
         },
+	{
+	    "message": "Non-unique combination of ocid, id values",
+	    "message_safe": "Non-unique combination of ocid, id values",
+	    "validator": "uniqueItems",
+	    "assumption": None,
+	    "message_type": "uniqueItems",
+	    "path_no_number": "releases",
+	    "header": "releases",
+	    "header_extra": "releases",
+	    "null_clause": "",
+	    "error_id": "uniqueItems_with_ocid__id",
+	    "values": [
+		{"path": "releases", "value": "EXAMPLE-1, EXAMPLE-1-1"},
+		{"path": "releases", "value": "EXAMPLE-1, EXAMPLE-1-2"},
+	    ],
+	},
         {
             "error_id": "uniqueItems_with_id",
             "values": [
