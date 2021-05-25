@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.24.1] - 2021-05-25
+
+### Fixed
+
+- Include .mo files in the PyPI package
+
 # [0.24.0] - 2021-05-25
 
 ### Changed
