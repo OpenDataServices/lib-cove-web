@@ -205,7 +205,11 @@ def html_error_msg(error):
 
         if error["error_id"].startswith("uniqueItems_with_"):
             id_name = error["error_id"][len("uniqueItems_with_"):]
-            return _("Non-unique {} values").format(id_name)
+            if "__" in id_name:
+                id_names = id_name.split("__")
+                return _("Non-unique combination of {} values").format(", ".join(id_names))
+            else:
+                return _("Non-unique {} values").format(id_name)
 
         if error["error_id"] == "additionalProperties_not_allowed":
             extras = error.get("extras") or []

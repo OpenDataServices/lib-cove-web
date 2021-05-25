@@ -1,6 +1,5 @@
 *.sqlite3
 *.swp
-*.mo
 *~
 .ve
 *.pyc

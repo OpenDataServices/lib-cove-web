@@ -40,8 +40,12 @@ jobs:
           PYTHONWARNINGS: error
           DJANGO_SETTINGS_MODULE: cove.settings
           SECRET_KEY: 7ur)dt+e%1^e6$8_sd-@1h67_5zixe2&39%r2$$8_7v6fr_7ee
-      # Install translate toolkit to get pocount binary
       - run: "sudo apt-get update"
+      - run: "sudo apt-get install gettext"
+      # Check that changes to .po files have been compiled
+      - run: "python manage.py compilemessages"
+      - run: "git diff --exit-code"
+      # Install translate toolkit to get pocount binary
       - run: "sudo apt-get install translate-toolkit"
       # Check that strings have Spanish translation (for cove-ocds)
       - run: "python manage.py makemessages -l es"
