@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.6", "3.7", "3.8", "3.9"]
+        python-version: ["3.6", "3.7", "3.8", "3.9", "3.10"]
         django-version:
           - "Django>=2.2,<2.3"
           - "Django>=3.0,<3.1"
@@ -19,6 +19,14 @@ jobs:
             django-version: "Django>=2.2,<2.3"
           - python-version: "3.9"
             django-version: "Django>=3.0,<3.1"
+          # Django 3.2+ supports Python 3.10.
+          # https://docs.djangoproject.com/en/3.2/releases/3.2/
+          - python-version: "3.10"
+            django-version: "Django>=2.2,<2.3"
+          - python-version: "3.10"
+            django-version: "Django>=3.0,<3.1"
+          - python-version: "3.10"
+            django-version: "Django>=3.1,<3.2"
     steps:
       - uses: actions/checkout@v2
       - name: Setup python
