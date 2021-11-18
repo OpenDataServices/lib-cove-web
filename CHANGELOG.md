@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.24.2] - 2021-11-18
+
+- Do not warn if `SECRET_KEY` is not set in settings
+
 # [0.24.1] - 2021-05-25
 
 ### Fixed
