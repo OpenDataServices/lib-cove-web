@@ -36,6 +36,10 @@ class SuppliedData(models.Model):
     # Schema version in uploaded/linked file
     data_schema_version = models.CharField(max_length=10, default='')
 
+    # Parameters that were passed for this supplied data
+    parameters = models.TextField(blank=True, null=True)
+
+
     form_name = models.CharField(
         max_length=20,
         choices=[
