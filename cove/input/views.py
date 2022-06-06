@@ -1,3 +1,4 @@
+import json
 import requests
 
 from django import forms
@@ -63,6 +64,14 @@ def data_input(request, form_classes=default_form_classes, text_file_name='test.
                 data = form.save(commit=False)
             data.current_app = request.current_app
             data.form_name = form_name
+
+            try:
+                # We don't want to store large chunks of pasted data that might be in the request data.
+                if not "paste" in request_data:
+                    data.parameters = json.dumps(request_data)
+            except TypeError:
+                pass
+
             data.save()
             if form_name == 'url_form':
                 try:
