@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.25.0] - 2022-07-19
+
+### Add
+
+- Store the original form parameters that were used when submitting the data. Allowing for users of lib-cove-web to create custom actions based on the input.
+
+### Removed
+
+- "Tool is Alpha" content from banner block in base template
+
+
 # [0.24.2] - 2021-11-18
 
 - Do not warn if `SECRET_KEY` is not set in settings
