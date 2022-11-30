@@ -79,7 +79,7 @@ def explore_data_context(request, pk, get_file_type=None):
             }, status=404)
 
     try:
-        file_name = data.original_file.file.name
+        file_name = data.original_file.path
         if file_name.endswith('validation_errors-3.json'):
             raise PermissionError('You are not allowed to upload a file with this name.')
     except FileNotFoundError:
