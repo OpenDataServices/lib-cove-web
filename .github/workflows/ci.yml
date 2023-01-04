@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.6", "3.7", "3.8", "3.9", "3.10"]
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
         django-version:
           - "Django>=2.2,<2.3"
           - "Django>=3.0,<3.1"
@@ -41,7 +41,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - run: "pip install --upgrade pip"
-      - run: "pip install --use-feature=2020-resolver --upgrade -e .[test]"
+      - run: "pip install --upgrade -e .[test]"
       - run: "pip install '${{ matrix.django-version }}'"
       - run: "py.test -n 2 cove --cov"
         env:
