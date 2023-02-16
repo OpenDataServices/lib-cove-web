@@ -1,3 +1,4 @@
+from urllib.parse import urlsplit
 from django.db import models
 import uuid
 from django.urls import reverse
@@ -5,7 +6,7 @@ import os
 from django.conf import settings
 import requests
 from django.core.files.base import ContentFile
-import rfc6266_parser  # (content-disposition header parser)
+from werkzeug.http import parse_options_header
 
 CONTENT_TYPE_MAP = {
     'application/json': 'json',
@@ -70,7 +71,14 @@ class SuppliedData(models.Model):
             file_extension = CONTENT_TYPE_MAP.get(content_type)
 
             if not file_extension:
-                possible_extension = rfc6266_parser.parse_requests_response(r).filename_unsafe.split('.')[-1]
+                _, options = parse_options_header(r.headers.get('content-disposition'))
+                if 'filename*' in options:
+                    filename = options['filename*']
+                elif 'filename' in options:
+                    filename = options['filename']
+                else:
+                    filename = urlsplit(r.url).path.rstrip('/').rsplit('/')[-1]
+                possible_extension = filename.rsplit('.')[-1]
                 if possible_extension in CONTENT_TYPE_MAP.values():
                     file_extension = possible_extension
 
