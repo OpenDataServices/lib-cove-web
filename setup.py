@@ -35,7 +35,7 @@ setup(
         "requests",
         "django-environ",
         "flattentool",
-        "uc-rfc6266-parser",
+        "werkzeug",
         "libcove>=0.17.0",
     ],
     extras_require={
