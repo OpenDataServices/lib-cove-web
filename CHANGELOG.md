@@ -7,10 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.26.0] - 2023-02-17
+
 ## Changed
 
 - Switch to Werkzeug from uc-rfc6266-parser
 - Drop Python 3.6 support
+- Use FieldFile.path instead of File.name, to avoid unclosed file warnings
 
 # [0.25.0] - 2022-07-19
 
