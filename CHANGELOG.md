@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## Changed
+
+- Randomize the uploaded file subdirectory, to allow coves to hide original files from unauthenticated users
+
 # [0.26.0] - 2023-02-17
 
 ## Changed
