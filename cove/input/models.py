@@ -7,6 +7,8 @@ from django.conf import settings
 import requests
 from django.core.files.base import ContentFile
 from werkzeug.http import parse_options_header
+import secrets
+import string
 
 CONTENT_TYPE_MAP = {
     'application/json': 'json',
@@ -19,13 +21,15 @@ CONTENT_TYPE_MAP = {
 
 
 def upload_to(instance, filename=''):
-    return os.path.join(str(instance.pk), filename)
+    alphabet = string.ascii_letters + string.digits
+    random_string = "".join(secrets.choice(alphabet) for i in range(16))
+    return os.path.join(str(instance.pk), random_string, filename)
 
 
 class SuppliedData(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     source_url = models.URLField(null=True, max_length=2000)
-    original_file = models.FileField(upload_to=upload_to)
+    original_file = models.FileField(upload_to=upload_to, max_length=256)
     current_app = models.CharField(max_length=20)
 
     created = models.DateTimeField(auto_now_add=True, null=True)
@@ -55,10 +59,10 @@ class SuppliedData(models.Model):
         return reverse('explore', args=(self.pk,), current_app=self.current_app)
 
     def upload_dir(self):
-        return os.path.join(settings.MEDIA_ROOT, upload_to(self))
+        return os.path.join(settings.MEDIA_ROOT, str(self.pk), '')
 
     def upload_url(self):
-        return os.path.join(settings.MEDIA_URL, upload_to(self))
+        return os.path.join(settings.MEDIA_URL, str(self.pk), '')
 
     def is_google_doc(self):
         return self.source_url.startswith('https://docs.google.com/')
