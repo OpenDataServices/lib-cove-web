@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Removed
 
 - Dropped support for Python 3.7, as it is now end of life.
+- Remove django-environ dependency https://github.com/OpenDataServices/lib-cove-web/issues/80
+  If you use this dependency directly, add it to your requirements file.
 
 ### Fixed
 
