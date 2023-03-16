@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Support Django 4.2 https://github.com/OpenDataServices/lib-cove-web/issues/112
 
+### Removed
+
+- Remove django-environ dependency https://github.com/OpenDataServices/lib-cove-web/issues/80
+
+  If you use this dependency directly, add it to your requirements file.
+
 # [0.27.0] - 2023-03-06
 
 ## Changed

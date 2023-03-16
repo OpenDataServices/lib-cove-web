@@ -33,7 +33,6 @@ setup(
         "Django>=2.2,<4.3",
         "django-bootstrap3",
         "requests",
-        "django-environ",
         "flattentool",
         "werkzeug",
         "libcove>=0.17.0",
