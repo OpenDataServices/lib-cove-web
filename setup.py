@@ -30,7 +30,7 @@ setup(
     ],
     python_requires=">=3.7",
     install_requires=[
-        "Django>=2.2,<3.3",
+        "Django>=2.2,<4.3",
         "django-bootstrap3",
         "requests",
         "django-environ",
