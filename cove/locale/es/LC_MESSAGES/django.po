@@ -60,7 +60,7 @@ msgid ""
 "any characters other than 0-9 and dot (<code>.</code>). Number values should"
 " not be in quotes. "
 msgstr ""
-"{}<code>{}</code>no es un número. Compruebe que el valor {} no contenga "
+"{}<code>{}</code> no es un número. Compruebe que el valor {} no contenga "
 "ningún carácter más que 0-9 y el punto (.). Los valores numéricos no deben "
 "estar entre comillas"
 
@@ -99,7 +99,7 @@ msgstr "<code>{}</code> falta pero se requiere dentro de <code>{}</code>"
 
 #: cove/html_error_msg.py:94
 msgid "<code>{}</code> is missing but required"
-msgstr "<code>{}</code>falta pero se requiere"
+msgstr "<code>{}</code> falta pero se requiere"
 
 #: cove/html_error_msg.py:98
 msgid "Invalid code found in <code>{}</code>"
@@ -107,31 +107,31 @@ msgstr "Código inválido encontrado en <code>{}</code>"
 
 #: cove/html_error_msg.py:102
 msgid "<code>{}</code> does not match the regex <code>{}</code>"
-msgstr "<code>{}</code>no coincide con la expresión regular <code>{}</code>"
+msgstr "<code>{}</code> no coincide con la expresión regular <code>{}</code>"
 
 #: cove/html_error_msg.py:110
 msgid ""
 "<code>{}</code> is too short. You must supply at least one value, or remove "
 "the item entirely (unless it’s required)."
 msgstr ""
-"<code>{}</code>es muy corto. Debe proporcionar al menos un valor o eliminar "
+"<code>{}</code> es muy corto. Debe proporcionar al menos un valor o eliminar "
 "el artículo por completo (a menos que sea necesario)."
 
 #: cove/html_error_msg.py:115 cove/html_error_msg.py:127
 msgid "<code>{}</code> is too short"
-msgstr "<code>{}</code>es muy corto"
+msgstr "<code>{}</code> es muy corto"
 
 #: cove/html_error_msg.py:122
 msgid ""
 "<code>{}</code> is too short. Strings must be at least one character. This "
 "error typically indicates a missing value."
 msgstr ""
-"<code>{}</code>es muy corto. Las cadenas deben ser de al menos un caracter. "
+"<code>{}</code> es muy corto. Las cadenas deben ser de al menos un caracter. "
 "Este error generalmente indica que hay un valor faltante. "
 
 #: cove/html_error_msg.py:133 cove/html_error_msg.py:139
 msgid "<code>{}</code> is too long"
-msgstr "<code>{}</code>es muy largo"
+msgstr "<code>{}</code> es muy largo"
 
 #: cove/html_error_msg.py:144
 msgid "{} does not have enough properties"
@@ -156,7 +156,7 @@ msgstr "%(instance)s es menor que el mínimo de %(validator_value)s"
 #, python-format
 msgid ""
 "%(instance)s is more than or equal to the maximum of %(validator_value)s"
-msgstr "%(instance)ses mayor o igual que el máximo de %(validator_value)s"
+msgstr "%(instance)s es mayor o igual que el máximo de %(validator_value)s"
 
 #: cove/html_error_msg.py:168
 #, python-format
@@ -188,7 +188,7 @@ msgstr[1] "Items adicionales no están permitidos (%s fueron inesperados)"
 #: cove/html_error_msg.py:197
 #, python-format
 msgid "%(each)s is a dependency of %(property)s"
-msgstr "%(each)ses una dependencia de %(property)s"
+msgstr "%(each)s es una dependencia de %(property)s"
 
 #: cove/html_error_msg.py:204
 msgid "Array has non-unique elements"
@@ -206,9 +206,9 @@ msgstr "Valores {} no únicos"
 #, python-format
 msgid "Additional properties are not allowed (%s was unexpected)"
 msgid_plural "Additional properties are not allowed (%s were unexpected)"
-msgstr[0] "Propiedades adicionales no están permitidas (%s fue inesperado )"
+msgstr[0] "Propiedades adicionales no están permitidas (%s fue inesperado)"
 msgstr[1] ""
-"Propiedades adicionales no están permitidas (%s fueron inesperados )"
+"Propiedades adicionales no están permitidas (%s fueron inesperados)"
 
 #: cove/html_error_msg.py:225
 #, python-format
