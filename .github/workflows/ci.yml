@@ -60,6 +60,15 @@ jobs:
           DJANGO_SETTINGS_MODULE: cove.settings
           SECRET_KEY: 7ur)dt+e%1^e6$8_sd-@1h67_5zixe2&39%r2$$8_7v6fr_7ee
         if: ${{ matrix.django-version == 'Django>=4.2,<4.3' }}
+      - name: Check existing migrations can run and no migrations are missing
+        env:
+          DJANGO_SETTINGS_MODULE: cove.settings
+          DATABASE_URL: postgresql://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres
+        shell: bash
+        run: |
+          ./manage.py migrate
+          ./manage.py makemigrations --check --dry-run
+          ./manage.py check --fail-level WARNING
       - run: "sudo apt-get update"
       - run: "sudo apt-get install gettext"
       # Check that changes to .po files have been compiled
