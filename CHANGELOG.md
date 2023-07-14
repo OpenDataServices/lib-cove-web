@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
-- Add missing, or remote extra, spaces around HTML tags, named placeholders and punctuation in Spanish translations
+- Add missing, or remove extra, spaces around HTML tags, named placeholders and punctuation in Spanish translations
 - Add database migration for 0.27.0 changes
 
 # [0.27.0] - 2023-03-06
