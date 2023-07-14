@@ -27,7 +27,7 @@ validation_error_template_lookup_safe = {
     "object": _("{}<code>{}</code> is not a JSON object"),
     "array": _("{}<code>{}</code> is not a JSON array"),
     "boolean": _("{}<code>{}</code> is not a JSON boolean"),
-    "boolean": _("{}<code>{}</code> is not null"),
+    "null": _("{}<code>{}</code> is not null"),
 }
 
 
