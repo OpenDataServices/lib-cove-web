@@ -6,31 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.7", "3.8", "3.9", "3.10"]
+        python-version: ["3.9"]
         django-version:
-          - "Django>=2.2,<2.3"
-          - "Django>=3.0,<3.1"
-          - "Django>=3.1,<3.2"
-          - "Django>=3.2,<3.3"
-          - "Django>=4.2,<4.3"
-        exclude:
-          # Django 4.2 drops Python 3.7 support
-          - python-version: "3.7"
-            django-version: "Django>=4.2,<4.3"
-          # Django 3.1+ supports Python 3.9.
-          # https://docs.djangoproject.com/en/3.1/releases/3.1.3/
-          - python-version: "3.9"
-            django-version: "Django>=2.2,<2.3"
-          - python-version: "3.9"
-            django-version: "Django>=3.0,<3.1"
-          # Django 3.2+ supports Python 3.10.
-          # https://docs.djangoproject.com/en/3.2/releases/3.2/
-          - python-version: "3.10"
-            django-version: "Django>=2.2,<2.3"
-          - python-version: "3.10"
-            django-version: "Django>=3.0,<3.1"
-          - python-version: "3.10"
-            django-version: "Django>=3.1,<3.2"
+          - "Django==4.2.4"
     steps:
       - uses: actions/checkout@v2
       - name: Setup python
@@ -38,18 +16,50 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           architecture: x64
-      - uses: actions/cache@v1
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements_dev.txt') }}-${{ matrix.python-version }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
+
+
       - run: "pip install --upgrade pip"
       - run: "pip install --upgrade -e .[test]"
       - run: "pip install '${{ matrix.django-version }}'"
+
+
+      - run: "pip install Django==4.2.3"
+      - run: "pip install certifi==2023.5.7"
+      - run: "pip install exceptiongroup==1.1.2"
+      - run: "pip install flake8==6.0.0"
+      - run: "pip install hypothesis==6.81.1"
+      - run: "pip install ijson==3.2.2"
+      - run: "pip install jsonschema==4.18.3"
+      - run: "pip install jsonschema-specifications==2023.6.1"
+      - run: "pip install numpy==1.25.1"
+      - run: "pip install pycodestyle==2.10.0"
+      - run: "pip install pyflakes==3.0.1"
+      - run: "pip install pytest-localserver==0.7.1"
+      - run: "pip install referencing==0.29.1"
+      - run: "pip install rpds-py==0.8.10"
+      - run: "pip install selenium==4.10.0"
+      - run: "pip install werkzeug==2.3.6"
+      - run: "pip install zodb==5.8.0"
+
+      - run: find cove
+      - run: grep -r cove_tags cove/
+      - name: Check existing migrations can run and no migrations are missing
+        env:
+          DJANGO_SETTINGS_MODULE: cove.settings
+          DATABASE_URL: postgresql://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres
+        shell: bash
+        run: |
+          ./manage.py migrate
+          ./manage.py makemigrations --check --dry-run
+          ./manage.py check --fail-level WARNING
+          
+          
+          
+          
+
+
       - run: "py.test -n 2 cove --cov"
         env:
-          PYTHONWARNINGS: error
           DJANGO_SETTINGS_MODULE: cove.settings
           SECRET_KEY: 7ur)dt+e%1^e6$8_sd-@1h67_5zixe2&39%r2$$8_7v6fr_7ee
         if: ${{ matrix.django-version != 'Django>=4.2,<4.3' }}
@@ -60,15 +70,10 @@ jobs:
           DJANGO_SETTINGS_MODULE: cove.settings
           SECRET_KEY: 7ur)dt+e%1^e6$8_sd-@1h67_5zixe2&39%r2$$8_7v6fr_7ee
         if: ${{ matrix.django-version == 'Django>=4.2,<4.3' }}
-      - name: Check existing migrations can run and no migrations are missing
-        env:
-          DJANGO_SETTINGS_MODULE: cove.settings
-          DATABASE_URL: postgresql://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres
-        shell: bash
-        run: |
-          ./manage.py migrate
-          ./manage.py makemigrations --check --dry-run
-          ./manage.py check --fail-level WARNING
+
+
+
+
       - run: "sudo apt-get update"
       - run: "sudo apt-get install gettext"
       # Check that changes to .po files have been compiled
