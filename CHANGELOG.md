@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix the "null" key in validation_error_template_lookup_safe
+  https://github.com/OpenDataServices/lib-cove-web/pull/122
+  https://github.com/OpenDataServices/lib-cove-web/pull/123 
+
 # [0.28.0] - 2023-07-13
 
 ### Add
