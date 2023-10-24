@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Removed
+
+- Dropped support for Python 3.7, as it is now end of life.
+
 ### Fixed
 
 - Fix the "null" key in validation_error_template_lookup_safe
