@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import environ
 import os
 import warnings
 
@@ -27,33 +26,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#%^&*(-_=+)'
 secret_key = get_random_string(50, chars)
-
-env = environ.Env(  # set default values and casting
-    DEBUG=(bool, True),
-    PIWIK_URL=(str, ''),
-    PIWIK_SITE_ID=(str, ''),
-    PIWIK_DIMENSION_MAP=(dict, {}),
-    GOOGLE_ANALYTICS_ID=(str, ''),
-    ALLOWED_HOSTS=(list, []),
-    SECRET_KEY=(str, secret_key),
-    DB_NAME=(str, os.path.join(BASE_DIR, 'db.sqlite3')),
-    VALIDATION_ERROR_LOCATIONS_LENGTH=(int, 1000),
-    VALIDATION_ERROR_LOCATIONS_SAMPLE=(bool, False),
-    DELETE_FILES_AFTER_DAYS=(int, 7),
-    # SCHEMA_URL_360=(str, 'https://raw.githubusercontent.com/ThreeSixtyGiving/standard/master/schema/'),
-)
+boolean_true_strings = ('true', 'on', 'ok', 'y', 'yes', '1')
 
 PIWIK = {
-    'url': env('PIWIK_URL'),
-    'site_id': env('PIWIK_SITE_ID'),
-    'dimension_map': env('PIWIK_DIMENSION_MAP'),
+    'url': os.getenv('PIWIK_URL', ''),
+    'site_id': os.getenv('PIWIK_SITE_ID', ''),
+    'dimension_map': dict(v.split('=', 1) for v in os.getenv('PIWIK_DIMENSION_MAP', '').split(',') if v),
 }
-GOOGLE_ANALYTICS_ID = env('GOOGLE_ANALYTICS_ID')
+GOOGLE_ANALYTICS_ID = os.getenv('GOOGLE_ANALYTICS_ID', '')
 
-VALIDATION_ERROR_LOCATIONS_LENGTH = env("VALIDATION_ERROR_LOCATIONS_LENGTH")
-VALIDATION_ERROR_LOCATIONS_SAMPLE = env("VALIDATION_ERROR_LOCATIONS_SAMPLE")
+VALIDATION_ERROR_LOCATIONS_LENGTH = int(os.getenv("VALIDATION_ERROR_LOCATIONS_LENGTH", 1000))
+VALIDATION_ERROR_LOCATIONS_SAMPLE = os.getenv("VALIDATION_ERROR_LOCATIONS_SAMPLE", '').lower() in boolean_true_strings
 
-DELETE_FILES_AFTER_DAYS = env("DELETE_FILES_AFTER_DAYS")
+DELETE_FILES_AFTER_DAYS = int(os.getenv("DELETE_FILES_AFTER_DAYS", 7))
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -62,12 +47,12 @@ MEDIA_URL = '/media/'
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY', secret_key)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = os.getenv('DEBUG', 'true').lower() in boolean_true_strings
 
-ALLOWED_HOSTS = env('ALLOWED_HOSTS')
+ALLOWED_HOSTS = [v for v in os.getenv('ALLOWED_HOSTS', '').split(',') if v]
 
 
 # Application definition
@@ -125,7 +110,7 @@ WSGI_APPLICATION = ''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': env('DB_NAME'),
+        'NAME': os.getenv('DB_NAME', os.path.join(BASE_DIR, 'db.sqlite3')),
     }
 }
 
