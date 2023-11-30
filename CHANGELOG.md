@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.30.0] - 2023-12-01
+
 ### Removed / Changed
 
 - Link to http://datapipes.herokuapp.com in cove/templates/additional_codelist_values.html - instead link direct to URL.
