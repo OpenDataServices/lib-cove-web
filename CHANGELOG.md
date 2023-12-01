@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+# [0.30.0] - 2023-12-01
+
+### Removed / Changed
+
+- Link to http://datapipes.herokuapp.com in cove/templates/additional_codelist_values.html - instead link direct to URL.
+  https://github.com/OpenDataServices/lib-cove-web/issues/74
+  The datapipes app was shutdown in Aug 2022, so this feature has been showing users links that 404 for a while.
+  So while this removal may seem like a breaking change, it actually makes things better for users.
+  See issue for discussion about fixes.
+
 # [0.29.0] - 2023-11-09
 
 ### Removed
