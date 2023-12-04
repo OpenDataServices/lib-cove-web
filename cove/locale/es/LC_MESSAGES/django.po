@@ -166,7 +166,7 @@ msgstr "%(instance)s es mayor que el máximo de %(validator_value)s"
 #: cove/html_error_msg.py:174
 #, python-format
 msgid "%s is not valid under any of the given schemas"
-msgstr "%sno es válido bajo ninguno de los esquemas dados"
+msgstr "%s no es válido bajo ninguno de los esquemas dados"
 
 #: cove/html_error_msg.py:177
 #, python-format
