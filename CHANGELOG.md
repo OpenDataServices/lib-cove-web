@@ -7,13 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-# [0.30.1] - 2023-12-05
+## [0.30.1] - 2023-12-05
 
 ### Fixed
 
 - Spacing in a Spanish translation https://github.com/OpenDataServices/lib-cove-web/pull/129
 
-# [0.30.0] - 2023-12-01
+## [0.30.0] - 2023-12-01
 
 ### Removed / Changed
 
@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   So while this removal may seem like a breaking change, it actually makes things better for users.
   See issue for discussion about fixes.
 
-# [0.29.0] - 2023-11-09
+## [0.29.0] - 2023-11-09
 
 ### Removed
 
@@ -37,7 +37,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   https://github.com/OpenDataServices/lib-cove-web/pull/122
   https://github.com/OpenDataServices/lib-cove-web/pull/123 
 
-# [0.28.0] - 2023-07-13
+## [0.28.0] - 2023-07-13
 
 ### Add
 
@@ -48,13 +48,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add missing, or remove extra, spaces around HTML tags, named placeholders and punctuation in Spanish translations
 - Add database migration for 0.27.0 changes
 
-# [0.27.0] - 2023-03-06
+## [0.27.0] - 2023-03-06
 
 ## Changed
 
 - Randomize the uploaded file subdirectory, to allow coves to hide original files from unauthenticated users
 
-# [0.26.0] - 2023-02-17
+## [0.26.0] - 2023-02-17
 
 ## Changed
 
@@ -62,7 +62,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Drop Python 3.6 support
 - Use FieldFile.path instead of File.name, to avoid unclosed file warnings
 
-# [0.25.0] - 2022-07-19
+## [0.25.0] - 2022-07-19
 
 ### Add
 
@@ -73,24 +73,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - "Tool is Alpha" content from banner block in base template
 
 
-# [0.24.2] - 2021-11-18
+## [0.24.2] - 2021-11-18
 
 - Do not warn if `SECRET_KEY` is not set in settings
 
-# [0.24.1] - 2021-05-25
+## [0.24.1] - 2021-05-25
 
 ### Fixed
 
 - Include .mo files in the PyPI package
 
-# [0.24.0] - 2021-05-25
+## [0.24.0] - 2021-05-25
 
 ### Changed
 
 - Add support to `html_error_msg` for messages about a non-unique combination of multiple IDs. (E.g. ocid and id, as added in [this lib-cove-ocds PR](https://github.com/open-contracting/lib-cove-ocds/pull/91)).
 - `.mo` files are commited now, so we don't have to rely on the parent cove project finding them with `compilemessages` https://github.com/open-contracting/deploy/issues/269
 
-# [0.23.0] - 2021-05-12
+## [0.23.0] - 2021-05-12
 
 ### Removed
 
@@ -103,19 +103,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `PIWIK` and `GOOGLE_ANALYSTICS_ID` are now optional in the settings https://github.com/OpenDataServices/lib-cove-web/pull/94
 - Don't show section on Sentry in the terms and conditions, if its not in use https://github.com/OpenDataServices/lib-cove-web/pull/95
 
-# [0.22.0] - 2021-04-14
+## [0.22.0] - 2021-04-14
 
 ### Added
 
 - Add Django 3.x support https://github.com/OpenDataServices/lib-cove-web/pull/79
 
-# [0.21.1] - 2021-04-08
+## [0.21.1] - 2021-04-08
 
 ### Fixed
 
 - Switch to a fork of the rfc6266 package, that supports Python 3.8
 
-# [0.21.0] - 2021-03-25
+## [0.21.0] - 2021-03-25
 
 ### Changed
 
@@ -125,19 +125,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Codelist csv link now points to working service. https://github.com/OpenDataServices/lib-cove-web/issues/74
 
-# [0.20.0] - 2021-02-10
+## [0.20.0] - 2021-02-10
 
 ### Added
 
 - Number of days before files expire is now configurable in settings.py https://github.com/open-contracting/cove-ocds/issues/142
 
-# [0.19.0] - 2021-01-26
+## [0.19.0] - 2021-01-26
 
 ### Changed
 
 - Make `html_error_msg` importable from its own file, and without Django settings needing to be configured (e.g. in lib-cove-bods).
 
-# [0.18.4] - 2020-12-18
+## [0.18.4] - 2020-12-18
 
 ### Fixed
 
