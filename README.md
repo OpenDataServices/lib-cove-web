@@ -15,7 +15,7 @@ Currently it does *not* stand alone as a CoVE django app.
 * [Open Contracting Data Standard](https://github.com/open-contracting/cove-ocds)
 * [Open Contracting for Infrastructure Data Standards](https://github.com/open-contracting/cove-oc4ids)
 * [IATI](https://github.com/opendataservices/cove)
-* [360Giving](https://github.com/opendataservices/cove)
+* [360Giving](https://github.com/ThreeSixtyGiving/dataquality/)
 
 ## Theme customization
 
