@@ -2,6 +2,7 @@ import functools
 import logging
 from datetime import timedelta
 
+from django.conf import settings
 from django.db.models.aggregates import Count
 from django.shortcuts import render
 from django.utils.translation import gettext_lazy as _
@@ -54,6 +55,7 @@ def cove_web_input_error(func):
                 }
             else:
                 context = err.context
+        context['support_email'] = settings.COVE_CONFIG.get('support_email')
         return render(request, 'error.html', context=context)
     return wrapper
 
@@ -75,6 +77,7 @@ def explore_data_context(request, pk, get_file_type=None):
             'sub_title': _('Sorry, the page you are looking for is not available'),
             'link': 'index',
             'link_text': _('Go to Home page'),
+            'support_email': settings.COVE_CONFIG.get('support_email'),
             'msg': _("We don't seem to be able to find the data you requested.")
             }, status=404)
 
@@ -87,6 +90,7 @@ def explore_data_context(request, pk, get_file_type=None):
             'sub_title': _('Sorry, the page you are looking for is not available'),
             'link': 'index',
             'link_text': _('Go to Home page'),
+            'support_email': settings.COVE_CONFIG.get('support_email'),
             'msg': _('The data you were hoping to explore no longer exists.\n\nThis is because all '
                      'data supplied to this website is automatically deleted after 7 days, and therefore '
                      'the analysis of that data is no longer available.')
@@ -108,6 +112,7 @@ def explore_data_context(request, pk, get_file_type=None):
         'created_datetime': data.created.strftime('%A, %d %B %Y %I:%M%p %Z'),
         'created_date': data.created.strftime('%A, %d %B %Y'),
         'created_time': data.created.strftime('%I:%M%p %Z'),
+        'support_email': settings.COVE_CONFIG.get('support_email'),
     }
 
     return (context, data, None)

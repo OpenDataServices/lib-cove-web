@@ -20,6 +20,7 @@ COVE_CONFIG = {
     'app_name': 'test',
     'app_base_template': 'base.html',
     'input_methods': ['upload', 'url', 'text'],
+    'support_email': 'code@opendataservices.coop',
 }
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
