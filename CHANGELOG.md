@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Spacing in a Spanish translation https://github.com/OpenDataServices/lib-cove-web/pull/129
+
 # [0.30.0] - 2023-12-01
 
 ### Removed / Changed
