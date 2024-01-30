@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.30.2] - 2024-01-30
+
 ### Fixed
 
 - support_email was in templates but was not set anywhere. Set in views and set in config.
