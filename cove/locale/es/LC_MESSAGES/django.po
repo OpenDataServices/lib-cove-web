@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Eduardo Gomez <eduardo.gomez@hotmail.co.uk>, 2018
 # David Raznick <david.raznick@opendataservices.coop>, 2019
@@ -11,20 +11,21 @@
 # Maria Esther Cervantes <mcervantes@cds.com.py>, 2021
 # Ben Webb <ben.webb@opendataservices.coop>, 2021
 # Bibiana Cristòfol <bcristofol@gmail.com>, 2021
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-21 15:36+0000\n"
+"POT-Creation-Date: 2024-05-04 04:28+0000\n"
 "PO-Revision-Date: 2018-11-30 11:12+0000\n"
 "Last-Translator: Bibiana Cristòfol <bcristofol@gmail.com>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/59127/es/)\n"
+"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/"
+"teams/59127/es/)\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: cove/html_error_msg.py:22
@@ -37,12 +38,12 @@ msgstr "Se ha encontrado una 'uri' inválida"
 
 #: cove/html_error_msg.py:24
 msgid ""
-"{}<code>{}</code> is not a string. Check that the value {} has quotes at the"
-" start and end. Escape any quotes in the value with <code>\\</code>"
+"{}<code>{}</code> is not a string. Check that the value {} has quotes at the "
+"start and end. Escape any quotes in the value with <code>\\</code>"
 msgstr ""
 "{}<code>{}</code> no es un hilo. Revise que el valor {} tenga comillas al "
-"principio y al final. Escapa de cualquier comillas con el valor "
-"<code>\\</code>"
+"principio y al final. Escapa de cualquier comillas con el valor <code>\\</"
+"code>"
 
 #: cove/html_error_msg.py:25
 msgid ""
@@ -51,14 +52,14 @@ msgid ""
 "be in quotes. "
 msgstr ""
 "{}<code>{}</code> no es un entero. Compruebe que el valor {} no contenga "
-"puntos decimales ni ningún otro carácter que no sea 0-9. Los valores enteros"
-" no deben estar entre comillas."
+"puntos decimales ni ningún otro carácter que no sea 0-9. Los valores enteros "
+"no deben estar entre comillas."
 
 #: cove/html_error_msg.py:26
 msgid ""
 "{}<code>{}</code> is not a number. Check that the value {} doesn’t contain "
-"any characters other than 0-9 and dot (<code>.</code>). Number values should"
-" not be in quotes. "
+"any characters other than 0-9 and dot (<code>.</code>). Number values should "
+"not be in quotes. "
 msgstr ""
 "{}<code>{}</code> no es un número. Compruebe que el valor {} no contenga "
 "ningún carácter más que 0-9 y el punto (.). Los valores numéricos no deben "
@@ -207,62 +208,63 @@ msgstr "Valores {} no únicos"
 msgid "Additional properties are not allowed (%s was unexpected)"
 msgid_plural "Additional properties are not allowed (%s were unexpected)"
 msgstr[0] "Propiedades adicionales no están permitidas (%s fue inesperado)"
-msgstr[1] ""
-"Propiedades adicionales no están permitidas (%s fueron inesperados)"
+msgstr[1] "Propiedades adicionales no están permitidas (%s fueron inesperados)"
 
 #: cove/html_error_msg.py:225
 #, python-format
 msgid "%(extras)s does not match any of the regexes: %(patterns)s"
 msgid_plural "%(extras)s do not match any of the regexes: %(patterns)s"
 msgstr[0] ""
-"%(extras)s no coincide con ninguna de las expresiones regulares: "
-"%(patterns)s"
+"%(extras)s no coincide con ninguna de las expresiones regulares: %(patterns)s"
 msgstr[1] ""
 "%(extras)s no coinciden con ninguna de las expresiones regulares: "
 "%(patterns)s"
 
-#: cove/input/views.py:18
+#: cove/input/views.py:19
 msgid "Upload a file (.json, .csv, .xlsx, .ods)"
 msgstr "Subir un archivo (.json, .csv, .xlsx, .ods)"
 
-#: cove/input/views.py:27
+#: cove/input/views.py:28
 msgid "Supply a URL"
 msgstr "Proporcionar una dirección URL"
 
-#: cove/input/views.py:32
+#: cove/input/views.py:33
 msgid "Paste (JSON only)"
 msgstr "Pegar (sólo JSON)"
 
-#: cove/input/views.py:72
+#: cove/input/views.py:81
+msgid "That URL is invalid"
+msgstr "Esa URL no es válida"
+
+#: cove/input/views.py:83 cove/input/views.py:90 cove/input/views.py:98
+#: cove/views.py:28 cove/views.py:39 cove/views.py:49
+msgid "Try Again"
+msgstr "Inténtelo de nuevo"
+
+#: cove/input/views.py:88
 msgid "Sorry we got a ConnectionError whilst trying to download that file"
 msgstr ""
 "Lo sentimos, al tratar de descargar el archivo hemos encontrado un "
 "ConnectionError"
 
-#: cove/input/views.py:74 cove/input/views.py:82 cove/views.py:28
-#: cove/views.py:39 cove/views.py:49
-msgid "Try Again"
-msgstr "Inténtelo de nuevo"
-
-#: cove/input/views.py:75
+#: cove/input/views.py:91
 msgid ""
-"Common reasons for this error include supplying a local development url that"
-" our servers can't access, or misconfigured SSL certificates."
+"Common reasons for this error include supplying a local development url that "
+"our servers can't access, or misconfigured SSL certificates."
 msgstr ""
 "Las razones comunes de este error incluyen el suministro de una URL de "
 "desarrollo local a la que nuestros servidores no pueden acceder o "
 "certificados SSL mal configurados."
 
-#: cove/input/views.py:80
+#: cove/input/views.py:96
 msgid "Sorry we got a HTTP Error whilst trying to download that file"
 msgstr ""
-"Lo sentimos, al tratar de descargar el archivo hemos encontrado un HTTP "
-"Error"
+"Lo sentimos, al tratar de descargar el archivo hemos encontrado un HTTP Error"
 
-#: cove/input/views.py:83
+#: cove/input/views.py:99
 msgid ""
-"If you can access the file through a browser then the problem may be related"
-" to permissions, or you may be blocking certain user agents."
+"If you can access the file through a browser then the problem may be related "
+"to permissions, or you may be blocking certain user agents."
 msgstr ""
 "Si no puede acceder al archivo a través del navegador entonces el problema "
 "puede esta relacionado con los permisos, o puede que este bloqueando a "
@@ -342,67 +344,66 @@ msgid "Child fields of %(parent_full_path)s"
 msgstr "Campos hijos de %(parent_full_path)s"
 
 #. Translators: Label of a button that triggers search
-#: cove/templates/base.html:55 cove/templates/page_header.html:27
+#: cove/templates/base.html:54 cove/templates/page_header.html:27
 msgid "Go"
 msgstr "Ir"
 
-#: cove/templates/base.html:115
+#: cove/templates/base.html:114
 msgid "About"
 msgstr "Acerca de"
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:117
 msgid "Built by"
 msgstr "Construido por "
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:117
 msgid "Open Data Services Co-operative"
 msgstr "Open Data Services Co-operative"
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "The code for this site is available on"
 msgstr "El código de este sitio está disponible en "
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "GitHub"
 msgstr "GitHub"
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "Cove - COnvert Validate & Explore"
 msgstr "Cove - COnvert Validate & Explore"
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "Licence"
 msgstr "Licencia"
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "AGPLv3"
 msgstr "AGPLv3"
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "Report/View issues"
 msgstr "Reportar / Ver issues"
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "Cove Issues"
 msgstr "Issues del Cove"
 
-#: cove/templates/base.html:124
+#: cove/templates/base.html:123
 msgid "Terms &amp; Conditions"
 msgstr "Términos y condiciones"
 
-#: cove/templates/base.html:133
+#: cove/templates/base.html:132
 msgid "Links"
 msgstr "Enlaces"
 
 #: cove/templates/error_extra.html:2
 msgid ""
-"If you think this is a bug, you can <a "
-"href=\"https://github.com/OpenDataServices/cove/issues\">file an issue "
-"publicly on GitHub</a> or "
+"If you think this is a bug, you can <a href=\"https://github.com/"
+"OpenDataServices/cove/issues\">file an issue publicly on GitHub</a> or "
 msgstr ""
-"Si cree que esto es un error, puede <a "
-"href=\"https://github.com/OpenDataServices/cove/issues\">presentar un issue "
-"públicamente en GitHub</a> o"
+"Si cree que esto es un error, puede <a href=\"https://github.com/"
+"OpenDataServices/cove/issues\">presentar un issue públicamente en GitHub</a> "
+"o"
 
 #: cove/templates/error_extra.html:2
 msgid "get in touch via email"
@@ -444,8 +445,7 @@ msgstr "Hoja de cálculo de Excel (.xlsx) con títulos"
 msgid "OpenDocument Spreadsheet (.ods) with titles"
 msgstr "Hoja de cálculo de OpenDocument (.ods) con títulos"
 
-#. Translators: JSON probably does not need a transalation:
-#. http://www.json.org/
+#. Translators: JSON probably does not need a transalation: http://www.json.org/
 #: cove/templates/explore.html:19
 msgid "JSON"
 msgstr "JSON"
@@ -585,7 +585,8 @@ msgid ""
 "\n"
 "Error message: {}"
 msgstr ""
-"Creemos que ha intentado subir un archivo JSON, pero el archivo no es JSON bien formado.\n"
+"Creemos que ha intentado subir un archivo JSON, pero el archivo no es JSON "
+"bien formado.\n"
 "\n"
 "Mensaje del error: {}"
 
@@ -605,7 +606,8 @@ msgid ""
 "\n"
 "Error message: {}"
 msgstr ""
-"Creemos que ha tratado de suministrar una hoja de cálculo, pero no hemos podido convertirla.\n"
+"Creemos que ha tratado de suministrar una hoja de cálculo, pero no hemos "
+"podido convertirla.\n"
 "\n"
 "Mensaje del error: {}"
 
@@ -625,8 +627,11 @@ msgstr "Parece que no podemos encontrar los datos que usted solicitó."
 msgid ""
 "The data you were hoping to explore no longer exists.\n"
 "\n"
-"This is because all data supplied to this website is automatically deleted after 7 days, and therefore the analysis of that data is no longer available."
+"This is because all data supplied to this website is automatically deleted "
+"after 7 days, and therefore the analysis of that data is no longer available."
 msgstr ""
 "Los datos que usted quería explorar ya no existen.\n"
 "\n"
-"Esto se debe a que todos los datos suministrados a este sitio web se borran automáticamente después de 7 días, y por lo tanto el análisis de esos datos ya no está disponible."
+"Esto se debe a que todos los datos suministrados a este sitio web se borran "
+"automáticamente después de 7 días, y por lo tanto el análisis de esos datos "
+"ya no está disponible."

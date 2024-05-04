@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-21 15:36+0000\n"
+"POT-Creation-Date: 2024-05-04 04:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -193,38 +193,42 @@ msgid_plural "%(extras)s do not match any of the regexes: %(patterns)s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: cove/input/views.py:18
+#: cove/input/views.py:19
 msgid "Upload a file (.json, .csv, .xlsx, .ods)"
 msgstr ""
 
-#: cove/input/views.py:27
+#: cove/input/views.py:28
 msgid "Supply a URL"
 msgstr ""
 
-#: cove/input/views.py:32
+#: cove/input/views.py:33
 msgid "Paste (JSON only)"
 msgstr ""
 
-#: cove/input/views.py:72
-msgid "Sorry we got a ConnectionError whilst trying to download that file"
+#: cove/input/views.py:81
+msgid "That URL is invalid"
 msgstr ""
 
-#: cove/input/views.py:74 cove/input/views.py:82 cove/views.py:28
-#: cove/views.py:39 cove/views.py:49
+#: cove/input/views.py:83 cove/input/views.py:90 cove/input/views.py:98
+#: cove/views.py:28 cove/views.py:39 cove/views.py:49
 msgid "Try Again"
 msgstr ""
 
-#: cove/input/views.py:75
+#: cove/input/views.py:88
+msgid "Sorry we got a ConnectionError whilst trying to download that file"
+msgstr ""
+
+#: cove/input/views.py:91
 msgid ""
 "Common reasons for this error include supplying a local development url that "
 "our servers can't access, or misconfigured SSL certificates."
 msgstr ""
 
-#: cove/input/views.py:80
+#: cove/input/views.py:96
 msgid "Sorry we got a HTTP Error whilst trying to download that file"
 msgstr ""
 
-#: cove/input/views.py:83
+#: cove/input/views.py:99
 msgid ""
 "If you can access the file through a browser then the problem may be related "
 "to permissions, or you may be blocking certain user agents."
@@ -300,55 +304,55 @@ msgid "Child fields of %(parent_full_path)s"
 msgstr ""
 
 #. Translators: Label of a button that triggers search
-#: cove/templates/base.html:55 cove/templates/page_header.html:27
+#: cove/templates/base.html:54 cove/templates/page_header.html:27
 msgid "Go"
 msgstr ""
 
-#: cove/templates/base.html:115
+#: cove/templates/base.html:114
 msgid "About"
 msgstr ""
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:117
 msgid "Built by"
 msgstr ""
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:117
 msgid "Open Data Services Co-operative"
 msgstr ""
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "The code for this site is available on"
 msgstr ""
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "GitHub"
 msgstr ""
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "Cove - COnvert Validate & Explore"
 msgstr ""
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "Licence"
 msgstr ""
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "AGPLv3"
 msgstr ""
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "Report/View issues"
 msgstr ""
 
-#: cove/templates/base.html:119
+#: cove/templates/base.html:118
 msgid "Cove Issues"
 msgstr ""
 
-#: cove/templates/base.html:124
+#: cove/templates/base.html:123
 msgid "Terms &amp; Conditions"
 msgstr ""
 
-#: cove/templates/base.html:133
+#: cove/templates/base.html:132
 msgid "Links"
 msgstr ""
 
