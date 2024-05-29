@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Report a human-readable error when an invalid URL for the input data is supplied by the user.
+
 ## [0.30.2] - 2024-01-30
 
 ### Fixed
