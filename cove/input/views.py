@@ -76,7 +76,7 @@ def data_input(request, form_classes=default_form_classes, text_file_name='test.
             if form_name == 'url_form':
                 try:
                     data.download()
-                except requests.InvalidURL as err:
+                except requests.exceptions.InvalidURL as err:
                     return render(request, 'error.html', context={
                         'sub_title': _("That URL is invalid"),
                         'link': 'index',
