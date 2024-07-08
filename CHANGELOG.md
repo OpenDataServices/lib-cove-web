@@ -7,11 +7,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.30.4] - 2024-06-28
+
+### Fixed
+
+- Report a human-readable error when an invalid URL for the input data is supplied by the user. https://github.com/OpenDataServices/lib-cove-web/pull/139
+
 ## [0.30.3] - 2024-05-29
 
 ### Fixed
 
-- Report a human-readable error when an invalid URL for the input data is supplied by the user.
+- Unsuccessful implmentation of human-readable error, see 0.30.4 above.
 
 ## [0.30.2] - 2024-01-30
 
