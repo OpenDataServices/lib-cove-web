@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Set the `REQUESTS_TIMEOUT` setting, to prevent source URLs from causing a denial of service, whether accidentally or maliciously.
+
 ## [0.30.4] - 2024-06-28
 
 ### Fixed
