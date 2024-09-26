@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 from django.utils.translation import gettext_lazy as _
 
 from cove.input.models import SuppliedData
-from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import csrf_protect
 
 
 class UploadForm(forms.ModelForm):
@@ -40,11 +40,11 @@ default_form_classes = {
 }
 
 
-@csrf_exempt
+@csrf_protect
 def data_input(request, form_classes=default_form_classes, text_file_name='test.json'):
     forms = {form_name: form_class() for form_name, form_class in form_classes.items()}
     request_data = None
-    if "source_url" in request.GET:
+    if "source_url" in request.GET and settings.COVE_CONFIG.get("allow_direct_web_fetch", False):
         request_data = request.GET
     if request.POST:
         request_data = request.POST
