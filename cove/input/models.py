@@ -69,7 +69,11 @@ class SuppliedData(models.Model):
 
     def download(self):
         if self.source_url:
-            r = requests.get(self.source_url, headers={'User-Agent': 'Cove (cove.opendataservice.coop)'})
+            r = requests.get(
+                self.source_url,
+                headers={'User-Agent': 'Cove (cove.opendataservice.coop)'},
+                timeout=getattr(settings, "REQUESTS_TIMEOUT", None),
+            )
             r.raise_for_status()
             content_type = r.headers.get('content-type', '').split(';')[0].lower()
             file_extension = CONTENT_TYPE_MAP.get(content_type)

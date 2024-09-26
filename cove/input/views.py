@@ -83,6 +83,16 @@ def data_input(request, form_classes=default_form_classes, text_file_name='test.
                         'link_text': _('Try Again'),
                         'msg': str(err)
                     })
+                except requests.Timeout as err:
+                    return render(request, 'error.html', context={
+                        'sub_title': _(
+                            "The request timed out after %(timeout)s seconds",
+                            getattr(settings, "REQUESTS_TIMEOUT", "indefinite"),
+                        ),
+                        'link': 'index',
+                        'link_text': _('Try Again'),
+                        'msg': str(err)
+                    })
                 except requests.ConnectionError as err:
                     return render(request, 'error.html', context={
                         'sub_title': _("Sorry we got a ConnectionError whilst trying to download that file"),
