@@ -7,8 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.30.5] - 2024-09-30
+
 ### Added
 
+- New setting `allow_direct_web_fetch` to configure whether cove will fetch any url passed as a GET parameter rather than from the input form. The default will be for this to be disabled. Cove implementations updating may need to check if there are "try this sample data" links on the home page that will need to be updated to use a form with newly required CSRF protection (For example - https://github.com/OpenDataServices/lib-cove-web/pull/144#issuecomment-2378743354).
 - Set the `REQUESTS_TIMEOUT` setting, to prevent source URLs from causing a denial of service, whether accidentally or maliciously.
 
 ## [0.30.4] - 2024-06-28
