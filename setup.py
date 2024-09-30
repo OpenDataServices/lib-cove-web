@@ -4,7 +4,7 @@ install_requires = []
 
 setup(
     name='libcoveweb',
-    version='0.30.4',
+    version='0.30.5',
     author='Open Data Services',
     author_email='code@opendataservices.coop',
     packages=find_packages(),
