@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Add `lang` attribute to `html` tag.
+
 ## [0.30.5] - 2024-09-30
 
 ### Added
