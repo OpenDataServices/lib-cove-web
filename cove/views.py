@@ -85,6 +85,25 @@ def explore_data_context(request, pk, get_file_type=None):
         file_name = data.original_file.path
         if file_name.endswith('validation_errors-3.json'):
             raise PermissionError('You are not allowed to upload a file with this name.')
+
+        file_type = get_file_type(data.original_file)
+        context = {
+            'original_file': {
+                'url': data.original_file.url,
+                'size': data.original_file.size,
+                'path': data.original_file.path,
+            },
+            'file_type': file_type,
+            'file_name': get_file_name(file_name),
+            'data_uuid': pk,
+            'current_url': request.build_absolute_uri(),
+            'source_url': data.source_url,
+            'form_name': data.form_name,
+            'created_datetime': data.created.strftime('%A, %d %B %Y %I:%M%p %Z'),
+            'created_date': data.created.strftime('%A, %d %B %Y'),
+            'created_time': data.created.strftime('%I:%M%p %Z'),
+            'support_email': settings.COVE_CONFIG.get('support_email'),
+        }
     except FileNotFoundError:
         return {}, None, render(request, 'error.html', {
             'sub_title': _('Sorry, the page you are looking for is not available'),
@@ -92,28 +111,10 @@ def explore_data_context(request, pk, get_file_type=None):
             'link_text': _('Go to Home page'),
             'support_email': settings.COVE_CONFIG.get('support_email'),
             'msg': _('The data you were hoping to explore no longer exists.\n\nThis is because all '
-                     'data supplied to this website is automatically deleted after 7 days, and therefore '
+                     'data supplied to this website is automatically deleted after %s days, and therefore '
                      'the analysis of that data is no longer available.')
+                     % getattr(settings, 'DELETE_FILES_AFTER_DAYS', 7)
         }, status=404)
-
-    file_type = get_file_type(data.original_file)
-    context = {
-        'original_file': {
-            'url': data.original_file.url,
-            'size': data.original_file.size,
-            'path': data.original_file.path,
-        },
-        'file_type': file_type,
-        'file_name': get_file_name(file_name),
-        'data_uuid': pk,
-        'current_url': request.build_absolute_uri(),
-        'source_url': data.source_url,
-        'form_name': data.form_name,
-        'created_datetime': data.created.strftime('%A, %d %B %Y %I:%M%p %Z'),
-        'created_date': data.created.strftime('%A, %d %B %Y'),
-        'created_time': data.created.strftime('%I:%M%p %Z'),
-        'support_email': settings.COVE_CONFIG.get('support_email'),
-    }
 
     return (context, data, None)
 
