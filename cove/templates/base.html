@@ -2,7 +2,8 @@
 {% load static %}
 {% load bootstrap3 %}
 {% load i18n %}
-<html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   {% block after_head %}
