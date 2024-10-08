@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-26 01:52+0000\n"
+"POT-Creation-Date: 2024-10-04 15:54+0000\n"
 "PO-Revision-Date: 2018-11-30 11:12+0000\n"
 "Last-Translator: Bibiana Cristòfol <bcristofol@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/"
@@ -616,11 +616,11 @@ msgstr ""
 "\n"
 "Mensaje del error: {}"
 
-#: cove/views.py:77 cove/views.py:90
+#: cove/views.py:77 cove/views.py:109
 msgid "Sorry, the page you are looking for is not available"
 msgstr "Lo sentimos, la página que está buscando no está disponible"
 
-#: cove/views.py:79 cove/views.py:92
+#: cove/views.py:79 cove/views.py:111
 msgid "Go to Home page"
 msgstr "Ir a la Página de Inicio"
 
@@ -628,15 +628,17 @@ msgstr "Ir a la Página de Inicio"
 msgid "We don't seem to be able to find the data you requested."
 msgstr "Parece que no podemos encontrar los datos que usted solicitó."
 
-#: cove/views.py:94
+#: cove/views.py:113
+#, python-format
 msgid ""
 "The data you were hoping to explore no longer exists.\n"
 "\n"
 "This is because all data supplied to this website is automatically deleted "
-"after 7 days, and therefore the analysis of that data is no longer available."
+"after %s days, and therefore the analysis of that data is no longer "
+"available."
 msgstr ""
 "Los datos que usted quería explorar ya no existen.\n"
 "\n"
 "Esto se debe a que todos los datos suministrados a este sitio web se borran "
-"automáticamente después de 7 días, y por lo tanto el análisis de esos datos "
+"automáticamente después de %s días, y por lo tanto el análisis de esos datos "
 "ya no está disponible."
