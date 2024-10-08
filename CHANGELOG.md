@@ -7,9 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+
 ### Added
 
 - Add `lang` attribute to `html` tag.
+
+### Fixed
+
+- If a file is expired, the error message states the correct DELETE_FILES_AFTER_DAYS value, instead of the default of 7.
+- If a file is expired, the "file not found" exception is caught by all possible sources.
 
 ## [0.30.5] - 2024-09-30
 
