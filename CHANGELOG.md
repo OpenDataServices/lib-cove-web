@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## Fixed
+
+- Fixed string formatting for the "The request timed out after %(timeout)s seconds" error
+
 ## [0.31.0] - 2024-10-16
 
 Note: Release 0.30.5 was not done properly and was missing some code.
