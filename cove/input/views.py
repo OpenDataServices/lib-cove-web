@@ -87,7 +87,7 @@ def data_input(request, form_classes=default_form_classes, text_file_name='test.
                     return render(request, 'error.html', context={
                         'sub_title': _(
                             "The request timed out after %(timeout)s seconds"
-                        ) % getattr(settings, "REQUESTS_TIMEOUT", "indefinite"),
+                        ) % {"timeout": getattr(settings, "REQUESTS_TIMEOUT", "indefinite")},
                         'link': 'index',
                         'link_text': _('Try Again'),
                         'msg': str(err)
