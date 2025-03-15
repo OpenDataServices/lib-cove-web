@@ -25,6 +25,8 @@ setup(
     scripts=['manage.py'],
     url='https://github.com/OpenDataServices/lib-cove-web',
     description='',
+    long_description="",
+    long_description_content_type="text/plain",
     classifiers=[
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
     ],
