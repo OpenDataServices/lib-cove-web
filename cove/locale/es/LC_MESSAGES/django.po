@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-04 15:54+0000\n"
+"POT-Creation-Date: 2025-04-16 10:14+0000\n"
 "PO-Revision-Date: 2018-11-30 11:12+0000\n"
 "Last-Translator: Bibiana Cristòfol <bcristofol@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/"
@@ -236,8 +236,8 @@ msgstr "Pegar (sólo JSON)"
 msgid "That URL is invalid"
 msgstr "Esa URL no es válida"
 
-#: cove/input/views.py:83 cove/input/views.py:93 cove/input/views.py:100
-#: cove/input/views.py:109 cove/views.py:29 cove/views.py:40 cove/views.py:50
+#: cove/input/views.py:83 cove/input/views.py:92 cove/input/views.py:99
+#: cove/input/views.py:108 cove/views.py:29 cove/views.py:40 cove/views.py:50
 msgid "Try Again"
 msgstr "Inténtelo de nuevo"
 
@@ -246,13 +246,13 @@ msgstr "Inténtelo de nuevo"
 msgid "The request timed out after %(timeout)s seconds"
 msgstr "La solicitud expiró luego de %(timeout)s segundos"
 
-#: cove/input/views.py:98
+#: cove/input/views.py:97
 msgid "Sorry we got a ConnectionError whilst trying to download that file"
 msgstr ""
 "Lo sentimos, al tratar de descargar el archivo hemos encontrado un "
 "ConnectionError"
 
-#: cove/input/views.py:102
+#: cove/input/views.py:101
 msgid ""
 "Common reasons for this error include supplying a local development url that "
 "our servers can't access, or misconfigured SSL certificates."
@@ -261,12 +261,12 @@ msgstr ""
 "desarrollo local a la que nuestros servidores no pueden acceder o "
 "certificados SSL mal configurados."
 
-#: cove/input/views.py:107
+#: cove/input/views.py:106
 msgid "Sorry we got a HTTP Error whilst trying to download that file"
 msgstr ""
 "Lo sentimos, al tratar de descargar el archivo hemos encontrado un HTTP Error"
 
-#: cove/input/views.py:111
+#: cove/input/views.py:110
 msgid ""
 "If you can access the file through a browser then the problem may be related "
 "to permissions, or you may be blocking certain user agents."
@@ -349,55 +349,55 @@ msgid "Child fields of %(parent_full_path)s"
 msgstr "Campos hijos de %(parent_full_path)s"
 
 #. Translators: Label of a button that triggers search
-#: cove/templates/base.html:54 cove/templates/page_header.html:27
+#: cove/templates/base.html:55 cove/templates/page_header.html:27
 msgid "Go"
 msgstr "Ir"
 
-#: cove/templates/base.html:114
+#: cove/templates/base.html:115
 msgid "About"
 msgstr "Acerca de"
 
-#: cove/templates/base.html:117
+#: cove/templates/base.html:118
 msgid "Built by"
 msgstr "Construido por "
 
-#: cove/templates/base.html:117
+#: cove/templates/base.html:118
 msgid "Open Data Services Co-operative"
 msgstr "Open Data Services Co-operative"
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "The code for this site is available on"
 msgstr "El código de este sitio está disponible en "
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "GitHub"
 msgstr "GitHub"
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "Cove - COnvert Validate & Explore"
 msgstr "Cove - COnvert Validate & Explore"
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "Licence"
 msgstr "Licencia"
 
-#: cove/templates/base.html:118
-msgid "AGPLv3"
-msgstr "AGPLv3"
+#: cove/templates/base.html:119
+msgid "BSD"
+msgstr "BSD"
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "Report/View issues"
 msgstr "Reportar / Ver issues"
 
-#: cove/templates/base.html:118
+#: cove/templates/base.html:119
 msgid "Cove Issues"
 msgstr "Issues del Cove"
 
-#: cove/templates/base.html:123
+#: cove/templates/base.html:124
 msgid "Terms &amp; Conditions"
 msgstr "Términos y condiciones"
 
-#: cove/templates/base.html:132
+#: cove/templates/base.html:133
 msgid "Links"
 msgstr "Enlaces"
 
@@ -642,3 +642,6 @@ msgstr ""
 "Esto se debe a que todos los datos suministrados a este sitio web se borran "
 "automáticamente después de %s días, y por lo tanto el análisis de esos datos "
 "ya no está disponible."
+
+#~ msgid "AGPLv3"
+#~ msgstr "AGPLv3"
