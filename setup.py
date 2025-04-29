@@ -25,9 +25,7 @@ setup(
     scripts=['manage.py'],
     url='https://github.com/OpenDataServices/lib-cove-web',
     description='',
-    classifiers=[
-        'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
-    ],
+    classifiers=["License :: OSI Approved :: BSD License"],
     python_requires=">=3.8",
     install_requires=[
         "Django>=2.2,<4.3",
