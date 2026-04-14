@@ -9,6 +9,7 @@ from django.core.files.base import ContentFile
 from werkzeug.http import parse_options_header
 import secrets
 import string
+import django
 
 CONTENT_TYPE_MAP = {
     'application/json': 'json',
@@ -26,9 +27,21 @@ def upload_to(instance, filename=''):
     return os.path.join(str(instance.pk), random_string, filename)
 
 
+# This class is only needed while Django<5 is supported.
+class URLField(models.URLField):
+    def formfield(self, **kwargs):
+        if django.VERSION >= (5, 0):
+            kwargs.setdefault('assume_scheme', 'https')
+        return super().formfield(**kwargs)
+
+    def deconstruct(self):
+        name, path, args, kwargs = super().deconstruct()
+        return name, "django.db.models.URLField", args, kwargs
+
+
 class SuppliedData(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    source_url = models.URLField(null=True, max_length=2000)
+    source_url = URLField(null=True, max_length=2000)
     original_file = models.FileField(upload_to=upload_to, max_length=256)
     current_app = models.CharField(max_length=20)
 

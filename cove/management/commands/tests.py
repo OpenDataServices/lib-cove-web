@@ -13,7 +13,7 @@ def test_expire_files():
     recent.original_file.save('test.json', ContentFile('{}'))
 
     old = SuppliedData.objects.create()
-    old.created = timezone.datetime(2015, 1, 1, tzinfo=timezone.utc)
+    old.created = timezone.datetime(2015, 1, 1, tzinfo=datetime.timezone.utc)
     old.original_file.save('test.json', ContentFile('{}'))
 
     call_command('expire_files')

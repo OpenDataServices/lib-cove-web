@@ -28,7 +28,7 @@ setup(
     classifiers=["License :: OSI Approved :: BSD License"],
     python_requires=">=3.8",
     install_requires=[
-        "Django>=2.2,<4.3",
+        "Django>=4.2,<5.3",
         "django-bootstrap3",
         "requests",
         "flattentool",
